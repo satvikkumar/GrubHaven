@@ -1,0 +1,11 @@
+{
+  "name": "drms",
+  "version": "1.0.0",
+  "description": "Testing backend api",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Team_E5",
+  "license": "ISC"
+}
