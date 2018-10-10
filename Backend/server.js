@@ -8,7 +8,7 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var cors = require('cors');
  
 // Configuration
-mongoose.connect('mongodb://54.169.177.221:27017/drms');
+mongoose.connect('mongodb://172.31.30.225:27017/drms');
  
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
@@ -44,7 +44,7 @@ var emp = mongoose.model('employees', {
             if (err)
                 res.send(err)
  
-            res.json(employee); // return all reviews in JSON format
+            res.send(employee); // return all reviews in JSON format
         });
     });
  
