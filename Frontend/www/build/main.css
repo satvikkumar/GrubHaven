@@ -25673,3 +25673,136 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-login .login-content {
+  background: #FFFFFF;
+}
+
+page-login .login-content .logo-row {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+page-login .login-content .login-box {
+  background: #ff3333;
+  padding: 20px 20px 0px 20px;
+  margin-top: 30px;
+}
+
+page-login .login-content ion-row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+page-login .login-content ion-item {
+  border-radius: 30px !important;
+  padding-left: 30px !important;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-bottom: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-login .login-content .signup-col {
+  margin: 0px 16px 0px 16px;
+  padding-bottom: 20px;
+}
+
+page-login .login-content .item-inner {
+  border-bottom-color: #ffffff !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-login .login-content .submit-btn {
+  background: #dac9c9;
+  border-radius: 30px !important;
+  border: 1px solid #ffffff;
+}
+
+page-login .login-content .register-btn {
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+page-manager-home .options {
+  background: white;
+}
+
+page-manager-home .employees, page-manager-home .inventory, page-manager-home .analytics, page-manager-home .tables, page-manager-home .orders, page-manager-home .reservations {
+  border-radius: 30px !important;
+  border: 1px solid #ff3333;
+}
+
+page-manager-home .basic {
+  background-color: #ff3333;
+}
+
+page-manager-home .heading {
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-register .login-content {
+  background: #FFFFFF;
+}
+
+page-register .login-content .logo-row {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+page-register .login-content .login-box {
+  background: #ff3333;
+  padding: 20px 20px 0px 20px;
+  margin-top: 30px;
+}
+
+page-register .login-content ion-row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+page-register .login-content ion-item {
+  border-radius: 30px !important;
+  padding-left: 30px !important;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-bottom: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-register .login-content .signup-col {
+  margin: 0px 16px 0px 16px;
+  padding-bottom: 20px;
+}
+
+page-register .login-content .item-inner {
+  border-bottom-color: #ffffff !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-register .login-content .submit-btn {
+  background: #51CFB1;
+  border-radius: 30px !important;
+  border: 1px solid #ffffff;
+}
+
+page-register .login-content .register-btn {
+  color: #ffffff;
+  font-size: 0.8em;
+}

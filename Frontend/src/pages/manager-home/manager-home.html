@@ -1,0 +1,17 @@
+<ion-content class = "basic">
+  <ion-row>
+    <div class = "heading" width = "100%" style= "text-align:center">
+      <h1> Hello {{user}} </h1>
+    </div>
+  </ion-row>
+  <ion-row>
+    <ion-col class="options">
+      <button ion-button class="employees" full type="employees" block clear (click)="employees()">Manage Employees</button>
+      <button ion-button class="inventory" block clear (click)="inventory()">Manage Inventory</button>
+      <button ion-button class="orders" block clear (click)="orders()">View Orders</button>
+      <button ion-button class="tables" block clear (click)="tables()">Manage Tables</button>
+      <button ion-button class="reservations" block clear (click)="reservations()">Manage Reservations</button>
+      <button ion-button class="analytics" block clear (click)="analytics()">View Analytics</button>
+    </ion-col>
+  </ion-row>
+</ion-content>
