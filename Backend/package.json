@@ -1,10 +1,10 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
+  "name": "backend api",
+  "version": "1.5.0",
   "description": "Backend testing api",
-  "main": "vanilla_node.js",
+  "main": "server.js",
   "scripts": {
-    "test": "node vanilla_node.js"
+    "test": "nodemon server.js"
   },
   "repository": {
     "type": "git",
