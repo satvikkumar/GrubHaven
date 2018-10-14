@@ -1,5 +1,5 @@
 # GrubHaven 
-Working Repository of Zoma2 for a Software Engineering Project
+Working Repository of GrubHaven for a Software Engineering Project
 
 # Usage
 ## Server
