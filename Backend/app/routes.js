@@ -1,7 +1,8 @@
-var AuthenticationController = require('./controllers/authentication'),
-    express = require('express'),
-    passportService = require('../config/passport'),
-    passport = require('passport');
+var AuthenticationController = require('./controllers/authentication');
+var express = require('express');
+var passportService = require('../config/passport');
+var passport = require('passport');
+var Listing=require('./controllers/Listing')
 
 var requireAuth = passport.authenticate('jwt', {
         session: false
@@ -20,19 +21,9 @@ module.exports = function (app) {
 
     authRoutes.post('/register', AuthenticationController.register);
     authRoutes.post('/login', requireLogin, AuthenticationController.login);
+    authRoutes.get('/list',requireLogin,Listing.list)
+    
 
-    authRoutes.get('/protected', requireAuth, function (req, res) {
-        res.send({
-            content: 'Success'
-        });
-    });
-
-    // Todo Routes
-    // apiRoutes.use('/todos', todoRoutes);
-
-    // todoRoutes.get('/', requireAuth, AuthenticationController.roleAuthorization(['reader','creator','editor']), TodoController.getTodos);
-    // todoRoutes.post('/', requireAuth, AuthenticationController.roleAuthorization(['creator','editor']), TodoController.createTodo);
-    // todoRoutes.delete('/:todo_id', requireAuth, AuthenticationController.roleAuthorization(['editor']), TodoController.deleteTodo);
 
     // Set up routes
     app.use('/api', apiRoutes);

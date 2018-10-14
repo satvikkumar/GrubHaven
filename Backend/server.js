@@ -10,6 +10,9 @@ var cors = require('cors');
 var databaseConfig = require('./config/database');
 var router = require('./app/routes');
 
+// Configuration
+mongoose.connect(databaseConfig.url);
+
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());                                     // parse application/json
@@ -17,8 +20,6 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(methodOverride());
 app.use(cors());
 
-// Configuration
-mongoose.connect(databaseConfig.url);
  
  
 app.use(function(req, res, next) {
@@ -27,32 +28,19 @@ app.use(function(req, res, next) {
    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
    next();
 });
- 
-
- 
-// Routes
 
 app.get("/", function(req, res) {
   res.send("Server Active. ")
 });
 
+router(app);
 
-// List employees
-app.get('/list', function(req, res) {
-
-    console.log("Listing users");
-
-    // use mongoose to get all employees
-    emp.find(function(err, employee) {
-
-        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-        if (err)
-            res.send(err)
-
-        res.send(employee); // return all reviews in JSON format
-    });
-});
  
+
+
+
+// Routes
+
     // create review and send back all reviews after creation
     // app.post('/api/reviews', function(req, res) {
  
