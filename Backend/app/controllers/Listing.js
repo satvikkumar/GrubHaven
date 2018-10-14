@@ -1,4 +1,4 @@
-var emp = require('../models/employee');
+var Emp = require('../models/employee');
 
 
 exports.list=function(req, res) {
@@ -6,7 +6,7 @@ exports.list=function(req, res) {
     console.log("Listing users");
 
     // use mongoose to get all employees
-    emp.find(function(err, employee) {
+    Emp.find(function(err, employee) {
 
         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
         if (err)

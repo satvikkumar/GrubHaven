@@ -22,6 +22,7 @@ var UserSchema = new mongoose.Schema({
 }, {
     timestamps: true
 });
+
  
 UserSchema.pre('save', function(next){
  
