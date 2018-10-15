@@ -7,11 +7,16 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login'
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterPage } from '../pages/register/register';
 import { ManagerHomePage } from '../pages/manager-home/manager-home';
+import { SearchPage } from '../pages/search/search';
+import { AuthProvider } from '../providers/auth/auth';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +25,14 @@ import { ManagerHomePage } from '../pages/manager-home/manager-home';
     LoginPage,
     RegisterPage,
     ManagerHomePage,
+    SearchPage,
     ListPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -34,12 +42,14 @@ import { ManagerHomePage } from '../pages/manager-home/manager-home';
     RegisterPage,
     ManagerHomePage,
     HomePage,
+    SearchPage,
     ListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider
   ]
 })
 export class AppModule {}

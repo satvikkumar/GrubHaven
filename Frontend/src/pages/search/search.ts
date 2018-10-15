@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
-import { SearchPage } from '../search/search'
-import { Auth } from '../../providers/auth/auth';
+//import { Auth } from '../../providers/auth/auth';
 
 @IonicPage()
 @Component({
@@ -20,7 +19,7 @@ export class SearchPage {
    */
   search() {
 
-    let credentials = {name:this.restaurant_name}
+    /*let credentials = {name:this.restaurant_name}
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     let token_1 = this.storage.get('token')
@@ -33,22 +32,16 @@ export class SearchPage {
         console.log(data);
         //this.token = data.token;
 
-        /*this.storage.set('token', data.token);*/
+        //this.storage.set('token', data.token);
         resolve(data);
 
         resolve(res.json());
       }, (err) => {
         reject(err);
-      });
+      });*/
   }
 
   /**
    * Navigate to the detail page for this item.
    */
-  openItem(item: Item) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
-    });
-  }
-
 }

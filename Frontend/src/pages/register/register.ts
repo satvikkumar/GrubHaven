@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
-//import { Auth } from '../../providers/auth/auth';
+import { AuthProvider } from '../../providers/auth/auth';
 import { ManagerHomePage } from '../manager-home/manager-home';
 
 
@@ -11,17 +11,18 @@ import { ManagerHomePage } from '../manager-home/manager-home';
 })
 export class RegisterPage {
   registerCredentials = { email: '', password: '', role: '' };
-  constructor(public navCtrl: NavController, public AlertCtrl : AlertController ) {
+  constructor(public navCtrl: NavController, public authService: AuthProvider, public AlertCtrl : AlertController ) {
   }
 
   public register() {
 
-    /*let details = {email : this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role};
+    let details = {email : this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role};
     var header = { "headers": {"Content-Type": "application/json"} };
     
     this.authService.createAccount(details).then((result) => {
       let data = JSON.parse(JSON.stringify(result["user"]));
-    if ((data.role) == 'reader')
+      console.log(result);
+    if ((data.role) == 'manager')
     this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
     else
       console.log(data.role);
@@ -30,19 +31,19 @@ export class RegisterPage {
     }, (err) => {
 
       
-      let data = err.json();
+      /*let data = err.json();
      let alert = this.AlertCtrl.create({
         title:  "Error",
         message: data.error,
         buttons : ['Dismiss']
       });
       alert.present();
-      console.log(data);
-    });*/
-    if (this.registerCredentials.role == 'manager')
+      console.log(data);*/
+    });
+    /*if (this.registerCredentials.role == 'manager')
       this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
 
     else
-      console.log("CUSTOMER")
+      console.log("CUSTOMER")*/
   }
 }

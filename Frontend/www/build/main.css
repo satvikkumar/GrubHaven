@@ -25806,3 +25806,115 @@ page-register .login-content .register-btn {
   color: #ffffff;
   font-size: 0.8em;
 }
+
+page-review .login-content {
+  background: #FFFFFF;
+}
+
+page-review .login-content .logo-row {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+page-review .login-content .login-box {
+  background: #ff3333;
+  padding: 20px 20px 0px 20px;
+  margin-top: 30px;
+}
+
+page-review .login-content ion-row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+page-review .login-content ion-item {
+  border-radius: 30px !important;
+  padding-left: 30px !important;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-bottom: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-review .login-content .signup-col {
+  margin: 0px 16px 0px 16px;
+  padding-bottom: 20px;
+}
+
+page-review .login-content .item-inner {
+  border-bottom-color: #ffffff !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-review .login-content .submit-btn {
+  background: #dac9c9;
+  border-radius: 30px !important;
+  border: 1px solid #ffffff;
+}
+
+page-review .login-content .register-btn {
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+page-search .login-content {
+  background: #FFFFFF;
+}
+
+page-search .login-content .logo-row {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+page-search .login-content .login-box {
+  background: #ff3333;
+  padding: 20px 20px 0px 20px;
+  margin-top: 30px;
+}
+
+page-search .login-content ion-row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+page-search .login-content ion-item {
+  border-radius: 30px !important;
+  padding-left: 30px !important;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-bottom: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-search .login-content .signup-col {
+  margin: 0px 16px 0px 16px;
+  padding-bottom: 20px;
+}
+
+page-search .login-content .item-inner {
+  border-bottom-color: #ffffff !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-search .login-content .submit-btn {
+  background: #51CFB1;
+  border-radius: 30px !important;
+  border: 1px solid #ffffff;
+}
+
+page-search .login-content .register-btn {
+  color: #ffffff;
+  font-size: 0.8em;
+}
