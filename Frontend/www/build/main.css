@@ -25878,12 +25878,19 @@ page-search .login-content .login-box {
   margin-top: 30px;
 }
 
+page-search .login-content .r_name, page-search .login-content .r_address, page-search .login-content .r_city, page-search .login-content .r_contact, page-search .login-content .r_cuisine {
+  padding: 20px 20px 0px 20px;
+  margin-top: -1%;
+}
+
 page-search .login-content .r_name {
   font-weight: bold;
+  border: 1px solid #000000;
+  color: blue;
 }
 
 page-search .login-content #content {
-  background: #ff3333;
+  background: #f8f8f8;
   display: none;
   text-align: center;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http, Headers } from '@angular/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import * as Enums from '../../assets/apiconfig';
@@ -17,7 +18,7 @@ export class SearchPage {
   availableRestaurants: any []; 
   restaurant_name:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient ) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http ) { }
 
   
   public search() {
@@ -25,22 +26,22 @@ export class SearchPage {
     //TODO 
     //Read json of restaurants and populate below array
     let postParams = {name: this.restaurant_name};
-    var header = { "headers": {"Content-Type": "application/json"} };
   
-    console.log(postParams);
     let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
         let url = Enums.APIURL.URL1;
         let path = url.concat( "/api/search");
+        console.log(path);
         console.log(postParams);
 
 
-       /* this.http.post(path, JSON.stringify(postParams), {headers: headers})
+        this.http.post(path, JSON.stringify(postParams), {headers: headers})
           .subscribe(res => {
  
-            console.log(data);
+            console.log(res);
             let data = res.json();
+            
             var cont = document.getElementsByClassName('r_name')[0];
          let lbl1 = "RESTAURANT NAME: " 
          cont.innerHTML = lbl1.concat(data.name);
@@ -65,34 +66,12 @@ export class SearchPage {
  
           }, (err) => {
             console.log(err);
-          });*/
-
-         var cont = document.getElementsByClassName('r_name')[0];
-         let lbl1 = "RESTAURANT NAME: " 
-         cont.innerHTML = lbl1.concat('REST1');
-
-         var cont = document.getElementsByClassName('r_address')[0];
-         let lbl2 = "ADDRESS: "
-         cont.innerHTML = lbl2.concat('banashankari');
-
-         var cont = document.getElementsByClassName('r_city')[0];
-         let lbl3 = "CITY: "
-         cont.innerHTML = lbl3.concat('bangalore');
-
-         var cont = document.getElementsByClassName('r_contact')[0];
-         let lbl4 = "CONTACT: "
-         cont.innerHTML = lbl4.concat('911');
-         
-         var cont = document.getElementsByClassName('r_cuisine')[0];
-         let lbl5 = "CUISINE: "
-         cont.innerHTML = lbl5.concat('indian');
-
-         document.getElementById('content').style.display = 'block';
+          });
   }
 
   public book()
   {
-      //Add the 
+      //Add the link to make reservations
   }
 
   /**

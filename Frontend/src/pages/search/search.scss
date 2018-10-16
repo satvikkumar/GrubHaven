@@ -14,12 +14,18 @@ page-search {
             margin-top: 30px;
           }
 
+          .r_name, .r_address, .r_city, .r_contact, .r_cuisine{
+            padding: 20px 20px 0px 20px;
+            margin-top: -1%;
+          }
           .r_name{
             font-weight: bold;
+            border: 1px solid #000000;
+            color: blue;
           }
 
           #content {
-            background: #ff3333;
+            background: #f8f8f8;
             display: none;
             text-align : center;
           }
