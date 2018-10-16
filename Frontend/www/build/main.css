@@ -25878,6 +25878,16 @@ page-search .login-content .login-box {
   margin-top: 30px;
 }
 
+page-search .login-content .r_name {
+  font-weight: bold;
+}
+
+page-search .login-content #content {
+  background: #ff3333;
+  display: none;
+  text-align: center;
+}
+
 page-search .login-content ion-row {
   -webkit-box-align: center;
   -webkit-align-items: center;
