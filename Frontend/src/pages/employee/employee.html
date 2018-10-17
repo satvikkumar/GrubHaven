@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>GrubHaven</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding="true">
+  <ion-tabs>
+    <ion-tab [root]="Chef_tab" tabTitle="Chefs"></ion-tab>
+    <ion-tab [root]="Waiter_tab" tabTitle="Waiter"></ion-tab>
+  </ion-tabs>
+  </ion-content>

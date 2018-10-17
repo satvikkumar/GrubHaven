@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
-import { RegisterPage } from '../register/register';
+
+
 import { AuthProvider } from '../../providers/auth/auth';
 import { ManagerHomePage } from '../manager-home/manager-home';
+import { RegisterPage } from '../register/register';
  
 @IonicPage()
 @Component({
@@ -11,14 +13,15 @@ import { ManagerHomePage } from '../manager-home/manager-home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+ 
   loading: Loading;
-  //registerCredentials = { email: '', password: '' };
   email: string;
   password: string;
  
   constructor(private nav: NavController , public authService: AuthProvider , private alertCtrl: AlertController, private loadingCtrl: LoadingController, public http:HttpClient) { }
  
   public createAccount() {
+   
   this.nav.push(RegisterPage);
   
   }
@@ -34,11 +37,10 @@ export class LoginPage {
     let data = JSON.parse(JSON.stringify(result["user"]));
     if ((data.role) == 'manager')
     {
-      console.log(data.role);
       this.nav.push(ManagerHomePage, { username: this.email });
     }
     else
-    console.log(data.role);
+      console.log(data.role);
       
   }, (err) => {
     console.log(err);

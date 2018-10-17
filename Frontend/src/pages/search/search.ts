@@ -18,7 +18,9 @@ export class SearchPage {
   availableRestaurants: any []; 
   restaurant_name:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http ) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http ) { 
+    
+  }
 
   
   public search() {

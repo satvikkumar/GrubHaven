@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ManagerHomePage } from '../manager-home/manager-home';
+import { LoginPage } from '../login/login';
 
 
 @IonicPage()
@@ -13,7 +14,12 @@ export class RegisterPage {
   registerCredentials = { email: '', password: '', role: '' };
   constructor(public navCtrl: NavController, public authService: AuthProvider, public AlertCtrl : AlertController ) {
   }
+  public GoToLogin() {
 
+    
+    this.navCtrl.push(LoginPage);
+    
+    }
   public register() {
 
     let details = {email : this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role};

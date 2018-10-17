@@ -25674,193 +25674,430 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-login .login-content {
-  background: #FFFFFF;
+/* #Style Login flat
+================================================*/
+page-login {
+  /* Settings font size
+    =========================================*/
+  /* Settings font weight
+    =========================================*/
+  /* Settings text color
+    =========================================*/
+  /* Content
+    ===============================*/
+  /* Responsive for tablet
+   ===============================*/
 }
 
-page-login .login-content .logo-row {
-  padding-top: 50px;
-  padding-bottom: 20px;
+page-login ion-content {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 
-page-login .login-content .login-box {
-  background: #ff3333;
-  padding: 20px 20px 0px 20px;
-  margin-top: 30px;
+page-login ion-content .scroll-content {
+  padding-bottom: 0 !important;
 }
 
-page-login .login-content ion-row {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
+page-login ion-content .scroll-content ion-grid {
+  min-height: 100%;
+  /* Settings logo
+      ===============================*/
+  /* Settings title
+      ===============================*/
+  /* Settings form
+      ===============================*/
 }
 
-page-login .login-content ion-item {
-  border-radius: 30px !important;
-  padding-left: 30px !important;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-  border: 1px solid #ffffff;
-  border-bottom: 0px !important;
+page-login ion-content .scroll-content ion-grid [header] {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+page-login ion-content .scroll-content ion-grid [logo] {
+  height: 18px;
+  margin-top: 64px;
+  margin-left: 20px;
+}
+
+page-login ion-content .scroll-content ion-grid h1 {
+  color: #CCCCCC;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-right: 20%;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+page-login ion-content .scroll-content ion-grid strong {
+  display: block;
+}
+
+page-login ion-content .scroll-content ion-grid form {
+  margin-top: 20%;
+  /* Settings input-field
+        ===============================*/
+  /*Settings description
+        ===============================*/
+  /* Settings full button - Login button
+        ===============================*/
+}
+
+page-login ion-content .scroll-content ion-grid form [input-field] {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #CCCCCC;
+}
+
+page-login ion-content .scroll-content ion-grid form [input-field] .item:nth-last-child(1) .item-inner {
+  border-bottom: none !important;
+}
+
+page-login ion-content .scroll-content ion-grid form [input-field] .item-block {
+  overflow: visible !important;
+}
+
+page-login ion-content .scroll-content ion-grid form ion-item {
+  background-color: transparent !important;
+  /* Settings text-input
+          ===============================*/
+  /* Settings input-placeholder
+          ===============================*/
+}
+
+page-login ion-content .scroll-content ion-grid form ion-item ion-label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #FF0000 !important;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 17px;
+  margin-right: 10px;
+}
+
+page-login ion-content .scroll-content ion-grid form ion-item .item-inner {
+  display: block !important;
+  overflow: visible !important;
+  border-bottom: 1px solid #CCCCCC !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-page-login .login-content .signup-col {
-  margin: 0px 16px 0px 16px;
-  padding-bottom: 20px;
+page-login ion-content .scroll-content ion-grid form ion-item .text-input {
+  color: #242424;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100% !important;
+  margin: 19px 20px;
 }
 
-page-login .login-content .item-inner {
-  border-bottom-color: #ffffff !important;
+page-login ion-content .scroll-content ion-grid form ion-item ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+page-login ion-content .scroll-content ion-grid form ion-item ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+page-login ion-content .scroll-content ion-grid form ion-item :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+page-login ion-content .scroll-content ion-grid form ion-item :-moz-placeholder {
+  /* Firefox 18- */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+page-login ion-content .scroll-content ion-grid form [description] {
+  margin: 20px 0;
+}
+
+page-login ion-content .scroll-content ion-grid form [description] a {
+  color: #687DFC;
+  font-size: 10px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+page-login ion-content .scroll-content ion-grid form [description] p {
+  color: #242424;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+page-login ion-content .scroll-content ion-grid form [full] {
+  min-height: 57px;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: #687DFC !important;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16) !important;
+}
+
+@media (min-width: 576px) and (orientation: portrait) {
+  page-login ion-grid {
+    position: relative;
+  }
+  page-login [logo] {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+  }
+  page-login h1 {
+    margin-top: 50px !important;
+  }
+  page-login form {
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 576px) and (orientation: landscape) {
+  page-login ion-grid {
+    position: relative;
+  }
+  page-login [logo] {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+  }
+  page-login h1 {
+    margin-top: 50px !important;
+  }
+  page-login form {
+    margin-top: 0 !important;
+  }
+}
+
+/* #Style Login flat
+================================================*/
+page-register {
+  /* Settings font size
+  =========================================*/
+  /* Settings font weight
+  =========================================*/
+  /* Settings text color
+  =========================================*/
+  /* Content
+  ===============================*/
+  /* Responsive for tablet
+ ===============================*/
+}
+
+page-register ion-content {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+
+page-register ion-content .scroll-content {
+  padding-bottom: 0 !important;
+}
+
+page-register ion-content .scroll-content ion-grid {
+  min-height: 100%;
+  /* Settings logo
+    ===============================*/
+  /* Settings title
+    ===============================*/
+  /* Settings form
+    ===============================*/
+}
+
+page-register ion-content .scroll-content ion-grid [header] {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+page-register ion-content .scroll-content ion-grid [logo] {
+  height: 18px;
+  margin-top: 64px;
+  margin-left: 20px;
+}
+
+page-register ion-content .scroll-content ion-grid h1 {
+  color: #CCCCCC;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-right: 20%;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+page-register ion-content .scroll-content ion-grid strong {
+  display: block;
+}
+
+page-register ion-content .scroll-content ion-grid form {
+  margin-top: 20%;
+  /* Settings input-field
+      ===============================*/
+  /*Settings description
+      ===============================*/
+  /* Settings full button - Login button
+      ===============================*/
+}
+
+page-register ion-content .scroll-content ion-grid form [input-field] {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #CCCCCC;
+}
+
+page-register ion-content .scroll-content ion-grid form [input-field] .item:nth-last-child(1) .item-inner {
+  border-bottom: none !important;
+}
+
+page-register ion-content .scroll-content ion-grid form [input-field] .item-block {
+  overflow: visible !important;
+}
+
+page-register ion-content .scroll-content ion-grid form ion-item {
+  background-color: transparent !important;
+  /* Settings text-input
+        ===============================*/
+  /* Settings input-placeholder
+        ===============================*/
+}
+
+page-register ion-content .scroll-content ion-grid form ion-item ion-label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #FF0000 !important;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 17px;
+  margin-right: 10px;
+}
+
+page-register ion-content .scroll-content ion-grid form ion-item .item-inner {
+  display: block !important;
+  overflow: visible !important;
+  border-bottom: 1px solid #CCCCCC !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-page-login .login-content .submit-btn {
-  background: #dac9c9;
-  border-radius: 30px !important;
-  border: 1px solid #ffffff;
+page-register ion-content .scroll-content ion-grid form ion-item .text-input {
+  color: #242424;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100% !important;
+  margin: 19px 20px;
 }
 
-page-login .login-content .register-btn {
-  color: #ffffff;
-  font-size: 0.8em;
+page-register ion-content .scroll-content ion-grid form ion-item ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
 }
 
-page-manager-home .options {
-  background: white;
+page-register ion-content .scroll-content ion-grid form ion-item ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
 }
 
-page-manager-home .employees, page-manager-home .inventory, page-manager-home .analytics, page-manager-home .tables, page-manager-home .orders, page-manager-home .reservations {
-  border-radius: 30px !important;
-  border: 1px solid #ff3333;
+page-register ion-content .scroll-content ion-grid form ion-item :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
 }
 
-page-manager-home .basic {
-  background-color: #ff3333;
+page-register ion-content .scroll-content ion-grid form ion-item :-moz-placeholder {
+  /* Firefox 18- */
+  color: #CCCCCC !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
 }
 
-page-manager-home .heading {
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+page-register ion-content .scroll-content ion-grid form [description] {
+  margin: 20px 0;
 }
 
-page-register .login-content {
-  background: #FFFFFF;
+page-register ion-content .scroll-content ion-grid form [description] a {
+  color: #687DFC;
+  font-size: 10px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-page-register .login-content .logo-row {
-  padding-top: 50px;
-  padding-bottom: 20px;
+page-register ion-content .scroll-content ion-grid form [description] p {
+  color: #242424;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
 }
 
-page-register .login-content .login-box {
-  background: #ff3333;
-  padding: 20px 20px 0px 20px;
-  margin-top: 30px;
+page-register ion-content .scroll-content ion-grid form [full] {
+  min-height: 57px;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: #687DFC !important;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16) !important;
 }
 
-page-register .login-content ion-row {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
+@media (min-width: 576px) and (orientation: portrait) {
+  page-register ion-grid {
+    position: relative;
+  }
+  page-register [logo] {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+  }
+  page-register h1 {
+    margin-top: 50px !important;
+  }
+  page-register form {
+    margin-top: 0 !important;
+  }
 }
 
-page-register .login-content ion-item {
-  border-radius: 30px !important;
-  padding-left: 30px !important;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-  border: 1px solid #ffffff;
-  border-bottom: 0px !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-page-register .login-content .signup-col {
-  margin: 0px 16px 0px 16px;
-  padding-bottom: 20px;
-}
-
-page-register .login-content .item-inner {
-  border-bottom-color: #ffffff !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-page-register .login-content .submit-btn {
-  background: #51CFB1;
-  border-radius: 30px !important;
-  border: 1px solid #ffffff;
-}
-
-page-register .login-content .register-btn {
-  color: #ffffff;
-  font-size: 0.8em;
-}
-
-page-review .login-content {
-  background: #FFFFFF;
-}
-
-page-review .login-content .logo-row {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-
-page-review .login-content .login-box {
-  background: #ff3333;
-  padding: 20px 20px 0px 20px;
-  margin-top: 30px;
-}
-
-page-review .login-content ion-row {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-}
-
-page-review .login-content ion-item {
-  border-radius: 30px !important;
-  padding-left: 30px !important;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-  border: 1px solid #ffffff;
-  border-bottom: 0px !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-page-review .login-content .signup-col {
-  margin: 0px 16px 0px 16px;
-  padding-bottom: 20px;
-}
-
-page-review .login-content .item-inner {
-  border-bottom-color: #ffffff !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-page-review .login-content .submit-btn {
-  background: #dac9c9;
-  border-radius: 30px !important;
-  border: 1px solid #ffffff;
-}
-
-page-review .login-content .register-btn {
-  color: #ffffff;
-  font-size: 0.8em;
+@media (min-width: 576px) and (orientation: landscape) {
+  page-register ion-grid {
+    position: relative;
+  }
+  page-register [logo] {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+  }
+  page-register h1 {
+    margin-top: 50px !important;
+  }
+  page-register form {
+    margin-top: 0 !important;
+  }
 }
 
 page-search .login-content {

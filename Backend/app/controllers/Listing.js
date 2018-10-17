@@ -1,17 +1,27 @@
 var Emp = require('../models/employee');
 
 
-exports.list=function(req, res) {
+exports.list = function(req, res) {
 
     console.log("Listing users");
 
     // use mongoose to get all employees
-    Emp.find(function(err, employee) {
+    var type = req.body.employee_type;
+    console.log(req.body)
 
-        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-        if (err)
-            res.send(err)
+    Emp.find({
+        employee_type: type
+    }, function (err, employee) {
 
-        res.send(employee); // return all reviews in JSON format
+        if (err) {
+            return next(err);
+        }
+
+        else {
+            console.log(employee);
+            res.send(employee);
+        };
+
+
     });
 }

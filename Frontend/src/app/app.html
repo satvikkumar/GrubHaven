@@ -6,18 +6,24 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item >
-        Manage Table
+    <ion-list inset>
+      <button ion-item menuClose   (click)="goToEmployees()">
+        Manage Employees
       </button>
-      <button menuClose ion-item >
-        Reservation
-      </button>
-      <button menuClose ion-item >
+      <button ion-item menuClose   (click)="goToInventory()">
         Inventory
       </button>
-      <button menuClose ion-item >
-        Manage Employees
+      <button ion-item menuClose   (click)="goToOrders()">
+        View Orders
+      </button>
+      <button ion-item  menuClose    (click)="goToTables()">
+        Manage Tables
+      </button>
+      <button ion-item  menuClose    (click)="goToReservations()">
+      Reservations
+      </button>
+      <button ion-item  menuClose    (click)="goToAnalytics()">
+      View Analytics
       </button>
       
       <!-- *ngFor="let p of pages" (click)="openPage(p)"> -->

@@ -2,8 +2,8 @@ var AuthenticationController = require('./controllers/authentication');
 var express = require('express');
 var passportService = require('../config/passport');
 var passport = require('passport');
-var Listing=require('./controllers/Listing')
-var searchRestaurants=require('./controllers/searchRestaurants'); 
+var listing = require('./controllers/listing')
+var searchRestaurants = require('./controllers/searchRestaurants'); 
 
 var requireAuth = passport.authenticate('jwt', {
     session: false
@@ -19,7 +19,7 @@ module.exports = function (app) {
     // Auth Routes
     authRoutes.post('/register', AuthenticationController.register);
     authRoutes.post('/login', requireLogin, AuthenticationController.login);
-    authRoutes.get('/list',Listing.list);
+    authRoutes.post('/list',listing.list);
     authRoutes.post('/search',searchRestaurants.search);
     
 

@@ -2,31 +2,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { LoginPage } from '../pages/login/login'
-import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage'
 
+import { MyApp } from './app.component';
+import { ManagerHomePage } from '../pages/manager-home/manager-home';
+
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { RegisterPage } from '../pages/register/register';
-import { ManagerHomePage } from '../pages/manager-home/manager-home';
-import { SearchPage } from '../pages/search/search';
-import { AuthProvider } from '../providers/auth/auth';
+import { LoginPage } from '../pages/login/login';
 
+import { AuthProvider } from '../providers/auth/auth';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeePage } from '../pages/employee/employee';
+import { RegisterPage } from '../pages/register/register';
+import { SearchPage } from '../pages/search/search';
+import { ChefPage } from '../pages/employee/chef/chef';
+import { WaiterPage } from '../pages/employee/waiter/waiter';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     LoginPage,
-    RegisterPage,
     ManagerHomePage,
+    EmployeePage,
     SearchPage,
-    ListPage
+    RegisterPage,
+    ChefPage,
+    WaiterPage
   ],
   imports: [
     BrowserModule,
@@ -39,11 +43,13 @@ import { AuthProvider } from '../providers/auth/auth';
   entryComponents: [
     MyApp,
     LoginPage,
-    RegisterPage,
     ManagerHomePage,
-    HomePage,
+    RegisterPage,
     SearchPage,
-    ListPage
+    ChefPage,
+    WaiterPage,
+    EmployeePage
+
   ],
   providers: [
     StatusBar,
