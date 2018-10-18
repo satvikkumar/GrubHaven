@@ -4,6 +4,7 @@ import * as Enums from '../../../assets/apiconfig';
 import { Http } from '@angular/http';
 import { Headers } from '@angular/http';
 import { AlertController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 
 /**
@@ -21,7 +22,7 @@ import { AlertController } from 'ionic-angular';
 export class WaiterPage {
   waiters: any;
 
-  constructor(   public alertCtrl: AlertController, public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams,public http: Http) {
+  constructor( private storage: Storage,  public alertCtrl: AlertController, public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams,public http: Http) {
   }
 
   ionViewCanEnter()
@@ -29,13 +30,17 @@ export class WaiterPage {
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
-  
+    var r_name = '';
     loading.present();
-
-    let postParams = {employee_type:"waiter"};
-  
+    this.storage.get('r_name').then((val) => {
+      console.log(val);
+        r_name = val 
+    
+    console.log(r_name)
+    let postParams = {employee_type:"waiter", hotel_name: r_name};
+    console.log(postParams);
     let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
+    headers.append('Content-Type', 'application/json');
 
         let url = Enums.APIURL.URL1;
         let path = url.concat( "/api/list");
@@ -50,13 +55,13 @@ export class WaiterPage {
               this.waiters.push(data[i].employee_name);
             
             }
-
            loading.dismiss();
           }, (err) => {
             console.log(err);
           });
+        });
   }
-  
+    
   public get_details($event,waiter)
   {
     console.log(waiter);

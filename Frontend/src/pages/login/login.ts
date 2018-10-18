@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { Storage } from '@ionic/storage';
 
 
 import { AuthProvider } from '../../providers/auth/auth';
@@ -18,7 +19,7 @@ export class LoginPage {
   email: string;
   password: string;
  
-  constructor(private nav: NavController , public authService: AuthProvider , private alertCtrl: AlertController, private loadingCtrl: LoadingController, public http:HttpClient) { }
+  constructor(private storage: Storage, private nav: NavController , public authService: AuthProvider , private alertCtrl: AlertController, private loadingCtrl: LoadingController, public http:HttpClient) { }
  
   public createAccount() {
    
@@ -37,7 +38,11 @@ export class LoginPage {
     let data = JSON.parse(JSON.stringify(result["user"]));
     if ((data.role) == 'manager')
     {
+      console.log(data.restaurant_name);
+      this.storage.set('r_name', data.restaurant_name);
+      
       this.nav.push(ManagerHomePage, { username: this.email });
+
     }
     else
       console.log(data.role);

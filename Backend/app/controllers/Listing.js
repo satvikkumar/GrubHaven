@@ -7,10 +7,12 @@ exports.list = function(req, res) {
 
     // use mongoose to get all employees
     var type = req.body.employee_type;
-    console.log(req.body)
+    var hotel = req.body.hotel_name;
+    //console.log(req.body)
 
     Emp.find({
-        employee_type: type
+        employee_type: type,
+        hotel_name : hotel
     }, function (err, employee) {
 
         if (err) {

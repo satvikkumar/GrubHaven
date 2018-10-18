@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 import { Http } from '@angular/http';
 import { Headers } from '@angular/http';
 import { AlertController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 import * as Enums from '../../../assets/apiconfig';
 
@@ -23,7 +24,7 @@ export class ChefPage {
  
   chefs: any;
 
-  constructor(  public alertCtrl: AlertController, public loadingCtrl: LoadingController,public navCtrl: NavController,public http: Http ) {
+  constructor( private storage: Storage,  public alertCtrl: AlertController, public loadingCtrl: LoadingController,public navCtrl: NavController,public http: Http ) {
 
   }
 
@@ -32,9 +33,15 @@ export class ChefPage {
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
+    var r_name = '';
     loading.present();
-
-    let postParams = {employee_type:"chef"};
+    this.storage.get('r_name').then((val) => {
+      console.log(val);
+        r_name = val 
+    
+    console.log(r_name)
+    let postParams = {employee_type:"chef", hotel_name: r_name};
+    console.log(postParams);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
@@ -55,6 +62,7 @@ export class ChefPage {
           }, (err) => {
             console.log(err);
           });
+        });
   }
   public get_details($event,chef)
   {

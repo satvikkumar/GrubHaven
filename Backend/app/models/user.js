@@ -17,6 +17,9 @@ var UserSchema = new mongoose.Schema({
         type: String,
         enum: ['manager', 'user'],
         default: 'user'
+    },
+    restaurant_name : {
+        type: String
     }
  
 }, {

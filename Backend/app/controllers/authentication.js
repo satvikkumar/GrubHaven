@@ -12,7 +12,8 @@ function setUserInfo(request) {
     return {
         _id: request._id,
         email: request.email,
-        role: request.role
+        role: request.role,
+        restaurant_name: request.restaurant_name
     };
 }
 
