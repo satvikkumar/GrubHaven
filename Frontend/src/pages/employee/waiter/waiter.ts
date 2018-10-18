@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 import * as Enums from '../../../assets/apiconfig';
 import { Http } from '@angular/http';
 import { Headers } from '@angular/http';
+import { AlertController } from 'ionic-angular';
 
 
 /**
@@ -20,7 +21,7 @@ import { Headers } from '@angular/http';
 export class WaiterPage {
   waiters: any;
 
-  constructor(  public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams,public http: Http) {
+  constructor(   public alertCtrl: AlertController, public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams,public http: Http) {
   }
 
   ionViewCanEnter()
@@ -55,8 +56,83 @@ export class WaiterPage {
             console.log(err);
           });
   }
+  
   public get_details($event,waiter)
   {
-    console.log(waiter)
-  }
+    console.log(waiter);
+    let postParams = {employee_name: waiter};
+  
+    let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        let url = Enums.APIURL.URL1;
+        let path = url.concat( "/api/employee");
+        console.log(path);
+        console.log(postParams);
+
+
+        this.http.post(path, JSON.stringify(postParams), {headers: headers})
+          .subscribe(res => {
+ 
+            console.log(res);
+            let data = res.json();
+            let alert = this.alertCtrl.create({
+              title: 'Employee Details',
+              message: "Name: " + data.employee_name,
+              inputs: [
+                {
+                  name: 'employee_address', placeholder: data.address
+                },
+                {
+                  name: 'contact', placeholder: data.contact
+                },
+                {
+                  name: 'shift_time', placeholder: data.shift_time
+                }
+              ],
+              buttons: [
+                {
+                  text: 'Cancel',
+                  role: 'cancel',
+                  handler: result => {
+                    console.log('Cancel clicked');
+                  }
+                },
+                {
+                  text: 'Change',
+                  handler: result => {
+                    let postParams = {employee_name: data.employee_name, 
+                      address: result.employee_address, 
+                      contact : result.contact , 
+                      shift_time : result.shift_time };
+
+                    let headers = new Headers();
+                    headers.append('Content-Type', 'application/json');
+
+                    let url = Enums.APIURL.URL1;
+                    let path = url.concat( "/api/eedit");
+
+                    console.log(path);
+                    console.log(postParams);
+
+                    this.http.post(path, JSON.stringify(postParams), {headers: headers})
+                    .subscribe(res =>{
+                        console.log(res);
+
+                        let alert2 = this.alertCtrl.create({
+                        title: "Successful",
+                        subTitle: "Details Changed",
+                        buttons: ['Dismiss']
+            });
+            alert2.present();
+                    }, (err) => {
+                      console.log(err);
+                    });
+                }
+              }
+              ]
+            });
+            alert.present();
+          });
+    }
 }
