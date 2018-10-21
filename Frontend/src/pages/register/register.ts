@@ -12,7 +12,15 @@ import { CustomerHomePage } from '../customer-home/customer-home';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  registerCredentials = { email: '', password: '', role: '' };
+  registerCredentials = { email: '', password: '', role: '', restaurant_name : '' };
+  manager: boolean = true;
+        radio_select(value) {
+        if (value == 'manager') {
+    this.manager = false;
+  } else if (value == 'user') {
+    this.manager = true;
+  }
+}
   constructor(public navCtrl: NavController, public authService: AuthProvider, public AlertCtrl : AlertController ) {
   }
   public GoToLogin() {
@@ -23,13 +31,15 @@ export class RegisterPage {
     }
   public register() {
 
-    let details = {email : this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role};
+    let details = {email : this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role, restaurant_name : this.registerCredentials.restaurant_name};
     var header = { "headers": {"Content-Type": "application/json"} };
+    console.log(details);
+
     
     this.authService.createAccount(details).then((result) => {
       let data = JSON.parse(JSON.stringify(result["user"]));
       console.log(result);
-    if ((data.role) == 'manager')
+    if ((this.registerCredentials.role) == 'manager')
     this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
     else
     {
@@ -49,10 +59,6 @@ export class RegisterPage {
       alert.present();
       console.log(data);*/
     });
-    /*if (this.registerCredentials.role == 'manager')
-      this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
-
-    else
-      console.log("CUSTOMER")*/
   }
+
 }

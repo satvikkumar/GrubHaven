@@ -30,8 +30,24 @@
                 <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" [ngModelOptions]="{standalone: true}" required></ion-input>
                 <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->
               </ion-item>
-              <ion-item no-padding>
-                  <ion-input type="text" placeholder="Role" name="role" [(ngModel)]="registerCredentials.role" required></ion-input>
+                <ion-list radio-group [(ngModel)]="registerCredentials.role" name = "role" class = "field">
+
+                  <ion-list-header>
+                    Who are you?
+                  </ion-list-header>
+                
+                  <ion-item>
+                    <ion-label>Manager</ion-label>
+                    <ion-radio value="manager" (ionSelect)="radio_select('manager')"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item>
+                    <ion-label>User</ion-label>
+                    <ion-radio value="user" (ionSelect)="radio_select('user')"></ion-radio>
+                  </ion-item>
+                  </ion-list>
+                <ion-item no-padding>
+                  <ion-input type="text" [disabled] = "manager" placeholder="Restaurant Name" name="restaurant_name" [(ngModel)]="registerCredentials.restaurant_name" required></ion-input>
                   <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->
                 </ion-item>
               
