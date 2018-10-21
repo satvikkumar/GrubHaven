@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button left menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>GrubHaven</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <form  #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-input class = "search" type="text" placeholder="Enter City" name="city" [(ngModel)]="city" required></ion-input>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>
+        </ion-col>
+      </ion-row>
+  </form>
+</div>
+  <ion-card *ngFor="let review of reviews;  let i = index">
+
+      <ion-card-header class = "rname">
+       {{ restaurant[i] }}  
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{ review }}
+        <!-- Add card content here! -->
+      </ion-card-content>
+
+      <ion-card-content class = "by">
+        Review By: {{ custname[i] }}
+        <!-- Add card content here! -->
+      </ion-card-content>
+
+      
+    
+    </ion-card>
+</ion-content>
+
+

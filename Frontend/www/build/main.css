@@ -25674,6 +25674,21 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-customer-home .search {
+  border: 1px solid grey;
+}
+
+page-customer-home .rname {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+page-customer-home .by {
+  font-weight: italic;
+  font-size: 10px;
+  color: grey;
+}
+
 /* #Style Login flat
 ================================================*/
 page-login {
@@ -26100,39 +26115,28 @@ page-register ion-content .scroll-content ion-grid form [full] {
   }
 }
 
-page-search .login-content {
-  background: #FFFFFF;
+page-search .search {
+  border: 1px solid grey;
 }
 
-page-search .login-content .logo-row {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-
-page-search .login-content .login-box {
-  background: #ff3333;
-  padding: 20px 20px 0px 20px;
-  margin-top: 30px;
-}
-
-page-search .login-content .r_name, page-search .login-content .r_address, page-search .login-content .r_city, page-search .login-content .r_contact, page-search .login-content .r_cuisine {
+page-search .r_name, page-search .r_address, page-search .r_city, page-search .r_contact, page-search .r_cuisine {
   padding: 20px 20px 0px 20px;
   margin-top: -1%;
 }
 
-page-search .login-content .r_name {
+page-search .r_name {
   font-weight: bold;
   border: 1px solid #000000;
   color: blue;
 }
 
-page-search .login-content #content {
+page-search #content {
   background: #f8f8f8;
   display: none;
   text-align: center;
 }
 
-page-search .login-content ion-row {
+page-search ion-row {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -26140,7 +26144,7 @@ page-search .login-content ion-row {
   text-align: center;
 }
 
-page-search .login-content ion-item {
+page-search ion-item {
   border-radius: 30px !important;
   padding-left: 30px !important;
   font-size: 0.9em;
@@ -26151,24 +26155,18 @@ page-search .login-content ion-item {
   box-shadow: none !important;
 }
 
-page-search .login-content .signup-col {
+page-search .signup-col {
   margin: 0px 16px 0px 16px;
   padding-bottom: 20px;
 }
 
-page-search .login-content .item-inner {
+page-search .item-inner {
   border-bottom-color: #ffffff !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-page-search .login-content .submit-btn {
-  background: #51CFB1;
-  border-radius: 30px !important;
-  border: 1px solid #ffffff;
-}
-
-page-search .login-content .register-btn {
+page-search .register-btn {
   color: #ffffff;
   font-size: 0.8em;
 }

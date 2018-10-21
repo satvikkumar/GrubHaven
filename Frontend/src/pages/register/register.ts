@@ -3,6 +3,7 @@ import { NavController, AlertController, LoadingController, Loading, IonicPage }
 import { AuthProvider } from '../../providers/auth/auth';
 import { ManagerHomePage } from '../manager-home/manager-home';
 import { LoginPage } from '../login/login';
+import { CustomerHomePage } from '../customer-home/customer-home';
 
 
 @IonicPage()
@@ -31,9 +32,11 @@ export class RegisterPage {
     if ((data.role) == 'manager')
     this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
     else
+    {
+      this.navCtrl.push(CustomerHomePage);
       console.log(data.role);
+    }
 
-      //Shruthi add customer home here
     }, (err) => {
 
       

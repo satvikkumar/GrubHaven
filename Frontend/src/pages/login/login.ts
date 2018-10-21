@@ -7,6 +7,7 @@ import { Storage } from '@ionic/storage';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ManagerHomePage } from '../manager-home/manager-home';
 import { RegisterPage } from '../register/register';
+import { CustomerHomePage } from '../customer-home/customer-home';
  
 @IonicPage()
 @Component({
@@ -45,8 +46,10 @@ export class LoginPage {
 
     }
     else
+    {
+    this.nav.push(CustomerHomePage);
       console.log(data.role);
-      
+    } 
   }, (err) => {
     console.log(err);
 

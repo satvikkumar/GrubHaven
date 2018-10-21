@@ -1,18 +1,8 @@
 page-search {
 
-  .login-content {
-          background: #FFFFFF;
-
-          .logo-row {
-            padding-top: 50px;
-            padding-bottom: 20px;
-          }
-
-          .login-box {
-            background: #ff3333;
-            padding: 20px 20px 0px 20px;
-            margin-top: 30px;
-          }
+  .search{
+    border: 1px solid grey;
+}
 
           .r_name, .r_address, .r_city, .r_contact, .r_cuisine{
             padding: 20px 20px 0px 20px;
@@ -55,15 +45,8 @@ page-search {
              box-shadow: none !important;
            }
 
-           .submit-btn {
-             background: #51CFB1;
-             border-radius: 30px !important;
-             border: 1px solid #ffffff;
-           }
-
            .register-btn {
              color: #ffffff;
              font-size: 0.8em;
            }
-        }
 }

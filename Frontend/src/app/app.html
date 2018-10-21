@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" id="menurest">
   <ion-header>
     <ion-toolbar>
       <ion-title>Menu</ion-title>
@@ -27,6 +27,33 @@
       </button>
       
       <!-- *ngFor="let p of pages" (click)="openPage(p)"> -->
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" id="menucust">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list inset>
+      <button ion-item menuClose   (click)="goToSearch()">
+        Search for Restaurant
+      </button>
+      <button ion-item menuClose   (click)="goToOrder()">
+        Place order
+      </button>
+      <button ion-item menuClose   (click)="goToBill()">
+        View Bills
+      </button>
+      <button ion-item  menuClose    (click)="goToRecommend()">
+        My Recommender
+      </button>
 
     </ion-list>
   </ion-content>

@@ -31,7 +31,7 @@ export class MyApp {
   public goToEmployees(){
     this.nav.push(EmployeePage);
   }
-  public goToInventory()
+  public goToSearch()
   {
     this.nav.push(SearchPage);
   }

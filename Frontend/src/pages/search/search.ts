@@ -3,6 +3,9 @@ import { Http, Headers } from '@angular/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import * as Enums from '../../assets/apiconfig';
+import { AlertController } from 'ionic-angular';
+
+
 //import { Auth } from '../../providers/auth/auth';
 
 @IonicPage()
@@ -18,7 +21,7 @@ export class SearchPage {
   availableRestaurants: any []; 
   restaurant_name:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http ) { 
+  constructor(private alertCtrl: AlertController , public navCtrl: NavController, public navParams: NavParams, public http: Http ) { 
     
   }
 
@@ -42,8 +45,20 @@ export class SearchPage {
           .subscribe(res => {
  
             console.log(res);
-            let data = res.json();
+            //let data = res.json();
+            console.log(JSON.stringify(res).length)
+            if (JSON.stringify(res).length < 150)
+            {
+              let alert = this.alertCtrl.create({
+                title: 'SORRY :(',
+                subTitle: 'Restaurant Not Found',
+                buttons: ['Dismiss']
+              });
+              alert.present();
+            }
             
+        else{
+          let data = res.json();
             var cont = document.getElementsByClassName('r_name')[0];
          let lbl1 = "RESTAURANT NAME: " 
          cont.innerHTML = lbl1.concat(data.name);
@@ -64,11 +79,12 @@ export class SearchPage {
          let lbl5 = "CUISINE: "
          cont.innerHTML = lbl5.concat(data.cuisine);
 
-         document.getElementById('content').style.display = 'block';
+         document.getElementById('content').style.display = 'block';}
  
           }, (err) => {
             console.log(err);
           });
+
   }
 
   public book()
