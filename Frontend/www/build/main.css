@@ -26115,6 +26115,10 @@ page-register ion-content .scroll-content ion-grid form [full] {
   }
 }
 
+page-review .field {
+  border: 1px solid grey;
+}
+
 page-search .search {
   border: 1px solid grey;
 }

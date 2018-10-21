@@ -7,6 +7,7 @@ import { ManagerHomePage } from '../pages/manager-home/manager-home';
 import { LoginPage } from '../pages/login/login';
 import { EmployeePage } from '../pages/employee/employee';
 import { SearchPage } from '../pages/search/search';
+import { ReviewPage } from '../pages/review/review';
 
 
 @Component({
@@ -34,6 +35,10 @@ export class MyApp {
   public goToSearch()
   {
     this.nav.push(SearchPage);
+  }
+  public goToReview()
+  {
+    this.nav.push(ReviewPage);
   }
 
 
