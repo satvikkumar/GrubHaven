@@ -7,6 +7,7 @@ var searchRestaurants = require('./controllers/searchRestaurants');
 var employeeEdit = require('./controllers/employeeEdit'); 
 var viewReviews = require('./controllers/viewReviews'); 
 var addReview = require('./controllers/addReview');
+var viewReviewByRestaurant = require('./controllers/viewReviewByRestaurant');
 
 var requireAuth = passport.authenticate('jwt', {
     session: false
@@ -28,6 +29,7 @@ module.exports = function (app) {
     authRoutes.post('/eedit', employeeEdit.edit );
     authRoutes.post('/viewReview', viewReviews.view );
     authRoutes.post('/addReview', addReview.add);
+    authRoutes.post('/viewReviewByRestaurant', viewReviewByRestaurant.view );
 
 
     // Set up routes

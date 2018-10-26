@@ -20,6 +20,8 @@ export class SearchPage {
 
   availableRestaurants: any []; 
   restaurant_name:string;
+  reviews : any;
+  custname: any;
 
   constructor(private alertCtrl: AlertController , public navCtrl: NavController, public navParams: NavParams, public http: Http ) { 
     
@@ -79,11 +81,35 @@ export class SearchPage {
          let lbl5 = "CUISINE: "
          cont.innerHTML = lbl5.concat(data.cuisine);
 
-         document.getElementById('content').style.display = 'block';}
+         document.getElementById('content').style.display = 'block';
+        
+         console.log(postParams);
+    
+     
+             let path2 = url.concat( "/api/viewReviewByRestaurant");
+   
+             console.log(path);
+     
+             this.http.post(path2, JSON.stringify(postParams), {headers: headers})
+               .subscribe(res => {
+      
+                 var data = res.json();
+                 this.reviews=[];
+                 this.custname=[];
+                 for (let i in data)
+                 {
+                   this.reviews.push(data[i].review);
+                   this.custname.push(data[i].customer_name);
+                 }
+               }, (err) => {
+                 console.log(err);
+               });
+        
+        }
  
           }, (err) => {
             console.log(err);
-          });
+          });  
 
   }
 

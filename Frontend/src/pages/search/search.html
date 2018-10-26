@@ -40,6 +40,23 @@
     
   </div>
 
+  <ion-card *ngFor="let review of reviews;  let i = index">
+
+    <ion-card-header>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ review }}
+    </ion-card-content>
+
+    <ion-card-content class = "by">
+      Review By: {{ custname[i] }}
+    </ion-card-content>
+
+    
+  
+  </ion-card>
+
 
 
 

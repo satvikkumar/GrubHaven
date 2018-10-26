@@ -26119,6 +26119,12 @@ page-review .field {
   border: 1px solid grey;
 }
 
+page-search .by {
+  font-weight: italic;
+  font-size: 10px;
+  color: grey;
+}
+
 page-search .search {
   border: 1px solid grey;
 }

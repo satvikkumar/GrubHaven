@@ -334,15 +334,15 @@ var RegisterPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.authService = authService;
         this.AlertCtrl = AlertCtrl;
-        this.registerCredentials = { email: '', password: '', role: '' };
+        this.registerCredentials = { email: '', password: '', role: '', restaurant_name: '' };
         this.manager = true;
     }
     RegisterPage.prototype.radio_select = function (value) {
         if (value == 'manager') {
-            this.manager = true;
+            this.manager = false;
         }
         else if (value == 'user') {
-            this.manager = false;
+            this.manager = true;
         }
     };
     RegisterPage.prototype.GoToLogin = function () {
@@ -350,12 +350,13 @@ var RegisterPage = /** @class */ (function () {
     };
     RegisterPage.prototype.register = function () {
         var _this = this;
-        var details = { email: this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role };
+        var details = { email: this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role, restaurant_name: this.registerCredentials.restaurant_name };
         var header = { "headers": { "Content-Type": "application/json" } };
+        console.log(details);
         this.authService.createAccount(details).then(function (result) {
             var data = JSON.parse(JSON.stringify(result["user"]));
             console.log(result);
-            if ((data.role) == 'manager')
+            if ((_this.registerCredentials.role) == 'manager')
                 _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__manager_home_manager_home__["a" /* ManagerHomePage */], { username: _this.registerCredentials.email });
             else {
                 _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__customer_home_customer_home__["a" /* CustomerHomePage */]);
@@ -371,11 +372,6 @@ var RegisterPage = /** @class */ (function () {
             alert.present();
             console.log(data);*/
         });
-        /*if (this.registerCredentials.role == 'manager')
-          this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
-    
-        else
-          console.log("CUSTOMER")*/
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -547,6 +543,21 @@ var SearchPage = /** @class */ (function () {
                 var lbl5 = "CUISINE: ";
                 cont.innerHTML = lbl5.concat(data.cuisine);
                 document.getElementById('content').style.display = 'block';
+                console.log(postParams);
+                var path2 = url.concat("/api/viewReviewByRestaurant");
+                console.log(path);
+                _this.http.post(path2, JSON.stringify(postParams), { headers: headers })
+                    .subscribe(function (res) {
+                    var data = res.json();
+                    _this.reviews = [];
+                    _this.custname = [];
+                    for (var i in data) {
+                        _this.reviews.push(data[i].review);
+                        _this.custname.push(data[i].customer_name);
+                    }
+                }, function (err) {
+                    console.log(err);
+                });
             }
         }, function (err) {
             console.log(err);
@@ -557,7 +568,7 @@ var SearchPage = /** @class */ (function () {
     };
     SearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-search',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/search/search.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n      <ion-title>GrubHaven</ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content class="login-content" padding>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input class = "search" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n        </ion-col>\n      </ion-row>\n  </form>\n\n<div id = "content">\n    <ion-label class = \'r_name\'></ion-label>\n    <ion-label class = \'r_address\'></ion-label>\n    <ion-label class = \'r_city\'></ion-label>\n    <ion-label class = \'r_contact\'></ion-label>\n    <ion-label class = \'r_cuisine\'></ion-label>\n\n    <button ion-button class="submit-btn" full type="submit" block clear (click)="book()">Book</button>\n\n    \n  </div>\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/search/search.html"*/
+            selector: 'page-search',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/search/search.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n      <ion-title>GrubHaven</ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content class="login-content" padding>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input class = "search" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n        </ion-col>\n      </ion-row>\n  </form>\n\n<div id = "content">\n    <ion-label class = \'r_name\'></ion-label>\n    <ion-label class = \'r_address\'></ion-label>\n    <ion-label class = \'r_city\'></ion-label>\n    <ion-label class = \'r_contact\'></ion-label>\n    <ion-label class = \'r_cuisine\'></ion-label>\n\n    <button ion-button class="submit-btn" full type="submit" block clear (click)="book()">Book</button>\n\n    \n  </div>\n\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n    <ion-card-header>\n    </ion-card-header>\n  \n    <ion-card-content>\n      {{ review }}\n    </ion-card-content>\n\n    <ion-card-content class = "by">\n      Review By: {{ custname[i] }}\n    </ion-card-content>\n\n    \n  \n  </ion-card>\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/search/search.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
     ], SearchPage);
