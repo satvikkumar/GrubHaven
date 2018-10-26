@@ -22554,8 +22554,8 @@ ion-navbar.toolbar {
 }
 
 .toolbar-background-md {
-  border-color: #b2b2b2;
-  background: #f8f8f8;
+  border-color: #00e5ff;
+  background: #00e5ff;
 }
 
 .header-md::after,
@@ -25687,6 +25687,10 @@ page-customer-home .by {
   font-weight: italic;
   font-size: 10px;
   color: grey;
+}
+
+page-employee {
+  background-image: url("Vanusa.jpg");
 }
 
 /* #Style Login flat

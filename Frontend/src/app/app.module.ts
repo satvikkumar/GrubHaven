@@ -23,6 +23,7 @@ import { WaiterPage } from '../pages/employee/waiter/waiter';
 import { CustomerHomePage } from '../pages/customer-home/customer-home';
 import { ReviewPage } from '../pages/review/review';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -41,7 +42,7 @@ import { ReviewPage } from '../pages/review/review';
     HttpClientModule,
     HttpModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'top'}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
