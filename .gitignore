@@ -1,2 +1,20 @@
-/Frontend/node_modules
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
 /Backend/node_modules
+
+/Frontend/.vscode/
+/Frontend/.idea/
+/Frontend/.ionic/
+/Frontend/.sourcemaps/
+/Frontend/.sass-cache/
+/Frontend/.tmp/
+/Frontend/.versions/
+/Frontend/coverage/
+/Frontend/dist/
+/Frontend/node_modules/
+/Frontend/tmp/
+/Frontend/temp/
+/Frontend/platforms/
+/Frontend/plugins/
+/Frontend/www/
