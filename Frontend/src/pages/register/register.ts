@@ -3,7 +3,10 @@ import { NavController, AlertController, LoadingController, Loading, IonicPage }
 import { AuthProvider } from '../../providers/auth/auth';
 import { ManagerHomePage } from '../manager-home/manager-home';
 import { LoginPage } from '../login/login';
+import { Http, Headers } from '@angular/http';
+import * as Enums from '../../assets/apiconfig';
 import { CustomerHomePage } from '../customer-home/customer-home';
+import { Storage } from '@ionic/storage';
 
 
 @IonicPage()
@@ -12,7 +15,8 @@ import { CustomerHomePage } from '../customer-home/customer-home';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  registerCredentials = { email: '', password: '', role: '', restaurant_name : '' };
+  registerCredentials = {  unique_id : '', email: '', password: '', role: '', restaurant_name : '' };
+  flag = 1;
   manager: boolean = true;
         radio_select(value) {
         if (value == 'manager') {
@@ -20,8 +24,10 @@ export class RegisterPage {
   } else if (value == 'user') {
     this.manager = true;
   }
+  
 }
-  constructor(public navCtrl: NavController, public authService: AuthProvider, public AlertCtrl : AlertController ) {
+
+  constructor(private storage: Storage, private alertCtrl: AlertController , public http: Http, public navCtrl: NavController, public authService: AuthProvider, public AlertCtrl : AlertController ) {
   }
   public GoToLogin() {
 
@@ -35,30 +41,54 @@ export class RegisterPage {
     var header = { "headers": {"Content-Type": "application/json"} };
     console.log(details);
 
-    
-    this.authService.createAccount(details).then((result) => {
-      let data = JSON.parse(JSON.stringify(result["user"]));
-      console.log(result);
-    if ((this.registerCredentials.role) == 'manager')
-    this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
-    else
-    {
-      this.navCtrl.push(CustomerHomePage);
-      console.log(data.role);
-    }
+    if ((this.registerCredentials.role) == 'manager'){
+      let postParams = {uniqueId: this.registerCredentials.unique_id, name : this.registerCredentials.restaurant_name};
+  
+    let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
 
-    }, (err) => {
+        let url = Enums.APIURL.URL1;
+        let path = url.concat( "/api/verify");
+        console.log(path);
+        console.log(postParams);
 
-      
-      /*let data = err.json();
-     let alert = this.AlertCtrl.create({
-        title:  "Error",
-        message: data.error,
-        buttons : ['Dismiss']
-      });
-      alert.present();
-      console.log(data);*/
+
+        this.http.post(path, JSON.stringify(postParams), {headers: headers})
+          .subscribe(res => {
+ 
+            console.log(res);
+            //let data = res.json();
+            console.log(JSON.stringify(res).length)
+            if (JSON.stringify(res).length < 150)
+            {
+              this.flag = 0;
+              let alert = this.alertCtrl.create({
+                title: 'WARNING',
+                subTitle: 'You are not authorized to do this',
+                buttons: ['Dismiss']
+              });
+              alert.present();
+            }
     });
+  }
+
+    if (this.flag == 1)
+    {
+      this.authService.createAccount(details).then((result) => {
+        let data = JSON.parse(JSON.stringify(result["user"]));
+        console.log(result);
+      if ((this.registerCredentials.role) == 'manager'){
+        this.storage.set('r_name', data.restaurant_name);
+        this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
+      }
+      else
+      {
+        this.navCtrl.push(CustomerHomePage);
+        console.log(data.role);
+      }
+
+      });
+   }
   }
 
 }

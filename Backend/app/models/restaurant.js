@@ -6,6 +6,10 @@ var RestaurantSchema = new mongoose.Schema({
         type: String,
         unique: true
     },
+    uniqueId:{
+        type: String,
+        required: true
+    },
     address: {
         type: String,
         required: true
@@ -20,10 +24,11 @@ var RestaurantSchema = new mongoose.Schema({
     cuisine: {
 	type: String
     },
-    
+    numTables: {
+        type: Number
+    },
     img: {
-        data: Buffer,
-        contentType :  String
+        type :  String
     }
  
 }, {
