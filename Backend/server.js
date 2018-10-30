@@ -88,5 +88,6 @@ router(app);
 
 // listen (start app with node vanilla_node.js) ======================================
 app.listen(8080);
+console.log("Checking Webhook")
 console.log("App listening on port 8080");
 
