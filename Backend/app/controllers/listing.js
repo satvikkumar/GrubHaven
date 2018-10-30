@@ -3,27 +3,27 @@ var Emp = require('../models/employee');
 
 exports.list = function(req, res) {
 
-	console.log("Listing users");
-	var type = req.body.employee_type;
-	console.log(req.body)
-	var hotel_name =String;
-        var employee_name = String;
-	var address=String;
-	var contact =String;
-	var shift_time =String;
+    console.log("Listing users");
 
-	
-	    Emp.find({employee_type:type},function (err, empl) {
+    // use mongoose to get all employees
+    var type = req.body.employee_type;
+    var hotel = req.body.hotel_name;
+    //console.log(req.body)
 
-				        if (err) {
-						            return next(err);
-						        }
+    Emp.find({
+        employee_type: type,
+        hotel_name : hotel
+    }, function (err, employee) {
 
-				        else {
-						        res.send(empl);
-					};
+        if (err) {
+            return next(err);
+        }
+
+        else {
+            console.log(employee);
+            res.send(employee);
+        };
 
 
-				    });
+    });
 }
-
