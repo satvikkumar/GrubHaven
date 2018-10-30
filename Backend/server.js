@@ -6,6 +6,7 @@ var morgan = require('morgan');             // log requests to the console (expr
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 var cors = require('cors');
+var shell = require('shelljs');
 
 var databaseConfig = require('./config/database');
 var router = require('./app/routes');
@@ -33,6 +34,11 @@ app.use(function(req, res, next) {
 app.get("/", function(req, res) {
   res.send("Server Active. ")
 });
+app.post("/github",function(req,res))
+{
+         console.log("New Push");
+         shell.exec("/home/ubuntu/git_pull.sh");
+         });
 
 router(app);
 
