@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 app.get("/", function(req, res) {
   res.send("Server Active. ")
 });
-app.post("/github",function(req,res))
+app.post("/github",function(req,res)
 {
          console.log("New Push");
          shell.exec("/home/ubuntu/git_pull.sh");
