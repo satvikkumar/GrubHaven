@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import * as Enums from '../../assets/apiconfig';
 import { AlertController } from 'ionic-angular';
+import { MakeReservationsPage } from '../make-reservations/make-reservations'; 
 
 
 //import { Auth } from '../../providers/auth/auth';
@@ -115,6 +116,7 @@ export class SearchPage {
 
   public book()
   {
+    this.navCtrl.push(MakeReservationsPage,  { restaurant_name: this.restaurant_name });
       //Add the link to make reservations
   }
 

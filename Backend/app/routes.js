@@ -9,6 +9,8 @@ var viewReviews = require('./controllers/viewReviews');
 var addReview = require('./controllers/addReview');
 var viewReviewByRestaurant = require('./controllers/viewReviewByRestaurant');
 var verify = require('./controllers/verify')
+var checkTables = require('./controllers/viewTables')
+var makeReservation = require('./controllers/makeReservation')
 
 var requireAuth = passport.authenticate('jwt', {
     session: false
@@ -32,6 +34,10 @@ module.exports = function (app) {
     authRoutes.post('/addReview', addReview.add);
     authRoutes.post('/viewReviewByRestaurant', viewReviewByRestaurant.view );
     authRoutes.post('/verify', verify.authorize );
+    authRoutes.post('/tables', checkTables.search);
+    authRoutes.post('/makeReservation', makeReservation.add)
+
+
 
 
     // Set up routes

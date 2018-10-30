@@ -10,7 +10,7 @@ var ReservationSchema = new mongoose.Schema({
         required: true
     },
     date: {
-        type: Date,
+        type: String,
         required: true
     },
     time: {
@@ -20,6 +20,10 @@ var ReservationSchema = new mongoose.Schema({
     table_number: {
 	type: String,
 	required: true
+    },
+    contact: {
+        type: String,
+        required: true
     }
  
 }, {
