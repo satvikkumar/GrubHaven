@@ -23,6 +23,11 @@ export class SearchPage {
   restaurant_name:string;
   reviews : any;
   custname: any;
+  numTables : any; 
+  address: any;
+  contact: any;
+  cuisine: any;
+  city : any;
 
   constructor(private alertCtrl: AlertController , public navCtrl: NavController, public navParams: NavParams, public http: Http ) { 
     
@@ -34,6 +39,7 @@ export class SearchPage {
     //TODO 
     //Read json of restaurants and populate below array
     let postParams = {name: this.restaurant_name};
+    console.log(postParams);
   
     let headers = new Headers();
         headers.append('Content-Type', 'application/json');
@@ -62,9 +68,11 @@ export class SearchPage {
             
         else{
           let data = res.json();
-            var cont = document.getElementsByClassName('r_name')[0];
+          console.log(data);
+          var cont = document.getElementsByClassName('r_name')[0];
          let lbl1 = "RESTAURANT NAME: " 
          cont.innerHTML = lbl1.concat(data.name);
+         console.log(cont.innerHTML)
 
          var cont = document.getElementsByClassName('r_address')[0];
          let lbl2 = "ADDRESS: "
@@ -82,9 +90,9 @@ export class SearchPage {
          let lbl5 = "CUISINE: "
          cont.innerHTML = lbl5.concat(data.cuisine);
 
+         this.numTables = data.numTables;
+
          document.getElementById('content').style.display = 'block';
-        
-         console.log(postParams);
     
      
              let path2 = url.concat( "/api/viewReviewByRestaurant");
@@ -116,7 +124,7 @@ export class SearchPage {
 
   public book()
   {
-    this.navCtrl.push(MakeReservationsPage,  { restaurant_name: this.restaurant_name });
+    this.navCtrl.push(MakeReservationsPage,  { restaurant_name: this.restaurant_name, numTables: this.numTables  });
       //Add the link to make reservations
   }
 

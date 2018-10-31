@@ -18,8 +18,10 @@ export class MakeReservationsPage {
 
   restaurant_name = ''
   path = '';
+  numTables = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
       this.restaurant_name = navParams.get('restaurant_name');
+      this.numTables = navParams.get('numTables');
   }
 
   ionViewDidLoad() {
@@ -29,6 +31,7 @@ export class MakeReservationsPage {
     let rname = "/" + this.restaurant_name;
     let image_name = rname.concat(".jpg");
     this.path = url.concat(image_name);
+    console.log(this.numTables);
 
   }
 
