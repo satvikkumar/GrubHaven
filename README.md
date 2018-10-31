@@ -11,7 +11,7 @@ Working Repository of GrubHaven for a Software Engineering Project
  - `npm run debug`
 
 ## Client
-// TODO
+Checking
 
 # License
 // TODO
