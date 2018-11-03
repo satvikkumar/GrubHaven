@@ -1,4 +1,4 @@
-var Order = require('../models/order');
+var Order = require('../models/orders');
 
 
 exports.view = function(req, res) {

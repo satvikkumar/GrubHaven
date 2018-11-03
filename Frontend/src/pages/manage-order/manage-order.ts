@@ -62,8 +62,8 @@ export class ManageOrderPage {
                 if(data[i].delivered=='no')
                 {
                 this.table_no.push(data[i].table_number);
-                this.dish.push(data[i+1].dish);
-                this.quant.push(data[i+3].quantity);
+                this.dish.push(data[i].dish);
+                this.quant.push(data[i].quantity);
                 }
                 
               }

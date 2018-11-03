@@ -1,4 +1,4 @@
-webpackJsonp([9],{
+webpackJsonp([10],{
 
 /***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6,10 +6,10 @@ webpackJsonp([9],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChefPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -140,7 +140,7 @@ var ChefPage = /** @class */ (function () {
     };
     ChefPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-chef',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/employee/chef/chef.html"*/'<!--\n  Generated template for the ChefPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding="true">\n    <ion-card *ngFor="let chef of chefs" (click)="get_details($event,chef)">\n\n        <ion-card-header>\n            {{ chef }}\n        </ion-card-header>\n      \n        <ion-card-content>\n            \n          <!-- Add card content here! -->\n        </ion-card-content>\n\n        \n      \n      </ion-card>\n  </ion-content>\n'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/employee/chef/chef.html"*/,
+            selector: 'page-chef',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\chef\chef.html"*/'<!--\n\n  Generated template for the ChefPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-buttons left>\n\n      <button ion-button left menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>GrubHaven</ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding="true">\n\n    <ion-card *ngFor="let chef of chefs" (click)="get_details($event,chef)">\n\n\n\n        <ion-card-header>\n\n            {{ chef }}\n\n        </ion-card-header>\n\n      \n\n        <ion-card-content>\n\n            \n\n          <!-- Add card content here! -->\n\n        </ion-card-content>\n\n\n\n        \n\n      \n\n      </ion-card>\n\n  </ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\chef\chef.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
     ], ChefPage);
@@ -157,10 +157,10 @@ var ChefPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WaiterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -292,7 +292,7 @@ var WaiterPage = /** @class */ (function () {
     };
     WaiterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-waiter',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/employee/waiter/waiter.html"*/'<!--\n  Generated template for the WaiterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding="true">\n\n    <ion-card *ngFor="let waiter of waiters" (click)="get_details($event,waiter)">\n\n        <ion-card-header>\n            {{ waiter }}\n        </ion-card-header>\n      \n        <ion-card-content>\n          <!-- Add card content here! -->\n        </ion-card-content>\n      \n      </ion-card>\n  </ion-content>'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/employee/waiter/waiter.html"*/,
+            selector: 'page-waiter',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\waiter\waiter.html"*/'<!--\n  Generated template for the WaiterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding="true">\n\n    <ion-card *ngFor="let waiter of waiters" (click)="get_details($event,waiter)">\n\n        <ion-card-header>\n            {{ waiter }}\n        </ion-card-header>\n      \n        <ion-card-content>\n          <!-- Add card content here! -->\n        </ion-card-content>\n      \n      </ion-card>\n  </ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\waiter\waiter.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
     ], WaiterPage);
@@ -309,14 +309,14 @@ var WaiterPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__manager_home_manager_home__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__assets_apiconfig__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__customer_home_customer_home__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -404,7 +404,7 @@ var RegisterPage = /** @class */ (function () {
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/register/register.html"*/'<ion-content class="login-content" padding>\n\n  \n    <ion-grid no-padding>\n      <!-- logo -->\n      <ion-row header align-items-start align-items-stretch>\n          <!-- <ion-col width-67> -->\n              <!-- <img src="../../assets/imgs/grubhaven.png"/> -->\n          <!-- </ion-col> -->\n  \n      <!-- Section form>-->\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n      <form padding  #registerForm="ngForm">\n        <ion-row align-items-start>\n          <ion-col col-12>\n            <h1><strong>Welcome!</strong>Register a new account!</h1>\n          </ion-col>\n        </ion-row>\n        <!-- Input-field -->\n        <ion-row>\n          <ion-col col-12>\n            <div input-field>\n              <!-- Input-field-text -->\n              <ion-item no-padding>\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="registerCredentials.email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n           </ion-item>\n              <!-- Input-field-password -->\n              <ion-item no-padding>\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" [ngModelOptions]="{standalone: true}" required></ion-input>\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n              </ion-item>\n                <ion-list radio-group [(ngModel)]="registerCredentials.role" name = "role" class = "field">\n\n                  <ion-list-header>\n                    Who are you?\n                  </ion-list-header>\n                \n                  <ion-item>\n                    <ion-label>Manager</ion-label>\n                    <ion-radio value="manager" (ionSelect)="radio_select(\'manager\')"></ion-radio>\n                  </ion-item>\n                \n                  <ion-item>\n                    <ion-label>User</ion-label>\n                    <ion-radio value="user" (ionSelect)="radio_select(\'user\')"></ion-radio>\n                  </ion-item>\n                  </ion-list>\n                <ion-item>\n                  <ion-input type="text" [disabled] = "manager" placeholder="Restaurant Name" name="restaurant_name" [(ngModel)]="registerCredentials.restaurant_name" required></ion-input>\n                </ion-item>\n                <ion-item>\n                  <ion-input type="password" [disabled] = "manager" placeholder="Unique Key" name="unique_id" [(ngModel)]="registerCredentials.unique_id" required></ion-input>\n                </ion-item>\n              \n            </div>\n            <!-- Login button -->\n            <ion-col col-12 no-padding>\n              <button no-margin ion-button full text-uppercase (click)=\'register()\'>Register</button>\n            </ion-col>\n            <!-- Description -->\n            <div description text-center>\n              <ion-row>\n                <!-- Signup now button -->\n                <ion-col col-12 no-padding>\n                  <p no-margin no-padding>Already a member!<a (click)="GoToLogin()">Login</a> </p>\n                </ion-col>\n              </ion-row>\n            </div>\n          </ion-col>\n        </ion-row>\n      </form>\n      </ion-col>\n    </ion-row>\n    </ion-grid>\n  </ion-content>'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/register/register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\register\register.html"*/'<ion-content class="login-content" padding>\n\n\n\n  \n\n    <ion-grid no-padding>\n\n      <!-- logo -->\n\n      <ion-row header align-items-start align-items-stretch>\n\n          <!-- <ion-col width-67> -->\n\n              <!-- <img src="../../assets/imgs/grubhaven.png"/> -->\n\n          <!-- </ion-col> -->\n\n  \n\n      <!-- Section form>-->\n\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n\n      <form padding  #registerForm="ngForm">\n\n        <ion-row align-items-start>\n\n          <ion-col col-12>\n\n            <h1><strong>Welcome!</strong>Register a new account!</h1>\n\n          </ion-col>\n\n        </ion-row>\n\n        <!-- Input-field -->\n\n        <ion-row>\n\n          <ion-col col-12>\n\n            <div input-field>\n\n              <!-- Input-field-text -->\n\n              <ion-item no-padding>\n\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="registerCredentials.email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n\n           </ion-item>\n\n              <!-- Input-field-password -->\n\n              <ion-item no-padding>\n\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" [ngModelOptions]="{standalone: true}" required></ion-input>\n\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n\n              </ion-item>\n\n                <ion-list radio-group [(ngModel)]="registerCredentials.role" name = "role" class = "field">\n\n\n\n                  <ion-list-header>\n\n                    Who are you?\n\n                  </ion-list-header>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Manager</ion-label>\n\n                    <ion-radio value="manager" (ionSelect)="radio_select(\'manager\')"></ion-radio>\n\n                  </ion-item>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>User</ion-label>\n\n                    <ion-radio value="user" (ionSelect)="radio_select(\'user\')"></ion-radio>\n\n                  </ion-item>\n\n                  </ion-list>\n\n                <ion-item>\n\n                  <ion-input type="text" [disabled] = "manager" placeholder="Restaurant Name" name="restaurant_name" [(ngModel)]="registerCredentials.restaurant_name" required></ion-input>\n\n                </ion-item>\n\n                <ion-item>\n\n                  <ion-input type="password" [disabled] = "manager" placeholder="Unique Key" name="unique_id" [(ngModel)]="registerCredentials.unique_id" required></ion-input>\n\n                </ion-item>\n\n              \n\n            </div>\n\n            <!-- Login button -->\n\n            <ion-col col-12 no-padding>\n\n              <button no-margin ion-button full text-uppercase (click)=\'register()\'>Register</button>\n\n            </ion-col>\n\n            <!-- Description -->\n\n            <div description text-center>\n\n              <ion-row>\n\n                <!-- Signup now button -->\n\n                <ion-col col-12 no-padding>\n\n                  <p no-margin no-padding>Already a member!<a (click)="GoToLogin()">Login</a> </p>\n\n                </ion-col>\n\n              </ion-row>\n\n            </div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </form>\n\n      </ion-col>\n\n    </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\register\register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], RegisterPage);
@@ -421,8 +421,8 @@ var RegisterPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeReservationsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -461,12 +461,11 @@ var MakeReservationsPage = /** @class */ (function () {
     };
     MakeReservationsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-make-reservations',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/make-reservations/make-reservations.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n      <ion-title>GrubHaven</ion-title>\n    </ion-navbar>\n  </ion-header>\n<ion-content>\n\n    <img src = "{{ path }}"/>\n  \n</ion-content>\n'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/make-reservations/make-reservations.html"*/,
+            selector: 'page-make-reservations',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\make-reservations\make-reservations.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      <ion-title>GrubHaven</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content>\n\n\n\n    <img src = "{{ path }}"/>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\make-reservations\make-reservations.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], MakeReservationsPage);
     return MakeReservationsPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=make-reservations.js.map
@@ -477,12 +476,103 @@ var MakeReservationsPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageOrderPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the ManageOrderPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ManageOrderPage = /** @class */ (function () {
+    function ManageOrderPage(storage, loadingCtrl, navCtrl, http) {
+        this.storage = storage;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
+        this.http = http;
+    }
+    ManageOrderPage.prototype.ionViewCanEnter = function () {
+        var _this = this;
+        var r_name = '';
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        this.storage.get('r_name').then(function (val) {
+            console.log(val);
+            r_name = val;
+        });
+        var postParams = { hotel_name: r_name };
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
+        var path = url.concat("/api/vieworder");
+        this.http.post(path, JSON.stringify(postParams), { headers: headers })
+            .subscribe(function (res) {
+            var data = res.json();
+            _this.dish = [];
+            _this.quant = [];
+            _this.table_no = [];
+            for (var i in data) {
+                if (data[i].delivered == 'no') {
+                    _this.table_no.push(data[i].table_number);
+                    _this.dish.push(data[i].dish);
+                    _this.quant.push(data[i].quantity);
+                }
+            }
+            loading.dismiss();
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    ManageOrderPage.prototype.get_details = function ($event, t) {
+        console.log(this.table_no);
+        console.log(this.dish);
+        console.log(this.quant);
+    };
+    ManageOrderPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-manage-order',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/'<!--\n  Generated template for the ManageOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>GrubHaven</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding="true">\n  <ion-card *ngFor="let t of table_no" (click)="get_details($event,t)">\n\n    <ion-card-header>\n      Table# - {{ t }}\n    </ion-card-header>\n</ion-card>\n    <ion-card-content>\n      <!-- add data! -->\n    </ion-card-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _d || Object])
+    ], ManageOrderPage);
+    return ManageOrderPage;
+    var _a, _b, _c, _d;
+}());
+
+//# sourceMappingURL=manage-order.js.map
+
+/***/ }),
+
+/***/ 113:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__customer_home_customer_home__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -546,7 +636,7 @@ var ReviewPage = /** @class */ (function () {
     };
     ReviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-review',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/review/review.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <form  #registerForm="ngForm">\n    <ion-row>\n      <ion-col>\n        <ion-list inset>\n\n          <ion-item class = "field">\n            <ion-input class = "restname" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n          </ion-item>\n          <ion-item class = "field">\n            <ion-input class = "name" type="text" placeholder="Enter your name" name="customer_name" [(ngModel)]="customer_name" required></ion-input>\n          </ion-item>\n          <ion-item class = "field">\n            <ion-textarea class = "review" type="text" placeholder="Enter your review" name="review" [(ngModel)]="review" required></ion-textarea>\n          </ion-item>\n          <ion-list radio-group [(ngModel)]="rating" name = "rating" class = "field">\n\n            <ion-list-header>\n              Rating\n            </ion-list-header>\n          \n            <ion-item>\n              <ion-label>1 Star</ion-label>\n              <ion-radio value="one"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>2 Star</ion-label>\n              <ion-radio value="two"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>3 Star</ion-label>\n              <ion-radio value="3"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>4 Star</ion-label>\n              <ion-radio value="4"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>5 Star</ion-label>\n              <ion-radio value="5"></ion-radio>\n            </ion-item>\n          \n          </ion-list>\n          \n\n        </ion-list>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col class="signup-col">\n        <button ion-button class="submit-btn" full type="submit" block clear (click)="submit()">Submit</button>\n      </ion-col>\n    </ion-row>\n</form>\n</ion-content>\n'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/review/review.html"*/,
+            selector: 'page-review',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\review\review.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-buttons left>\n\n      <button ion-button left menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>GrubHaven</ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <form  #registerForm="ngForm">\n\n    <ion-row>\n\n      <ion-col>\n\n        <ion-list inset>\n\n\n\n          <ion-item class = "field">\n\n            <ion-input class = "restname" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n\n          </ion-item>\n\n          <ion-item class = "field">\n\n            <ion-input class = "name" type="text" placeholder="Enter your name" name="customer_name" [(ngModel)]="customer_name" required></ion-input>\n\n          </ion-item>\n\n          <ion-item class = "field">\n\n            <ion-textarea class = "review" type="text" placeholder="Enter your review" name="review" [(ngModel)]="review" required></ion-textarea>\n\n          </ion-item>\n\n          <ion-list radio-group [(ngModel)]="rating" name = "rating" class = "field">\n\n\n\n            <ion-list-header>\n\n              Rating\n\n            </ion-list-header>\n\n          \n\n            <ion-item>\n\n              <ion-label>1 Star</ion-label>\n\n              <ion-radio value="one"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>2 Star</ion-label>\n\n              <ion-radio value="two"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>3 Star</ion-label>\n\n              <ion-radio value="3"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>4 Star</ion-label>\n\n              <ion-radio value="4"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>5 Star</ion-label>\n\n              <ion-radio value="5"></ion-radio>\n\n            </ion-item>\n\n          \n\n          </ion-list>\n\n          \n\n\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col class="signup-col">\n\n        <button ion-button class="submit-btn" full type="submit" block clear (click)="submit()">Submit</button>\n\n      </ion-col>\n\n    </ion-row>\n\n</form>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\review\review.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
     ], ReviewPage);
@@ -557,15 +647,15 @@ var ReviewPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 113:
+/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_reservations_make_reservations__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -608,12 +698,12 @@ var SearchPage = /** @class */ (function () {
             //let data = res.json();
             console.log(JSON.stringify(res).length);
             if (JSON.stringify(res).length < 150) {
-                var alert = _this.alertCtrl.create({
+                var alert_1 = _this.alertCtrl.create({
                     title: 'SORRY :(',
                     subTitle: 'Restaurant Not Found',
                     buttons: ['Dismiss']
                 });
-                alert.present();
+                alert_1.present();
             }
             else {
                 var data = res.json();
@@ -661,19 +751,18 @@ var SearchPage = /** @class */ (function () {
     };
     SearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-search',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/search/search.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n      <ion-title>GrubHaven</ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content class="login-content" padding>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input class = "search" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n        </ion-col>\n      </ion-row>\n  </form>\n\n<div id = "content">\n    <ion-label class = \'r_name\'></ion-label>\n    <ion-label class = \'r_address\'></ion-label>\n    <ion-label class = \'r_city\'></ion-label>\n    <ion-label class = \'r_contact\'></ion-label>\n    <ion-label class = \'r_cuisine\'></ion-label>\n\n    <button ion-button class="submit-btn" full type="submit" block clear (click)="book()">Book</button>\n\n    \n  </div>\n\n  \n\n\n\n\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n    <ion-card-header>\n    </ion-card-header>\n  \n    <ion-card-content>\n      {{ review }}\n    </ion-card-content>\n\n    <ion-card-content class = "by">\n      Review By: {{ custname[i] }}\n    </ion-card-content>\n\n    \n  \n  </ion-card>\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/search/search.html"*/
+            selector: 'page-search',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\search\search.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      <ion-title>GrubHaven</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content class="login-content" padding>\n\n    <form  #registerForm="ngForm">\n\n      <ion-row>\n\n        <ion-col>\n\n          <ion-list inset>\n\n\n\n            <ion-item>\n\n              <ion-input class = "search" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n\n            </ion-item>\n\n\n\n          </ion-list>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <ion-col class="signup-col">\n\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n\n        </ion-col>\n\n      </ion-row>\n\n  </form>\n\n\n\n<div id = "content">\n\n    <ion-label class = \'r_name\'></ion-label>\n\n    <ion-label class = \'r_address\'></ion-label>\n\n    <ion-label class = \'r_city\'></ion-label>\n\n    <ion-label class = \'r_contact\'></ion-label>\n\n    <ion-label class = \'r_cuisine\'></ion-label>\n\n\n\n    <button ion-button class="submit-btn" full type="submit" block clear (click)="book()">Book</button>\n\n\n\n    \n\n  </div>\n\n\n\n  \n\n\n\n\n\n\n\n\n\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n\n\n    <ion-card-header>\n\n    </ion-card-header>\n\n  \n\n    <ion-card-content>\n\n      {{ review }}\n\n    </ion-card-content>\n\n\n\n    <ion-card-content class = "by">\n\n      Review By: {{ custname[i] }}\n\n    </ion-card-content>\n\n\n\n    \n\n  \n\n  </ion-card>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\search\search.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
     ], SearchPage);
     return SearchPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=search.js.map
 
 /***/ }),
 
-/***/ 124:
+/***/ 125:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -686,48 +775,52 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 124;
+webpackEmptyAsyncContext.id = 125;
 
 /***/ }),
 
-/***/ 165:
+/***/ 166:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/customer-home/customer-home.module": [
-		290,
-		8
+		292,
+		9
 	],
 	"../pages/employee/chef/chef.module": [
 		291,
-		7
+		8
 	],
 	"../pages/employee/waiter/waiter.module": [
-		292,
-		6
+		293,
+		7
 	],
 	"../pages/login/login.module": [
-		293,
-		5
+		294,
+		6
 	],
 	"../pages/make-reservations/make-reservations.module": [
-		294,
+		295,
+		5
+	],
+	"../pages/manage-order/manage-order.module": [
+		296,
 		4
 	],
 	"../pages/manager-home/manager-home.module": [
-		295,
+		297,
 		3
 	],
 	"../pages/register/register.module": [
-		296,
+		298,
 		2
 	],
 	"../pages/review/review.module": [
-		297,
+		299,
 		1
 	],
 	"../pages/search/search.module": [
-		298,
+		300,
 		0
 	]
 };
@@ -742,12 +835,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 165;
+webpackAsyncContext.id = 166;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -774,7 +867,7 @@ var EmployeePage = /** @class */ (function () {
     }
     EmployeePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-employee',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/employee/employee.html"*/'=<ion-tabs>\n    <ion-tab [root]="Chef_tab" tabTitle="Chefs"></ion-tab>\n    <ion-tab [root]="Waiter_tab" tabTitle="Waiters"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/employee/employee.html"*/
+            selector: 'page-employee',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\employee.html"*/'=<ion-tabs>\n\n    <ion-tab [root]="Chef_tab" tabTitle="Chefs"></ion-tab>\n\n    <ion-tab [root]="Waiter_tab" tabTitle="Waiters"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\employee.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], EmployeePage);
@@ -785,13 +878,13 @@ var EmployeePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(234);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -799,37 +892,53 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 233:
+/***/ 23:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APIURL; });
+var APIURL;
+(function (APIURL) {
+    APIURL["URL1"] = "http://18.136.208.244:8080";
+    //URL1 = "http://localhost:8080"
+})(APIURL || (APIURL = {}));
+//# sourceMappingURL=apiconfig.js.map
+
+/***/ }),
+
+/***/ 234:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_manager_home_manager_home__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_auth__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_employee_employee__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_employee_employee__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_register_register__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_search_search__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_search_search__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_employee_chef_chef__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_employee_waiter_waiter__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_customer_home_customer_home__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_review_review__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_review_review__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -866,7 +975,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_16__pages_employee_waiter_waiter__["a" /* WaiterPage */],
                 __WEBPACK_IMPORTED_MODULE_17__pages_customer_home_customer_home__["a" /* CustomerHomePage */],
                 __WEBPACK_IMPORTED_MODULE_18__pages_review_review__["a" /* ReviewPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__["a" /* MakeReservationsPage */]
+                __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__["a" /* MakeReservationsPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__["a" /* ManageOrderPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -875,11 +985,12 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], { tabsPlacement: 'top' }, {
                     links: [
-                        { loadChildren: '../pages/customer-home/customer-home.module#CustomerHomePageModule', name: 'CustomerHomePage', segment: 'customer-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/employee/chef/chef.module#ChefPageModule', name: 'ChefPage', segment: 'chef', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/customer-home/customer-home.module#CustomerHomePageModule', name: 'CustomerHomePage', segment: 'customer-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/employee/waiter/waiter.module#WaiterPageModule', name: 'WaiterPage', segment: 'waiter', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/make-reservations/make-reservations.module#MakeReservationsPageModule', name: 'MakeReservationsPage', segment: 'make-reservations', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/manage-order/manage-order.module#ManageOrderPageModule', name: 'ManageOrderPage', segment: 'manage-order', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/manager-home/manager-home.module#ManagerHomePageModule', name: 'ManagerHomePage', segment: 'manager-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/review/review.module#ReviewPageModule', name: 'ReviewPage', segment: 'review', priority: 'low', defaultHistory: [] },
@@ -899,7 +1010,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_12__pages_employee_employee__["a" /* EmployeePage */],
                 __WEBPACK_IMPORTED_MODULE_17__pages_customer_home_customer_home__["a" /* CustomerHomePage */],
                 __WEBPACK_IMPORTED_MODULE_18__pages_review_review__["a" /* ReviewPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__["a" /* MakeReservationsPage */]
+                __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__["a" /* MakeReservationsPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__["a" /* ManageOrderPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
@@ -916,20 +1028,21 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_manager_home_manager_home__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_employee_employee__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_search_search__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_review_review__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_employee_employee__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_search_search__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_review_review__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_manage_order_manage_order__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -939,6 +1052,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -969,6 +1083,9 @@ var MyApp = /** @class */ (function () {
     MyApp.prototype.goToReview = function () {
         this.nav.push(__WEBPACK_IMPORTED_MODULE_8__pages_review_review__["a" /* ReviewPage */]);
     };
+    MyApp.prototype.goToOrders = function () {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_9__pages_manage_order_manage_order__["a" /* ManageOrderPage */]);
+    };
     MyApp.prototype.initializeApp = function () {
         var _this = this;
         this.platform.ready().then(function () {
@@ -988,7 +1105,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/app/app.html"*/'<ion-menu [content]="content" id="menurest">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list inset>\n      <button ion-item menuClose   (click)="goToEmployees()">\n        Manage Employees\n      </button>\n      <button ion-item menuClose   (click)="goToInventory()">\n        Inventory\n      </button>\n      <button ion-item menuClose   (click)="goToOrders()">\n        View Orders\n      </button>\n      <button ion-item  menuClose    (click)="goToTables()">\n        Manage Tables\n      </button>\n      <button ion-item  menuClose    (click)="goToReservations()">\n      Reservations\n      </button>\n      <button ion-item  menuClose    (click)="goToAnalytics()">\n      View Analytics\n      </button>\n      \n      <!-- *ngFor="let p of pages" (click)="openPage(p)"> -->\n\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-menu [content]="content" id="menucust">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list inset>\n      <button ion-item menuClose   (click)="goToSearch()">\n        Search for Restaurant\n      </button>\n      <button ion-item menuClose   (click)="goToOrder()">\n        Place order\n      </button>\n      <button ion-item menuClose   (click)="goToBill()">\n        View Bills\n      </button>\n      <button ion-item  menuClose    (click)="goToRecommend()">\n        My Recommender\n      </button>\n      <button ion-item  menuClose    (click)="goToReview()">\n        Write a review\n      </button>\n\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\app\app.html"*/'<ion-menu [content]="content" id="menurest">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list inset>\n\n      <button ion-item menuClose   (click)="goToEmployees()">\n\n        Manage Employees\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToInventory()">\n\n        Inventory\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToOrders()">\n\n        View Orders\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToTables()">\n\n        Manage Tables\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToReservations()">\n\n      Reservations\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToAnalytics()">\n\n      View Analytics\n\n      </button>\n\n      \n\n      <!-- *ngFor="let p of pages" (click)="openPage(p)"> -->\n\n\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<ion-menu [content]="content" id="menucust">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list inset>\n\n      <button ion-item menuClose   (click)="goToSearch()">\n\n        Search for Restaurant\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToOrder()">\n\n        Place order\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToBill()">\n\n        View Bills\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToRecommend()">\n\n        My Recommender\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToReview()">\n\n        Write a review\n\n      </button>\n\n\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -999,30 +1116,16 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 29:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APIURL; });
-var APIURL;
-(function (APIURL) {
-    APIURL["URL1"] = "http://18.136.208.244:8080";
-    //URL1 = "http://localhost:8080"
-})(APIURL || (APIURL = {}));
-//# sourceMappingURL=apiconfig.js.map
-
-/***/ }),
-
 /***/ 44:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerHomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1086,7 +1189,7 @@ var CustomerHomePage = /** @class */ (function () {
     };
     CustomerHomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-customer-home',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/customer-home/customer-home.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input class = "search" type="text" placeholder="Enter City" name="city" [(ngModel)]="city" required></ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n        </ion-col>\n      </ion-row>\n  </form>\n</div>\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n      <ion-card-header class = "rname">\n       {{ restaurant[i] }}  \n      </ion-card-header>\n    \n      <ion-card-content>\n        {{ review }}\n        <!-- Add card content here! -->\n      </ion-card-content>\n\n      <ion-card-content class = "by">\n        Review By: {{ custname[i] }}\n        <!-- Add card content here! -->\n      </ion-card-content>\n\n      \n    \n    </ion-card>\n</ion-content>\n\n\n'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/customer-home/customer-home.html"*/,
+            selector: 'page-customer-home',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\customer-home\customer-home.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-buttons left>\n\n      <button ion-button left menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>GrubHaven</ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div>\n\n    <form  #registerForm="ngForm">\n\n      <ion-row>\n\n        <ion-col>\n\n          <ion-list inset>\n\n\n\n            <ion-item>\n\n              <ion-input class = "search" type="text" placeholder="Enter City" name="city" [(ngModel)]="city" required></ion-input>\n\n            </ion-item>\n\n\n\n          </ion-list>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <ion-col class="signup-col">\n\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n\n        </ion-col>\n\n      </ion-row>\n\n  </form>\n\n</div>\n\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n\n\n      <ion-card-header class = "rname">\n\n       {{ restaurant[i] }}  \n\n      </ion-card-header>\n\n    \n\n      <ion-card-content>\n\n        {{ review }}\n\n        <!-- Add card content here! -->\n\n      </ion-card-content>\n\n\n\n      <ion-card-content class = "by">\n\n        Review By: {{ custname[i] }}\n\n        <!-- Add card content here! -->\n\n      </ion-card-content>\n\n\n\n      \n\n    \n\n    </ion-card>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\customer-home\customer-home.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
     ], CustomerHomePage);
@@ -1103,7 +1206,7 @@ var CustomerHomePage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManagerHomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1132,7 +1235,7 @@ var ManagerHomePage = /** @class */ (function () {
     };
     ManagerHomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-manager-home',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/manager-home/manager-home.html"*/'<ion-header>\n    <ion-toolbar>\n      <ion-buttons left>\n        <button ion-button left menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n      </ion-buttons>\n      <ion-title>GrubHaven</ion-title>\n    </ion-toolbar>\n  </ion-header>\n<ion-content class = "basic">\n\n      <h1> Hello {{user}} </h1>\n   \n</ion-content>'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/manager-home/manager-home.html"*/,
+            selector: 'page-manager-home',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manager-home\manager-home.html"*/'<ion-header>\n\n    <ion-toolbar>\n\n      <ion-buttons left>\n\n        <button ion-button left menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n      <ion-title>GrubHaven</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n<ion-content class = "basic">\n\n\n\n      <h1> Hello {{user}} </h1>\n\n   \n\n</ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manager-home\manager-home.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], ManagerHomePage);
@@ -1149,9 +1252,9 @@ var ManagerHomePage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__manager_home_manager_home__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__register_register__ = __webpack_require__(110);
@@ -1208,7 +1311,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/login/login.html"*/'<ion-content class="login-content" padding>\n\n  \n    <ion-grid no-padding>\n      <!-- logo -->\n      <ion-row header align-items-start align-items-stretch>\n          <!-- <ion-img style="width: 80px; height: 80px;" src="../../assets/imgs/grubhaven.png"></ion-img>       -->\n      <!-- Section form>-->\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n      <form padding  #registerForm="ngForm">\n        <ion-row align-items-start>\n          <ion-col col-12>\n            <h1><strong>Welcome back,</strong> Please login to your account</h1>\n          </ion-col>\n        </ion-row>\n        <!-- Input-field -->\n        <ion-row>\n          <ion-col col-12>\n            <div input-field>\n              <!-- Input-field-text -->\n              <ion-item no-padding>\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n           </ion-item>\n              <!-- Input-field-password -->\n              <ion-item no-padding>\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required></ion-input>\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n              </ion-item>\n            </div>\n            <!-- Login button -->\n            <ion-col col-12 no-padding>\n              <button no-margin ion-button full text-uppercase (click)=\'login()\'>Login</button>\n            </ion-col>\n            <!-- Description -->\n            <div description text-center>\n              <ion-row>\n                <!-- Reset your password button--> \n                <ion-col col-12 no-padding no-margin>\n                  <p no-margin padding>Forgot Password?<a>Reset Password</a> </p>\n                </ion-col>\n                <!-- Signup now button -->\n                <ion-col col-12 no-padding>\n                  <p no-margin no-padding>Not yet a member?<a (click)="createAccount()">Sign up now</a> </p>\n                </ion-col>\n              </ion-row>\n            </div>\n          </ion-col>\n        </ion-row>\n      </form>\n      </ion-col>\n    </ion-row>\n    </ion-grid>\n  </ion-content>'/*ion-inline-end:"/home/roshvenkatesh/Sem7/SE/Project/GH/GrubHaven/Frontend/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\login\login.html"*/'<ion-content class="login-content" padding>\n\n\n\n  \n\n    <ion-grid no-padding>\n\n      <!-- logo -->\n\n      <ion-row header align-items-start align-items-stretch>\n\n          <!-- <ion-img style="width: 80px; height: 80px;" src="../../assets/imgs/grubhaven.png"></ion-img>       -->\n\n      <!-- Section form>-->\n\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n\n      <form padding  #registerForm="ngForm">\n\n        <ion-row align-items-start>\n\n          <ion-col col-12>\n\n            <h1><strong>Welcome back,</strong> Please login to your account</h1>\n\n          </ion-col>\n\n        </ion-row>\n\n        <!-- Input-field -->\n\n        <ion-row>\n\n          <ion-col col-12>\n\n            <div input-field>\n\n              <!-- Input-field-text -->\n\n              <ion-item no-padding>\n\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n\n           </ion-item>\n\n              <!-- Input-field-password -->\n\n              <ion-item no-padding>\n\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required></ion-input>\n\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n\n              </ion-item>\n\n            </div>\n\n            <!-- Login button -->\n\n            <ion-col col-12 no-padding>\n\n              <button no-margin ion-button full text-uppercase (click)=\'login()\'>Login</button>\n\n            </ion-col>\n\n            <!-- Description -->\n\n            <div description text-center>\n\n              <ion-row>\n\n                <!-- Reset your password button--> \n\n                <ion-col col-12 no-padding no-margin>\n\n                  <p no-margin padding>Forgot Password?<a>Reset Password</a> </p>\n\n                </ion-col>\n\n                <!-- Signup now button -->\n\n                <ion-col col-12 no-padding>\n\n                  <p no-margin no-padding>Not yet a member?<a (click)="createAccount()">Sign up now</a> </p>\n\n                </ion-col>\n\n              </ion-row>\n\n            </div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </form>\n\n      </ion-col>\n\n    </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
     ], LoginPage);
@@ -1226,9 +1329,9 @@ var LoginPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1325,5 +1428,5 @@ var AuthProvider = /** @class */ (function () {
 
 /***/ })
 
-},[212]);
+},[213]);
 //# sourceMappingURL=main.js.map
