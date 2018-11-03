@@ -1,13 +1,52 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-      <ion-title>GrubHaven</ion-title>
-    </ion-navbar>
-  </ion-header>
-<ion-content>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Table Reservation</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="no-scroll">
+  <ion-content padding class="buttons-components-page">
+    <ion-card>
+      <ion-card-content>
+        <img src="{{path}}" />
+      </ion-card-content>
+    </ion-card>
 
-    <img src = "{{ path }}"/>
-  
+    <ion-list>
+      <ion-item-group>
+        <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" [(ngModel)]="today" (ionChange)="getTableAvailability()"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>TimeSlot</ion-label>
+          <ion-datetime displayFormat="h" pickerFormat="h" hourValues="01,02,03,04,05,06" [(ngModel)]="time"
+            (ionChange)="getTableAvailability()"></ion-datetime>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+
+    <ion-content item-text-wrap text-center>
+      <button round ion-button (click)="handleButtonClick(table.num)" *ngFor="let table of tableInfo" [outline]="!(table.num == tableSelected)"
+        [attr.disabled]="table.reserved ? true : null">Table {{table.num}}</button>
+    </ion-content>
+
+  </ion-content>
+
+  <ion-footer no-shadow [hidden]="isOneSelected ? null: true">
+    <ion-item>
+      <ion-label color="primary" floating>Name</ion-label>
+      <ion-input [(ngModel)]="contact_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Contact Number</ion-label>
+      <ion-input [(ngModel)]="contact_number" type="tel"></ion-input>
+    </ion-item>
+
+    <ion-toolbar position="bottom" style="padding:10px;">
+      <button full color="secondary" ion-button (click)="makeReservation()">Reserve Table</button>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
