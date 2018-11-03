@@ -22,19 +22,18 @@ import * as Enums from '../../assets/apiconfig';
 })
 export class CustomerHomePage {
 
-  reviews : any;
-  restaurant : any;
-  city:string;
+  reviews: any;
+  restaurant: any;
+  city: string;
   custname: any;
   activeMenu: string = 'none';
-  
 
-  constructor( public menu : MenuController,private storage: Storage,  public alertCtrl: AlertController, public navCtrl: NavController,public http: Http ) {
+
+  constructor(public menu: MenuController, private storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http) {
 
   }
 
-  ionViewDidLoad()
-  {
+  ionViewDidLoad() {
     this.activeMenu = 'menucust';
     this.menu.enable(true, 'menucust');
     this.menu.enable(false, 'menurest');
@@ -42,32 +41,31 @@ export class CustomerHomePage {
 
   public search() {
 
-      let postParams = {city: this.city};
-      console.log(postParams);
-      let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-  
-          let url = Enums.APIURL.URL1;
-          let path = url.concat( "/api/viewReview");
+    let postParams = { city: this.city };
+    console.log(postParams);
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
 
-          console.log(path);
-  
-          this.http.post(path, JSON.stringify(postParams), {headers: headers})
-            .subscribe(res => {
-   
-              var data = res.json();
-              this.reviews=[];
-              this.restaurant=[];
-              this.custname=[];
-              for (let i in data)
-              {
-                this.reviews.push(data[i].review);
-                this.restaurant.push(data[i].hotel_name);
-                this.custname.push(data[i].customer_name);
-              }
-            }, (err) => {
-              console.log(err);
-            });
+    let url = Enums.APIURL.URL1;
+    let path = url.concat("/api/viewReview");
+
+    console.log(path);
+
+    this.http.post(path, JSON.stringify(postParams), { headers: headers })
+      .subscribe(res => {
+
+        var data = res.json();
+        this.reviews = [];
+        this.restaurant = [];
+        this.custname = [];
+        for (let i in data) {
+          this.reviews.push(data[i].review);
+          this.restaurant.push(data[i].hotel_name);
+          this.custname.push(data[i].customer_name);
+        }
+      }, (err) => {
+        console.log(err);
+      });
   }
 
 }

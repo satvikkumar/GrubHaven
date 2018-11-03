@@ -419,6 +419,94 @@ var RegisterPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageOrderPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the ManageOrderPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ManageOrderPage = /** @class */ (function () {
+    function ManageOrderPage(storage, loadingCtrl, navCtrl, http) {
+        this.storage = storage;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
+        this.http = http;
+    }
+    ManageOrderPage.prototype.ionViewCanEnter = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        this.storage.get('r_name').then(function (val) {
+            var postParams = { hotel_name: val };
+            var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+            headers.append('Content-Type', 'application/json');
+            var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
+            var path = url.concat("/api/vieworder");
+            _this.http.post(path, JSON.stringify(postParams), { headers: headers })
+                .subscribe(function (res) {
+                var data = res.json();
+                _this.dish = [];
+                _this.quant = [];
+                _this.table_no = [];
+                for (var i in data) {
+                    if (data[i].delivered == 'no') {
+                        _this.table_no.push(data[i].table_number);
+                        _this.dish.push(data[i].dish);
+                        _this.quant.push(data[i].quantity);
+                    }
+                }
+                loading.dismiss();
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ManageOrderPage.prototype.get_details = function ($event, t) {
+        console.log(this.table_no);
+        console.log(this.dish);
+        console.log(this.quant);
+    };
+    ManageOrderPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-manage-order',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/'<!--\n  Generated template for the ManageOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>GrubHaven</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding="true">\n  <ion-card *ngFor="let t of table_no" (click)="get_details($event,t)">\n\n    <ion-card-header>\n      Table# - {{ t }}\n    </ion-card-header>\n</ion-card>\n    <ion-card-content>\n      <!-- add data! -->\n    </ion-card-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _d || Object])
+    ], ManageOrderPage);
+    return ManageOrderPage;
+    var _a, _b, _c, _d;
+}());
+
+//# sourceMappingURL=manage-order.js.map
+
+/***/ }),
+
+/***/ 112:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeReservationsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
@@ -469,97 +557,6 @@ var MakeReservationsPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=make-reservations.js.map
-
-/***/ }),
-
-/***/ 112:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageOrderPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the ManageOrderPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ManageOrderPage = /** @class */ (function () {
-    function ManageOrderPage(storage, loadingCtrl, navCtrl, http) {
-        this.storage = storage;
-        this.loadingCtrl = loadingCtrl;
-        this.navCtrl = navCtrl;
-        this.http = http;
-    }
-    ManageOrderPage.prototype.ionViewCanEnter = function () {
-        var _this = this;
-        var r_name = '';
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        this.storage.get('r_name').then(function (val) {
-            console.log(val);
-            r_name = val;
-        });
-        var postParams = { hotel_name: r_name };
-        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
-        headers.append('Content-Type', 'application/json');
-        var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
-        var path = url.concat("/api/vieworder");
-        this.http.post(path, JSON.stringify(postParams), { headers: headers })
-            .subscribe(function (res) {
-            var data = res.json();
-            _this.dish = [];
-            _this.quant = [];
-            _this.table_no = [];
-            for (var i in data) {
-                if (data[i].delivered == 'no') {
-                    _this.table_no.push(data[i].table_number);
-                    _this.dish.push(data[i].dish);
-                    _this.quant.push(data[i].quantity);
-                }
-            }
-            loading.dismiss();
-        }, function (err) {
-            console.log(err);
-        });
-    };
-    ManageOrderPage.prototype.get_details = function ($event, t) {
-        console.log(this.table_no);
-        console.log(this.dish);
-        console.log(this.quant);
-    };
-    ManageOrderPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-manage-order',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/'<!--\n  Generated template for the ManageOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>GrubHaven</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding="true">\n  <ion-card *ngFor="let t of table_no" (click)="get_details($event,t)">\n\n    <ion-card-header>\n      Table# - {{ t }}\n    </ion-card-header>\n</ion-card>\n    <ion-card-content>\n      <!-- add data! -->\n    </ion-card-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _d || Object])
-    ], ManageOrderPage);
-    return ManageOrderPage;
-    var _a, _b, _c, _d;
-}());
-
-//# sourceMappingURL=manage-order.js.map
 
 /***/ }),
 
@@ -656,7 +653,7 @@ var ReviewPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_reservations_make_reservations__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_reservations_make_reservations__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -784,11 +781,11 @@ webpackEmptyAsyncContext.id = 125;
 
 var map = {
 	"../pages/customer-home/customer-home.module": [
-		292,
+		291,
 		9
 	],
 	"../pages/employee/chef/chef.module": [
-		291,
+		292,
 		8
 	],
 	"../pages/employee/waiter/waiter.module": [
@@ -800,15 +797,15 @@ var map = {
 		6
 	],
 	"../pages/make-reservations/make-reservations.module": [
-		295,
+		297,
 		5
 	],
 	"../pages/manage-order/manage-order.module": [
-		296,
+		295,
 		4
 	],
 	"../pages/manager-home/manager-home.module": [
-		297,
+		296,
 		3
 	],
 	"../pages/register/register.module": [
@@ -930,8 +927,8 @@ var APIURL;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_employee_waiter_waiter__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_customer_home_customer_home__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_review_review__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -985,13 +982,13 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], { tabsPlacement: 'top' }, {
                     links: [
-                        { loadChildren: '../pages/employee/chef/chef.module#ChefPageModule', name: 'ChefPage', segment: 'chef', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/customer-home/customer-home.module#CustomerHomePageModule', name: 'CustomerHomePage', segment: 'customer-home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/employee/chef/chef.module#ChefPageModule', name: 'ChefPage', segment: 'chef', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/employee/waiter/waiter.module#WaiterPageModule', name: 'WaiterPage', segment: 'waiter', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/make-reservations/make-reservations.module#MakeReservationsPageModule', name: 'MakeReservationsPage', segment: 'make-reservations', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/manage-order/manage-order.module#ManageOrderPageModule', name: 'ManageOrderPage', segment: 'manage-order', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/manager-home/manager-home.module#ManagerHomePageModule', name: 'ManagerHomePage', segment: 'manager-home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/make-reservations/make-reservations.module#MakeReservationsPageModule', name: 'MakeReservationsPage', segment: 'make-reservations', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/review/review.module#ReviewPageModule', name: 'ReviewPage', segment: 'review', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] }
@@ -1042,7 +1039,7 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_employee_employee__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_search_search__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_review_review__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_manage_order_manage_order__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_manage_order_manage_order__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
