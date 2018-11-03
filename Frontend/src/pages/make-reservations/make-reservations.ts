@@ -1,4 +1,3 @@
-import { MakeReservationsPage } from './make-reservations';
 import {
   Component
 } from '@angular/core';

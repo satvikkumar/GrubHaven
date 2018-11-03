@@ -1,15 +1,22 @@
 webpackJsonp([10],{
 
-/***/ 108:
+/***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChefPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(30);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -131,7 +138,11 @@ var ChefPage = /** @class */ (function () {
     };
     ChefPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-chef',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\chef\chef.html"*/'<!--\n\n  Generated template for the ChefPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-buttons left>\n\n      <button ion-button left menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>GrubHaven</ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding="true">\n\n    <ion-card *ngFor="let chef of chefs" (click)="get_details($event,chef)">\n\n\n\n        <ion-card-header>\n\n            {{ chef }}\n\n        </ion-card-header>\n\n      \n\n        <ion-card-content>\n\n            \n\n          <!-- Add card content here! -->\n\n        </ion-card-content>\n\n\n\n        \n\n      \n\n      </ion-card>\n\n  </ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\chef\chef.html"*/,
+=======
+            selector: 'page-chef',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/employee/chef/chef.html"*/'<!--\n  Generated template for the ChefPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding="true">\n    <ion-card *ngFor="let chef of chefs" (click)="get_details($event,chef)">\n\n        <ion-card-header>\n            {{ chef }}\n        </ion-card-header>\n      \n        <ion-card-content>\n            \n          <!-- Add card content here! -->\n        </ion-card-content>\n\n        \n      \n      </ion-card>\n  </ion-content>\n'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/employee/chef/chef.html"*/,
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _e || Object])
     ], ChefPage);
@@ -143,7 +154,7 @@ var ChefPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 109:
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -255,10 +266,17 @@ var ManageOrderPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WaiterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(22);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(29);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -386,7 +404,11 @@ var WaiterPage = /** @class */ (function () {
     };
     WaiterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-waiter',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\waiter\waiter.html"*/'<!--\n  Generated template for the WaiterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding="true">\n\n    <ion-card *ngFor="let waiter of waiters" (click)="get_details($event,waiter)">\n\n        <ion-card-header>\n            {{ waiter }}\n        </ion-card-header>\n      \n        <ion-card-content>\n          <!-- Add card content here! -->\n        </ion-card-content>\n      \n      </ion-card>\n  </ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\waiter\waiter.html"*/,
+=======
+            selector: 'page-waiter',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/employee/waiter/waiter.html"*/'<!--\n  Generated template for the WaiterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding="true">\n\n    <ion-card *ngFor="let waiter of waiters" (click)="get_details($event,waiter)">\n\n        <ion-card-header>\n            {{ waiter }}\n        </ion-card-header>\n      \n        <ion-card-content>\n          <!-- Add card content here! -->\n        </ion-card-content>\n      \n      </ion-card>\n  </ion-content>'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/employee/waiter/waiter.html"*/,
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
     ], WaiterPage);
@@ -403,6 +425,7 @@ var WaiterPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__manager_home_manager_home__ = __webpack_require__(45);
@@ -411,6 +434,16 @@ var WaiterPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__customer_home_customer_home__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(22);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__manager_home_manager_home__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__assets_apiconfig__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__customer_home_customer_home__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(29);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -498,7 +531,11 @@ var RegisterPage = /** @class */ (function () {
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-register',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\register\register.html"*/'<ion-content class="login-content" padding>\n\n\n\n  \n\n    <ion-grid no-padding>\n\n      <!-- logo -->\n\n      <ion-row header align-items-start align-items-stretch>\n\n          <!-- <ion-col width-67> -->\n\n              <!-- <img src="../../assets/imgs/grubhaven.png"/> -->\n\n          <!-- </ion-col> -->\n\n  \n\n      <!-- Section form>-->\n\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n\n      <form padding  #registerForm="ngForm">\n\n        <ion-row align-items-start>\n\n          <ion-col col-12>\n\n            <h1><strong>Welcome!</strong>Register a new account!</h1>\n\n          </ion-col>\n\n        </ion-row>\n\n        <!-- Input-field -->\n\n        <ion-row>\n\n          <ion-col col-12>\n\n            <div input-field>\n\n              <!-- Input-field-text -->\n\n              <ion-item no-padding>\n\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="registerCredentials.email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n\n           </ion-item>\n\n              <!-- Input-field-password -->\n\n              <ion-item no-padding>\n\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" [ngModelOptions]="{standalone: true}" required></ion-input>\n\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n\n              </ion-item>\n\n                <ion-list radio-group [(ngModel)]="registerCredentials.role" name = "role" class = "field">\n\n\n\n                  <ion-list-header>\n\n                    Who are you?\n\n                  </ion-list-header>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>Manager</ion-label>\n\n                    <ion-radio value="manager" (ionSelect)="radio_select(\'manager\')"></ion-radio>\n\n                  </ion-item>\n\n                \n\n                  <ion-item>\n\n                    <ion-label>User</ion-label>\n\n                    <ion-radio value="user" (ionSelect)="radio_select(\'user\')"></ion-radio>\n\n                  </ion-item>\n\n                  </ion-list>\n\n                <ion-item>\n\n                  <ion-input type="text" [disabled] = "manager" placeholder="Restaurant Name" name="restaurant_name" [(ngModel)]="registerCredentials.restaurant_name" required></ion-input>\n\n                </ion-item>\n\n                <ion-item>\n\n                  <ion-input type="password" [disabled] = "manager" placeholder="Unique Key" name="unique_id" [(ngModel)]="registerCredentials.unique_id" required></ion-input>\n\n                </ion-item>\n\n              \n\n            </div>\n\n            <!-- Login button -->\n\n            <ion-col col-12 no-padding>\n\n              <button no-margin ion-button full text-uppercase (click)=\'register()\'>Register</button>\n\n            </ion-col>\n\n            <!-- Description -->\n\n            <div description text-center>\n\n              <ion-row>\n\n                <!-- Signup now button -->\n\n                <ion-col col-12 no-padding>\n\n                  <p no-margin no-padding>Already a member!<a (click)="GoToLogin()">Login</a> </p>\n\n                </ion-col>\n\n              </ion-row>\n\n            </div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </form>\n\n      </ion-col>\n\n    </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\register\register.html"*/,
+=======
+            selector: 'page-register',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/register/register.html"*/'<ion-content class="login-content" padding>\n\n  \n    <ion-grid no-padding>\n      <!-- logo -->\n      <ion-row header align-items-start align-items-stretch>\n          <!-- <ion-col width-67> -->\n              <!-- <img src="../../assets/imgs/grubhaven.png"/> -->\n          <!-- </ion-col> -->\n  \n      <!-- Section form>-->\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n      <form padding  #registerForm="ngForm">\n        <ion-row align-items-start>\n          <ion-col col-12>\n            <h1><strong>Welcome!</strong>Register a new account!</h1>\n          </ion-col>\n        </ion-row>\n        <!-- Input-field -->\n        <ion-row>\n          <ion-col col-12>\n            <div input-field>\n              <!-- Input-field-text -->\n              <ion-item no-padding>\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="registerCredentials.email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n           </ion-item>\n              <!-- Input-field-password -->\n              <ion-item no-padding>\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" [ngModelOptions]="{standalone: true}" required></ion-input>\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n              </ion-item>\n                <ion-list radio-group [(ngModel)]="registerCredentials.role" name = "role" class = "field">\n\n                  <ion-list-header>\n                    Who are you?\n                  </ion-list-header>\n                \n                  <ion-item>\n                    <ion-label>Manager</ion-label>\n                    <ion-radio value="manager" (ionSelect)="radio_select(\'manager\')"></ion-radio>\n                  </ion-item>\n                \n                  <ion-item>\n                    <ion-label>User</ion-label>\n                    <ion-radio value="user" (ionSelect)="radio_select(\'user\')"></ion-radio>\n                  </ion-item>\n                  </ion-list>\n                <ion-item>\n                  <ion-input type="text" [disabled] = "manager" placeholder="Restaurant Name" name="restaurant_name" [(ngModel)]="registerCredentials.restaurant_name" required></ion-input>\n                </ion-item>\n                <ion-item>\n                  <ion-input type="password" [disabled] = "manager" placeholder="Unique Key" name="unique_id" [(ngModel)]="registerCredentials.unique_id" required></ion-input>\n                </ion-item>\n              \n            </div>\n            <!-- Login button -->\n            <ion-col col-12 no-padding>\n              <button no-margin ion-button full text-uppercase (click)=\'register()\'>Register</button>\n            </ion-col>\n            <!-- Description -->\n            <div description text-center>\n              <ion-row>\n                <!-- Signup now button -->\n                <ion-col col-12 no-padding>\n                  <p no-margin no-padding>Already a member!<a (click)="GoToLogin()">Login</a> </p>\n                </ion-col>\n              </ion-row>\n            </div>\n          </ion-col>\n        </ion-row>\n      </form>\n      </ion-col>\n    </ion-row>\n    </ion-grid>\n  </ion-content>'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/register/register.html"*/,
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], RegisterPage);
@@ -515,8 +552,16 @@ var RegisterPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeReservationsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(23);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(14);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -529,6 +574,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 /**
  * Generated class for the MakeReservationsPage page.
  *
@@ -536,14 +584,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var MakeReservationsPage = /** @class */ (function () {
-    function MakeReservationsPage(navCtrl, navParams) {
+    function MakeReservationsPage(navCtrl, navParams, http, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.http = http;
+        this.alertCtrl = alertCtrl;
         this.restaurant_name = '';
+        this.today = '';
+        this.time = '';
         this.path = '';
         this.numTables = 0;
+        this.tableInfo = [];
+        this.isOneSelected = false;
+        this.tableSelected = -1;
+        this.contact_name = "";
+        this.contact_number = "";
         this.restaurant_name = navParams.get('restaurant_name');
         this.numTables = navParams.get('numTables');
+        var date = "2017-03-13";
+        var time = "01:00";
+        var timeAndDate = __WEBPACK_IMPORTED_MODULE_3_moment___default()(date + ' ' + time).format();
+        this.time = timeAndDate;
+        this.today = __WEBPACK_IMPORTED_MODULE_3_moment___default()().format();
     }
     MakeReservationsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad MakeReservationsPage');
@@ -552,12 +614,92 @@ var MakeReservationsPage = /** @class */ (function () {
         var image_name = rname.concat(".jpg");
         this.path = url.concat(image_name);
         console.log(this.numTables);
+        this.getTableAvailability();
+    };
+    MakeReservationsPage.prototype.getTableAvailability = function () {
+        var _this = this;
+        this.isOneSelected = false;
+        this.tableSelected = -1;
+        this.tableInfo = [];
+        for (var i = 0; i < this.numTables; i++) {
+            this.tableInfo.push({ num: i + 1, reserved: 0 });
+        }
+        var postParams = {
+            hotel_name: this.restaurant_name,
+            time: __WEBPACK_IMPORTED_MODULE_3_moment___default()(this.time).hour(),
+            date: __WEBPACK_IMPORTED_MODULE_3_moment___default()(this.today).format("DDMMYYYY"),
+        };
+        var headers = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var url = __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__["a" /* APIURL */].URL1;
+        var path = url.concat("/api/tables");
+        console.log(path);
+        console.log(postParams);
+        this.http.post(path, JSON.stringify(postParams), {
+            headers: headers
+        })
+            .subscribe(function (res) {
+            console.log(res.json());
+            res.json().forEach(function (element) {
+                console.log(element);
+                _this.tableInfo[parseInt(element.table_number) - 1].reserved = 1;
+            });
+            console.log(_this.tableInfo);
+            // res = JSON.parse(res.body)
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    MakeReservationsPage.prototype.handleButtonClick = function (tableNumber) {
+        console.log("SELECTED" + tableNumber);
+        this.isOneSelected = true;
+        this.tableSelected = tableNumber;
+    };
+    MakeReservationsPage.prototype.makeReservation = function () {
+        var _this = this;
+        var postParams = {
+            hotel_name: this.restaurant_name,
+            time: __WEBPACK_IMPORTED_MODULE_3_moment___default()(this.time).hour(),
+            date: __WEBPACK_IMPORTED_MODULE_3_moment___default()(this.today).format("DDMMYYYY"),
+            table_number: this.tableSelected,
+            customer_name: this.contact_name,
+            contact: this.contact_number,
+        };
+        var headers = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var url = __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__["a" /* APIURL */].URL1;
+        var path = url.concat("/api/makeReservation");
+        console.log(path);
+        console.log(postParams);
+        this.http.post(path, JSON.stringify(postParams), {
+            headers: headers
+        })
+            .subscribe(function (res) {
+            console.log(res.json());
+            console.log(_this.tableInfo);
+            var alert2 = _this.alertCtrl.create({
+                title: "Success!",
+                subTitle: "Your table has been reserved. Have a great meal. ",
+                buttons: ['Dismiss']
+            });
+            alert2.present();
+            _this.navCtrl.pop();
+            // this.navCtrl.push(CustomerHomePage);
+        }, function (err) {
+            console.log(err);
+        });
     };
     MakeReservationsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-make-reservations',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\make-reservations\make-reservations.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      <ion-title>GrubHaven</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content>\n\n\n\n    <img src = "{{ path }}"/>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\make-reservations\make-reservations.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+=======
+            selector: 'page-make-reservations',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/make-reservations/make-reservations.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Table Reservation</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="no-scroll">\n  <ion-content padding class="buttons-components-page">\n    <ion-card>\n      <ion-card-content>\n        <img src="{{path}}" />\n      </ion-card-content>\n    </ion-card>\n\n    <ion-list>\n      <ion-item-group>\n        <ion-item>\n          <ion-label>Date</ion-label>\n          <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" [(ngModel)]="today" (ionChange)="getTableAvailability()"></ion-datetime>\n        </ion-item>\n        <ion-item>\n          <ion-label>TimeSlot</ion-label>\n          <ion-datetime displayFormat="h" pickerFormat="h" hourValues="01,02,03,04,05,06" [(ngModel)]="time"\n            (ionChange)="getTableAvailability()"></ion-datetime>\n        </ion-item>\n      </ion-item-group>\n    </ion-list>\n\n    <ion-content item-text-wrap text-center>\n      <button round ion-button (click)="handleButtonClick(table.num)" *ngFor="let table of tableInfo" [outline]="!(table.num == tableSelected)"\n        [attr.disabled]="table.reserved ? true : null">Table {{table.num}}</button>\n    </ion-content>\n\n  </ion-content>\n\n  <ion-footer no-shadow [hidden]="isOneSelected ? null: true">\n    <ion-item>\n      <ion-label color="primary" floating>Name</ion-label>\n      <ion-input [(ngModel)]="contact_name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" floating>Contact Number</ion-label>\n      <ion-input [(ngModel)]="contact_number" type="tel"></ion-input>\n    </ion-item>\n\n    <ion-toolbar position="bottom" style="padding:10px;">\n      <button full color="secondary" ion-button (click)="makeReservation()">Reserve Table</button>\n    </ion-toolbar>\n  </ion-footer>\n</ion-content>\n'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/make-reservations/make-reservations.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+>>>>>>> .gitignore is now working
     ], MakeReservationsPage);
     return MakeReservationsPage;
 }());
@@ -572,11 +714,19 @@ var MakeReservationsPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__customer_home_customer_home__ = __webpack_require__(44);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__customer_home_customer_home__ = __webpack_require__(45);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -639,7 +789,11 @@ var ReviewPage = /** @class */ (function () {
     };
     ReviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-review',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\review\review.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-buttons left>\n\n      <button ion-button left menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>GrubHaven</ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <form  #registerForm="ngForm">\n\n    <ion-row>\n\n      <ion-col>\n\n        <ion-list inset>\n\n\n\n          <ion-item class = "field">\n\n            <ion-input class = "restname" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n\n          </ion-item>\n\n          <ion-item class = "field">\n\n            <ion-input class = "name" type="text" placeholder="Enter your name" name="customer_name" [(ngModel)]="customer_name" required></ion-input>\n\n          </ion-item>\n\n          <ion-item class = "field">\n\n            <ion-textarea class = "review" type="text" placeholder="Enter your review" name="review" [(ngModel)]="review" required></ion-textarea>\n\n          </ion-item>\n\n          <ion-list radio-group [(ngModel)]="rating" name = "rating" class = "field">\n\n\n\n            <ion-list-header>\n\n              Rating\n\n            </ion-list-header>\n\n          \n\n            <ion-item>\n\n              <ion-label>1 Star</ion-label>\n\n              <ion-radio value="one"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>2 Star</ion-label>\n\n              <ion-radio value="two"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>3 Star</ion-label>\n\n              <ion-radio value="3"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>4 Star</ion-label>\n\n              <ion-radio value="4"></ion-radio>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n              <ion-label>5 Star</ion-label>\n\n              <ion-radio value="5"></ion-radio>\n\n            </ion-item>\n\n          \n\n          </ion-list>\n\n          \n\n\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col class="signup-col">\n\n        <button ion-button class="submit-btn" full type="submit" block clear (click)="submit()">Submit</button>\n\n      </ion-col>\n\n    </ion-row>\n\n</form>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\review\review.html"*/,
+=======
+            selector: 'page-review',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/review/review.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <form  #registerForm="ngForm">\n    <ion-row>\n      <ion-col>\n        <ion-list inset>\n\n          <ion-item class = "field">\n            <ion-input class = "restname" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n          </ion-item>\n          <ion-item class = "field">\n            <ion-input class = "name" type="text" placeholder="Enter your name" name="customer_name" [(ngModel)]="customer_name" required></ion-input>\n          </ion-item>\n          <ion-item class = "field">\n            <ion-textarea class = "review" type="text" placeholder="Enter your review" name="review" [(ngModel)]="review" required></ion-textarea>\n          </ion-item>\n          <ion-list radio-group [(ngModel)]="rating" name = "rating" class = "field">\n\n            <ion-list-header>\n              Rating\n            </ion-list-header>\n          \n            <ion-item>\n              <ion-label>1 Star</ion-label>\n              <ion-radio value="one"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>2 Star</ion-label>\n              <ion-radio value="two"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>3 Star</ion-label>\n              <ion-radio value="3"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>4 Star</ion-label>\n              <ion-radio value="4"></ion-radio>\n            </ion-item>\n          \n            <ion-item>\n              <ion-label>5 Star</ion-label>\n              <ion-radio value="5"></ion-radio>\n            </ion-item>\n          \n          </ion-list>\n          \n\n        </ion-list>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col class="signup-col">\n        <button ion-button class="submit-btn" full type="submit" block clear (click)="submit()">Submit</button>\n      </ion-col>\n    </ion-row>\n</form>\n</ion-content>\n'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/review/review.html"*/,
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
     ], ReviewPage);
@@ -656,9 +810,15 @@ var ReviewPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(23);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(30);
+>>>>>>> .gitignore is now working
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_reservations_make_reservations__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -754,7 +914,11 @@ var SearchPage = /** @class */ (function () {
     };
     SearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-search',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\search\search.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      <ion-title>GrubHaven</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content class="login-content" padding>\n\n    <form  #registerForm="ngForm">\n\n      <ion-row>\n\n        <ion-col>\n\n          <ion-list inset>\n\n\n\n            <ion-item>\n\n              <ion-input class = "search" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n\n            </ion-item>\n\n\n\n          </ion-list>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <ion-col class="signup-col">\n\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n\n        </ion-col>\n\n      </ion-row>\n\n  </form>\n\n\n\n<div id = "content">\n\n    <ion-label class = \'r_name\'></ion-label>\n\n    <ion-label class = \'r_address\'></ion-label>\n\n    <ion-label class = \'r_city\'></ion-label>\n\n    <ion-label class = \'r_contact\'></ion-label>\n\n    <ion-label class = \'r_cuisine\'></ion-label>\n\n\n\n    <button ion-button class="submit-btn" full type="submit" block clear (click)="book()">Book</button>\n\n\n\n    \n\n  </div>\n\n\n\n  \n\n\n\n\n\n\n\n\n\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n\n\n    <ion-card-header>\n\n    </ion-card-header>\n\n  \n\n    <ion-card-content>\n\n      {{ review }}\n\n    </ion-card-content>\n\n\n\n    <ion-card-content class = "by">\n\n      Review By: {{ custname[i] }}\n\n    </ion-card-content>\n\n\n\n    \n\n  \n\n  </ion-card>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\search\search.html"*/
+=======
+            selector: 'page-search',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/search/search.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n      <ion-title>GrubHaven</ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content class="login-content" padding>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input class = "search" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n        </ion-col>\n      </ion-row>\n  </form>\n\n<div id = "content">\n    <ion-label class = \'r_name\'></ion-label>\n    <ion-label class = \'r_address\'></ion-label>\n    <ion-label class = \'r_city\'></ion-label>\n    <ion-label class = \'r_contact\'></ion-label>\n    <ion-label class = \'r_cuisine\'></ion-label>\n\n    <button ion-button class="submit-btn" full type="submit" block clear (click)="book()">Book</button>\n\n    \n  </div>\n\n  \n\n\n\n\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n    <ion-card-header>\n    </ion-card-header>\n  \n    <ion-card-content>\n      {{ review }}\n    </ion-card-content>\n\n    <ion-card-content class = "by">\n      Review By: {{ custname[i] }}\n    </ion-card-content>\n\n    \n  \n  </ion-card>\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/search/search.html"*/
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
     ], SearchPage);
@@ -787,6 +951,7 @@ webpackEmptyAsyncContext.id = 125;
 
 var map = {
 	"../pages/customer-home/customer-home.module": [
+<<<<<<< refs/remotes/origin/master
 		291,
 		9
 	],
@@ -824,6 +989,41 @@ var map = {
 	],
 	"../pages/search/search.module": [
 		300,
+=======
+		416,
+		8
+	],
+	"../pages/employee/chef/chef.module": [
+		417,
+		7
+	],
+	"../pages/employee/waiter/waiter.module": [
+		418,
+		6
+	],
+	"../pages/login/login.module": [
+		419,
+		5
+	],
+	"../pages/make-reservations/make-reservations.module": [
+		420,
+		4
+	],
+	"../pages/manager-home/manager-home.module": [
+		421,
+		3
+	],
+	"../pages/register/register.module": [
+		422,
+		2
+	],
+	"../pages/review/review.module": [
+		423,
+		1
+	],
+	"../pages/search/search.module": [
+		424,
+>>>>>>> .gitignore is now working
 		0
 	]
 };
@@ -843,14 +1043,36 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
+<<<<<<< refs/remotes/origin/master
 /***/ 212:
+=======
+/***/ 30:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APIURL; });
+var APIURL;
+(function (APIURL) {
+    APIURL["URL1"] = "http://18.136.208.244:8080";
+    //URL1 = "http://localhost:8080"
+})(APIURL || (APIURL = {}));
+//# sourceMappingURL=apiconfig.js.map
+
+/***/ }),
+
+/***/ 335:
+>>>>>>> .gitignore is now working
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmployeePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__waiter_waiter__ = __webpack_require__(110);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chef_chef__ = __webpack_require__(108);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chef_chef__ = __webpack_require__(109);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -870,7 +1092,11 @@ var EmployeePage = /** @class */ (function () {
     }
     EmployeePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-employee',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\employee.html"*/'=<ion-tabs>\n\n    <ion-tab [root]="Chef_tab" tabTitle="Chefs"></ion-tab>\n\n    <ion-tab [root]="Waiter_tab" tabTitle="Waiters"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\employee.html"*/
+=======
+            selector: 'page-employee',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/employee/employee.html"*/'=<ion-tabs>\n    <ion-tab [root]="Chef_tab" tabTitle="Chefs"></ion-tab>\n    <ion-tab [root]="Waiter_tab" tabTitle="Waiters"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/employee/employee.html"*/
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [])
     ], EmployeePage);
@@ -881,13 +1107,22 @@ var EmployeePage = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< refs/remotes/origin/master
 /***/ 213:
+=======
+/***/ 336:
+>>>>>>> .gitignore is now working
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(234);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(357);
+>>>>>>> .gitignore is now working
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -895,6 +1130,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
+<<<<<<< refs/remotes/origin/master
 /***/ 23:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -910,12 +1146,16 @@ var APIURL;
 /***/ }),
 
 /***/ 234:
+=======
+/***/ 357:
+>>>>>>> .gitignore is now working
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(22);
@@ -935,6 +1175,26 @@ var APIURL;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_review_review__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__ = __webpack_require__(109);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_manager_home_manager_home__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_auth__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_employee_employee__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_register_register__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_search_search__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_employee_chef_chef__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_employee_waiter_waiter__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_customer_home_customer_home__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_review_review__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__ = __webpack_require__(112);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1031,12 +1291,286 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< refs/remotes/origin/master
 /***/ 283:
+=======
+/***/ 390:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 169,
+	"./af.js": 169,
+	"./ar": 170,
+	"./ar-dz": 171,
+	"./ar-dz.js": 171,
+	"./ar-kw": 172,
+	"./ar-kw.js": 172,
+	"./ar-ly": 173,
+	"./ar-ly.js": 173,
+	"./ar-ma": 174,
+	"./ar-ma.js": 174,
+	"./ar-sa": 175,
+	"./ar-sa.js": 175,
+	"./ar-tn": 176,
+	"./ar-tn.js": 176,
+	"./ar.js": 170,
+	"./az": 177,
+	"./az.js": 177,
+	"./be": 178,
+	"./be.js": 178,
+	"./bg": 179,
+	"./bg.js": 179,
+	"./bm": 180,
+	"./bm.js": 180,
+	"./bn": 181,
+	"./bn.js": 181,
+	"./bo": 182,
+	"./bo.js": 182,
+	"./br": 183,
+	"./br.js": 183,
+	"./bs": 184,
+	"./bs.js": 184,
+	"./ca": 185,
+	"./ca.js": 185,
+	"./cs": 186,
+	"./cs.js": 186,
+	"./cv": 187,
+	"./cv.js": 187,
+	"./cy": 188,
+	"./cy.js": 188,
+	"./da": 189,
+	"./da.js": 189,
+	"./de": 190,
+	"./de-at": 191,
+	"./de-at.js": 191,
+	"./de-ch": 192,
+	"./de-ch.js": 192,
+	"./de.js": 190,
+	"./dv": 193,
+	"./dv.js": 193,
+	"./el": 194,
+	"./el.js": 194,
+	"./en-au": 195,
+	"./en-au.js": 195,
+	"./en-ca": 196,
+	"./en-ca.js": 196,
+	"./en-gb": 197,
+	"./en-gb.js": 197,
+	"./en-ie": 198,
+	"./en-ie.js": 198,
+	"./en-il": 199,
+	"./en-il.js": 199,
+	"./en-nz": 200,
+	"./en-nz.js": 200,
+	"./eo": 201,
+	"./eo.js": 201,
+	"./es": 202,
+	"./es-do": 203,
+	"./es-do.js": 203,
+	"./es-us": 204,
+	"./es-us.js": 204,
+	"./es.js": 202,
+	"./et": 205,
+	"./et.js": 205,
+	"./eu": 206,
+	"./eu.js": 206,
+	"./fa": 207,
+	"./fa.js": 207,
+	"./fi": 208,
+	"./fi.js": 208,
+	"./fo": 209,
+	"./fo.js": 209,
+	"./fr": 210,
+	"./fr-ca": 211,
+	"./fr-ca.js": 211,
+	"./fr-ch": 212,
+	"./fr-ch.js": 212,
+	"./fr.js": 210,
+	"./fy": 213,
+	"./fy.js": 213,
+	"./gd": 214,
+	"./gd.js": 214,
+	"./gl": 215,
+	"./gl.js": 215,
+	"./gom-latn": 216,
+	"./gom-latn.js": 216,
+	"./gu": 217,
+	"./gu.js": 217,
+	"./he": 218,
+	"./he.js": 218,
+	"./hi": 219,
+	"./hi.js": 219,
+	"./hr": 220,
+	"./hr.js": 220,
+	"./hu": 221,
+	"./hu.js": 221,
+	"./hy-am": 222,
+	"./hy-am.js": 222,
+	"./id": 223,
+	"./id.js": 223,
+	"./is": 224,
+	"./is.js": 224,
+	"./it": 225,
+	"./it.js": 225,
+	"./ja": 226,
+	"./ja.js": 226,
+	"./jv": 227,
+	"./jv.js": 227,
+	"./ka": 228,
+	"./ka.js": 228,
+	"./kk": 229,
+	"./kk.js": 229,
+	"./km": 230,
+	"./km.js": 230,
+	"./kn": 231,
+	"./kn.js": 231,
+	"./ko": 232,
+	"./ko.js": 232,
+	"./ky": 233,
+	"./ky.js": 233,
+	"./lb": 234,
+	"./lb.js": 234,
+	"./lo": 235,
+	"./lo.js": 235,
+	"./lt": 236,
+	"./lt.js": 236,
+	"./lv": 237,
+	"./lv.js": 237,
+	"./me": 238,
+	"./me.js": 238,
+	"./mi": 239,
+	"./mi.js": 239,
+	"./mk": 240,
+	"./mk.js": 240,
+	"./ml": 241,
+	"./ml.js": 241,
+	"./mn": 242,
+	"./mn.js": 242,
+	"./mr": 243,
+	"./mr.js": 243,
+	"./ms": 244,
+	"./ms-my": 245,
+	"./ms-my.js": 245,
+	"./ms.js": 244,
+	"./mt": 246,
+	"./mt.js": 246,
+	"./my": 247,
+	"./my.js": 247,
+	"./nb": 248,
+	"./nb.js": 248,
+	"./ne": 249,
+	"./ne.js": 249,
+	"./nl": 250,
+	"./nl-be": 251,
+	"./nl-be.js": 251,
+	"./nl.js": 250,
+	"./nn": 252,
+	"./nn.js": 252,
+	"./pa-in": 253,
+	"./pa-in.js": 253,
+	"./pl": 254,
+	"./pl.js": 254,
+	"./pt": 255,
+	"./pt-br": 256,
+	"./pt-br.js": 256,
+	"./pt.js": 255,
+	"./ro": 257,
+	"./ro.js": 257,
+	"./ru": 258,
+	"./ru.js": 258,
+	"./sd": 259,
+	"./sd.js": 259,
+	"./se": 260,
+	"./se.js": 260,
+	"./si": 261,
+	"./si.js": 261,
+	"./sk": 262,
+	"./sk.js": 262,
+	"./sl": 263,
+	"./sl.js": 263,
+	"./sq": 264,
+	"./sq.js": 264,
+	"./sr": 265,
+	"./sr-cyrl": 266,
+	"./sr-cyrl.js": 266,
+	"./sr.js": 265,
+	"./ss": 267,
+	"./ss.js": 267,
+	"./sv": 268,
+	"./sv.js": 268,
+	"./sw": 269,
+	"./sw.js": 269,
+	"./ta": 270,
+	"./ta.js": 270,
+	"./te": 271,
+	"./te.js": 271,
+	"./tet": 272,
+	"./tet.js": 272,
+	"./tg": 273,
+	"./tg.js": 273,
+	"./th": 274,
+	"./th.js": 274,
+	"./tl-ph": 275,
+	"./tl-ph.js": 275,
+	"./tlh": 276,
+	"./tlh.js": 276,
+	"./tr": 277,
+	"./tr.js": 277,
+	"./tzl": 278,
+	"./tzl.js": 278,
+	"./tzm": 279,
+	"./tzm-latn": 280,
+	"./tzm-latn.js": 280,
+	"./tzm.js": 279,
+	"./ug-cn": 281,
+	"./ug-cn.js": 281,
+	"./uk": 282,
+	"./uk.js": 282,
+	"./ur": 283,
+	"./ur.js": 283,
+	"./uz": 284,
+	"./uz-latn": 285,
+	"./uz-latn.js": 285,
+	"./uz.js": 284,
+	"./vi": 286,
+	"./vi.js": 286,
+	"./x-pseudo": 287,
+	"./x-pseudo.js": 287,
+	"./yo": 288,
+	"./yo.js": 288,
+	"./zh-cn": 289,
+	"./zh-cn.js": 289,
+	"./zh-hk": 290,
+	"./zh-hk.js": 290,
+	"./zh-tw": 291,
+	"./zh-tw.js": 291
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 390;
+
+/***/ }),
+
+/***/ 408:
+>>>>>>> .gitignore is now working
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(211);
@@ -1046,6 +1580,16 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_search_search__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_review_review__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_manage_order_manage_order__ = __webpack_require__(109);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_manager_home_manager_home__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_employee_employee__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_search_search__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_review_review__ = __webpack_require__(113);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1108,7 +1652,11 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
+<<<<<<< refs/remotes/origin/master
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\app\app.html"*/'<ion-menu [content]="content" id="menurest">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list inset>\n\n      <button ion-item menuClose   (click)="goToEmployees()">\n\n        Manage Employees\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToInventory()">\n\n        Inventory\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToOrders()">\n\n        View Orders\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToTables()">\n\n        Manage Tables\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToReservations()">\n\n      Reservations\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToAnalytics()">\n\n      View Analytics\n\n      </button>\n\n      \n\n      <!-- *ngFor="let p of pages" (click)="openPage(p)"> -->\n\n\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<ion-menu [content]="content" id="menucust">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list inset>\n\n      <button ion-item menuClose   (click)="goToSearch()">\n\n        Search for Restaurant\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToOrder()">\n\n        Place order\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToBill()">\n\n        View Bills\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToRecommend()">\n\n        My Recommender\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToReview()">\n\n        Write a review\n\n      </button>\n\n\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\app\app.html"*/
+=======
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/app/app.html"*/'<ion-menu [content]="content" id="menurest">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list inset>\n      <button ion-item menuClose   (click)="goToEmployees()">\n        Manage Employees\n      </button>\n      <button ion-item menuClose   (click)="goToInventory()">\n        Inventory\n      </button>\n      <button ion-item menuClose   (click)="goToOrders()">\n        View Orders\n      </button>\n      <button ion-item  menuClose    (click)="goToTables()">\n        Manage Tables\n      </button>\n      <button ion-item  menuClose    (click)="goToReservations()">\n      Reservations\n      </button>\n      <button ion-item  menuClose    (click)="goToAnalytics()">\n      View Analytics\n      </button>\n      \n      <!-- *ngFor="let p of pages" (click)="openPage(p)"> -->\n\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-menu [content]="content" id="menucust">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list inset>\n      <button ion-item menuClose   (click)="goToSearch()">\n        Search for Restaurant\n      </button>\n      <button ion-item menuClose   (click)="goToOrder()">\n        Place order\n      </button>\n      <button ion-item menuClose   (click)="goToBill()">\n        View Bills\n      </button>\n      <button ion-item  menuClose    (click)="goToRecommend()">\n        My Recommender\n      </button>\n      <button ion-item  menuClose    (click)="goToReview()">\n        Write a review\n      </button>\n\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/app/app.html"*/
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
     ], MyApp);
@@ -1120,16 +1668,27 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< refs/remotes/origin/master
 /***/ 44:
+=======
+/***/ 45:
+>>>>>>> .gitignore is now working
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerHomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(30);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1193,7 +1752,11 @@ var CustomerHomePage = /** @class */ (function () {
     };
     CustomerHomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-customer-home',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\customer-home\customer-home.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-buttons left>\n\n      <button ion-button left menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>GrubHaven</ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div>\n\n    <form  #registerForm="ngForm">\n\n      <ion-row>\n\n        <ion-col>\n\n          <ion-list inset>\n\n\n\n            <ion-item>\n\n              <ion-input class = "search" type="text" placeholder="Enter City" name="city" [(ngModel)]="city" required></ion-input>\n\n            </ion-item>\n\n\n\n          </ion-list>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <ion-col class="signup-col">\n\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n\n        </ion-col>\n\n      </ion-row>\n\n  </form>\n\n</div>\n\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n\n\n      <ion-card-header class = "rname">\n\n       {{ restaurant[i] }}  \n\n      </ion-card-header>\n\n    \n\n      <ion-card-content>\n\n        {{ review }}\n\n        <!-- Add card content here! -->\n\n      </ion-card-content>\n\n\n\n      <ion-card-content class = "by">\n\n        Review By: {{ custname[i] }}\n\n        <!-- Add card content here! -->\n\n      </ion-card-content>\n\n\n\n      \n\n    \n\n    </ion-card>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\customer-home\customer-home.html"*/,
+=======
+            selector: 'page-customer-home',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/customer-home/customer-home.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div>\n    <form  #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input class = "search" type="text" placeholder="Enter City" name="city" [(ngModel)]="city" required></ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>\n        </ion-col>\n      </ion-row>\n  </form>\n</div>\n  <ion-card *ngFor="let review of reviews;  let i = index">\n\n      <ion-card-header class = "rname">\n       {{ restaurant[i] }}  \n      </ion-card-header>\n    \n      <ion-card-content>\n        {{ review }}\n        <!-- Add card content here! -->\n      </ion-card-content>\n\n      <ion-card-content class = "by">\n        Review By: {{ custname[i] }}\n        <!-- Add card content here! -->\n      </ion-card-content>\n\n      \n    \n    </ion-card>\n</ion-content>\n\n\n'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/customer-home/customer-home.html"*/,
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
     ], CustomerHomePage);
@@ -1204,7 +1767,7 @@ var CustomerHomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 45:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1239,7 +1802,11 @@ var ManagerHomePage = /** @class */ (function () {
     };
     ManagerHomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-manager-home',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manager-home\manager-home.html"*/'<ion-header>\n\n    <ion-toolbar>\n\n      <ion-buttons left>\n\n        <button ion-button left menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n      <ion-title>GrubHaven</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n<ion-content class = "basic">\n\n\n\n      <h1> Hello {{user}} </h1>\n\n   \n\n</ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manager-home\manager-home.html"*/,
+=======
+            selector: 'page-manager-home',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/manager-home/manager-home.html"*/'<ion-header>\n    <ion-toolbar>\n      <ion-buttons left>\n        <button ion-button left menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n      </ion-buttons>\n      <ion-title>GrubHaven</ion-title>\n    </ion-toolbar>\n  </ion-header>\n<ion-content class = "basic">\n\n      <h1> Hello {{user}} </h1>\n   \n</ion-content>'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/manager-home/manager-home.html"*/,
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], ManagerHomePage);
@@ -1250,12 +1817,13 @@ var ManagerHomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
@@ -1263,6 +1831,15 @@ var ManagerHomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__manager_home_manager_home__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__register_register__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__customer_home_customer_home__ = __webpack_require__(44);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__manager_home_manager_home__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__register_register__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__customer_home_customer_home__ = __webpack_require__(45);
+>>>>>>> .gitignore is now working
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1315,7 +1892,11 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< refs/remotes/origin/master
             selector: 'page-login',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\login\login.html"*/'<ion-content class="login-content" padding>\n\n\n\n  \n\n    <ion-grid no-padding>\n\n      <!-- logo -->\n\n      <ion-row header align-items-start align-items-stretch>\n\n          <!-- <ion-img style="width: 80px; height: 80px;" src="../../assets/imgs/grubhaven.png"></ion-img>       -->\n\n      <!-- Section form>-->\n\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n\n      <form padding  #registerForm="ngForm">\n\n        <ion-row align-items-start>\n\n          <ion-col col-12>\n\n            <h1><strong>Welcome back,</strong> Please login to your account</h1>\n\n          </ion-col>\n\n        </ion-row>\n\n        <!-- Input-field -->\n\n        <ion-row>\n\n          <ion-col col-12>\n\n            <div input-field>\n\n              <!-- Input-field-text -->\n\n              <ion-item no-padding>\n\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n\n           </ion-item>\n\n              <!-- Input-field-password -->\n\n              <ion-item no-padding>\n\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required></ion-input>\n\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n\n              </ion-item>\n\n            </div>\n\n            <!-- Login button -->\n\n            <ion-col col-12 no-padding>\n\n              <button no-margin ion-button full text-uppercase (click)=\'login()\'>Login</button>\n\n            </ion-col>\n\n            <!-- Description -->\n\n            <div description text-center>\n\n              <ion-row>\n\n                <!-- Reset your password button--> \n\n                <ion-col col-12 no-padding no-margin>\n\n                  <p no-margin padding>Forgot Password?<a>Reset Password</a> </p>\n\n                </ion-col>\n\n                <!-- Signup now button -->\n\n                <ion-col col-12 no-padding>\n\n                  <p no-margin no-padding>Not yet a member?<a (click)="createAccount()">Sign up now</a> </p>\n\n                </ion-col>\n\n              </ion-row>\n\n            </div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </form>\n\n      </ion-col>\n\n    </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\login\login.html"*/,
+=======
+            selector: 'page-login',template:/*ion-inline-start:"/home/rohin/code/GrubHaven/Frontend/src/pages/login/login.html"*/'<ion-content class="login-content" padding>\n\n  \n    <ion-grid no-padding>\n      <!-- logo -->\n      <ion-row header align-items-start align-items-stretch>\n          <!-- <ion-img style="width: 80px; height: 80px;" src="../../assets/imgs/grubhaven.png"></ion-img>       -->\n      <!-- Section form>-->\n    <ion-col col-10 offset-1 col-md-6 offset-md-3>\n      <form padding  #registerForm="ngForm">\n        <ion-row align-items-start>\n          <ion-col col-12>\n            <h1><strong>Welcome back,</strong> Please login to your account</h1>\n          </ion-col>\n        </ion-row>\n        <!-- Input-field -->\n        <ion-row>\n          <ion-col col-12>\n            <div input-field>\n              <!-- Input-field-text -->\n              <ion-item no-padding>\n                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" required></ion-input>\n  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->\n           </ion-item>\n              <!-- Input-field-password -->\n              <ion-item no-padding>\n                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required></ion-input>\n                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->\n              </ion-item>\n            </div>\n            <!-- Login button -->\n            <ion-col col-12 no-padding>\n              <button no-margin ion-button full text-uppercase (click)=\'login()\'>Login</button>\n            </ion-col>\n            <!-- Description -->\n            <div description text-center>\n              <ion-row>\n                <!-- Reset your password button--> \n                <ion-col col-12 no-padding no-margin>\n                  <p no-margin padding>Forgot Password?<a>Reset Password</a> </p>\n                </ion-col>\n                <!-- Signup now button -->\n                <ion-col col-12 no-padding>\n                  <p no-margin no-padding>Not yet a member?<a (click)="createAccount()">Sign up now</a> </p>\n                </ion-col>\n              </ion-row>\n            </div>\n          </ion-col>\n        </ion-row>\n      </form>\n      </ion-col>\n    </ion-row>\n    </ion-grid>\n  </ion-content>'/*ion-inline-end:"/home/rohin/code/GrubHaven/Frontend/src/pages/login/login.html"*/,
+>>>>>>> .gitignore is now working
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
     ], LoginPage);
@@ -1326,16 +1907,23 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 85:
+/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+<<<<<<< refs/remotes/origin/master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(265);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(388);
+>>>>>>> .gitignore is now working
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1432,5 +2020,9 @@ var AuthProvider = /** @class */ (function () {
 
 /***/ })
 
+<<<<<<< refs/remotes/origin/master
 },[213]);
+=======
+},[336]);
+>>>>>>> .gitignore is now working
 //# sourceMappingURL=main.js.map
