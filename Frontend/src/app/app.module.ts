@@ -23,6 +23,7 @@ import { WaiterPage } from '../pages/employee/waiter/waiter';
 import { CustomerHomePage } from '../pages/customer-home/customer-home';
 import { ReviewPage } from '../pages/review/review';
 import { MakeReservationsPage } from '../pages/make-reservations/make-reservations';
+import { ManageOrderPage } from '../pages/manage-order/manage-order';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MakeReservationsPage } from '../pages/make-reservations/make-reservatio
     WaiterPage,
     CustomerHomePage,
     ReviewPage,
-    MakeReservationsPage
+    MakeReservationsPage,
+    ManageOrderPage
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { MakeReservationsPage } from '../pages/make-reservations/make-reservatio
     EmployeePage,
     CustomerHomePage,
     ReviewPage,
-    MakeReservationsPage
+    MakeReservationsPage,
+    ManageOrderPage
 
   ],
   providers: [

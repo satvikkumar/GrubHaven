@@ -35,7 +35,9 @@ module.exports = function (app) {
     authRoutes.post('/viewReviewByRestaurant', viewReviewByRestaurant.view );
     authRoutes.post('/verify', verify.authorize );
     authRoutes.post('/tables', checkTables.search);
-    authRoutes.post('/makeReservation', makeReservation.add)
+    authRoutes.post('/makeReservation', makeReservation.add);
+    authRoutes.post('/vieworder', viewOrder.view);
+
 
 
 
