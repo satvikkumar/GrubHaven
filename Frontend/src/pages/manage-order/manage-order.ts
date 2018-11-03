@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController, AlertController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Headers } from '@angular/http';
 import { Storage } from '@ionic/storage';
@@ -27,8 +27,9 @@ export class ManageOrderPage {
   quant: any;
   table_no: any;
   r_name: any;
+  list: any;
 
-  constructor(private storage: Storage, public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http) {
+  constructor(private storage: Storage, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http) {
 
   }
 
@@ -52,15 +53,11 @@ export class ManageOrderPage {
         .subscribe(res => {
 
           var data = res.json();
-          this.dish = [];
-          this.quant = [];
           this.table_no = [];
           for (let i in data) {
-            if (data[i].delivered == 'no') {
-              this.table_no.push(data[i].table_number);
-              this.dish.push(data[i].dish);
-              this.quant.push(data[i].quantity);
-            }
+
+            this.table_no.push(data[i].table_number);
+
 
           }
           loading.dismiss();
@@ -70,10 +67,36 @@ export class ManageOrderPage {
     });
   }
   public get_details($event, t) {
-    console.log(this.table_no);
-    console.log(this.dish);
-    console.log(this.quant);
+
+    this.storage.get('r_name').then((val) => {
+
+      let postParams = { hotel_name: val, table_no: t };
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      let url = Enums.APIURL.URL1;
+      let path = url.concat("/api/orderdetails");
+
+      this.http.post(path, JSON.stringify(postParams), { headers: headers })
+        .subscribe(res => {
+          var data = res.json();
+          // console.log(data)
+
+          this.list = "<table style='width:100%;'> <tr> <th>Dish</th> <th>Quantity</th> </tr>"
+          for (let i in data[0].dish) {
+            var element = "<tr> <td>" + data[0].dish[i] + "</td><td align:'right'>    " + data[0].quantity[i] + "</td></tr>"
+            this.list += element
+            //  console.log(data[0].quantity[i]);
+          }
+          this.list += "</table>"
+          let alert = this.alertCtrl.create({
+            title: 'Pending Order',
+            message: this.list,
+            buttons: ['Ok']
+          });
+          alert.present();
+        });
+
+    });
   }
-
-
 }

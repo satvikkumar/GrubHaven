@@ -38,7 +38,7 @@ module.exports = function (app) {
     authRoutes.post('/tables', checkTables.search);
     authRoutes.post('/makeReservation', makeReservation.add);
     authRoutes.post('/vieworder', viewOrder.view);
-
+    authRoutes.post('/orderdetails', viewOrder.orderdetail);
 
 
 

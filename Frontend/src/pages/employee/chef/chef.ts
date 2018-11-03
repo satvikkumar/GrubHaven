@@ -39,10 +39,9 @@ export class ChefPage {
       console.log(val);
         r_name = val 
     
-    console.log(r_name)
     let postParams = {employee_type:"chef", hotel_name: r_name};
-    console.log(postParams);
     let headers = new Headers();
+    
     headers.append('Content-Type', 'application/json');
 
         let url = Enums.APIURL.URL1;
@@ -66,7 +65,6 @@ export class ChefPage {
   }
   public get_details($event,chef)
   {
-    console.log(chef);
     let postParams = {employee_name: chef};
   
     let headers = new Headers();
@@ -74,14 +72,11 @@ export class ChefPage {
 
         let url = Enums.APIURL.URL1;
         let path = url.concat( "/api/employee");
-        console.log(path);
-        console.log(postParams);
-
+    
 
         this.http.post(path, JSON.stringify(postParams), {headers: headers})
           .subscribe(res => {
  
-            console.log(res);
             let data = res.json();
             let alert = this.alertCtrl.create({
               title: 'Employee Details',
@@ -119,13 +114,10 @@ export class ChefPage {
                     let url = Enums.APIURL.URL1;
                     let path = url.concat( "/api/eedit");
 
-                    console.log(path);
-                    console.log(postParams);
-
+ 
                     this.http.post(path, JSON.stringify(postParams), {headers: headers})
                     .subscribe(res =>{
-                        console.log(res);
-
+ 
                         let alert2 = this.alertCtrl.create({
                         title: "Successful",
                         subTitle: "Details Changed",

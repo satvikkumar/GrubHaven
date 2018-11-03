@@ -74,8 +74,7 @@ export class AuthProvider {
  
     return new Promise((resolve, reject) => {
 
-      console.log(credentials);
- 
+      
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 

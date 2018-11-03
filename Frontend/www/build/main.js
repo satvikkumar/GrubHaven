@@ -50,9 +50,7 @@ var ChefPage = /** @class */ (function () {
         this.storage.get('r_name').then(function (val) {
             console.log(val);
             r_name = val;
-            console.log(r_name);
             var postParams = { employee_type: "chef", hotel_name: r_name };
-            console.log(postParams);
             var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
             headers.append('Content-Type', 'application/json');
             var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
@@ -72,17 +70,13 @@ var ChefPage = /** @class */ (function () {
     };
     ChefPage.prototype.get_details = function ($event, chef) {
         var _this = this;
-        console.log(chef);
         var postParams = { employee_name: chef };
         var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
         headers.append('Content-Type', 'application/json');
         var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
         var path = url.concat("/api/employee");
-        console.log(path);
-        console.log(postParams);
         this.http.post(path, JSON.stringify(postParams), { headers: headers })
             .subscribe(function (res) {
-            console.log(res);
             var data = res.json();
             var alert = _this.alertCtrl.create({
                 title: 'Employee Details',
@@ -117,11 +111,8 @@ var ChefPage = /** @class */ (function () {
                             headers.append('Content-Type', 'application/json');
                             var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
                             var path = url.concat("/api/eedit");
-                            console.log(path);
-                            console.log(postParams);
                             _this.http.post(path, JSON.stringify(postParams), { headers: headers })
                                 .subscribe(function (res) {
-                                console.log(res);
                                 var alert2 = _this.alertCtrl.create({
                                     title: "Successful",
                                     subTitle: "Details Changed",
@@ -142,9 +133,10 @@ var ChefPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-chef',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\chef\chef.html"*/'<!--\n\n  Generated template for the ChefPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-buttons left>\n\n      <button ion-button left menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>GrubHaven</ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding="true">\n\n    <ion-card *ngFor="let chef of chefs" (click)="get_details($event,chef)">\n\n\n\n        <ion-card-header>\n\n            {{ chef }}\n\n        </ion-card-header>\n\n      \n\n        <ion-card-content>\n\n            \n\n          <!-- Add card content here! -->\n\n        </ion-card-content>\n\n\n\n        \n\n      \n\n      </ion-card>\n\n  </ion-content>\n\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\employee\chef\chef.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _e || Object])
     ], ChefPage);
     return ChefPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=chef.js.map
@@ -152,6 +144,112 @@ var ChefPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 109:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageOrderPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the ManageOrderPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ManageOrderPage = /** @class */ (function () {
+    function ManageOrderPage(storage, alertCtrl, loadingCtrl, navCtrl, http) {
+        this.storage = storage;
+        this.alertCtrl = alertCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
+        this.http = http;
+    }
+    ManageOrderPage.prototype.ionViewCanEnter = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        this.storage.get('r_name').then(function (val) {
+            var postParams = { hotel_name: val };
+            var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+            headers.append('Content-Type', 'application/json');
+            var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
+            var path = url.concat("/api/vieworder");
+            _this.http.post(path, JSON.stringify(postParams), { headers: headers })
+                .subscribe(function (res) {
+                var data = res.json();
+                _this.table_no = [];
+                for (var i in data) {
+                    _this.table_no.push(data[i].table_number);
+                }
+                loading.dismiss();
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ManageOrderPage.prototype.get_details = function ($event, t) {
+        var _this = this;
+        this.storage.get('r_name').then(function (val) {
+            var postParams = { hotel_name: val, table_no: t };
+            var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+            headers.append('Content-Type', 'application/json');
+            var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
+            var path = url.concat("/api/orderdetails");
+            _this.http.post(path, JSON.stringify(postParams), { headers: headers })
+                .subscribe(function (res) {
+                var data = res.json();
+                // console.log(data)
+                _this.list = "<table style='width:100%;'> <tr> <th>Dish</th> <th>Quantity</th> </tr>";
+                for (var i in data[0].dish) {
+                    var element = "<tr> <td>" + data[0].dish[i] + "</td><td align:'right'>    " + data[0].quantity[i] + "</td></tr>";
+                    _this.list += element;
+                    //  console.log(data[0].quantity[i]);
+                }
+                _this.list += "</table>";
+                var alert = _this.alertCtrl.create({
+                    title: 'Pending Order',
+                    message: _this.list,
+                    buttons: ['Ok']
+                });
+                alert.present();
+            });
+        });
+    };
+    ManageOrderPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-manage-order',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/'<!--\n  Generated template for the ManageOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons left>\n      <button ion-button left menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>GrubHaven</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding="true">\n  <ion-card *ngFor="let t of table_no" (click)="get_details($event,t)">\n\n    <ion-card-header>\n      Table# - {{ t }}\n    </ion-card-header>\n  </ion-card>\n  <ion-card-content>\n    <!-- add data! -->\n  </ion-card-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _e || Object])
+    ], ManageOrderPage);
+    return ManageOrderPage;
+    var _a, _b, _c, _d, _e;
+}());
+
+//# sourceMappingURL=manage-order.js.map
+
+/***/ }),
+
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -224,17 +322,13 @@ var WaiterPage = /** @class */ (function () {
     };
     WaiterPage.prototype.get_details = function ($event, waiter) {
         var _this = this;
-        console.log(waiter);
         var postParams = { employee_name: waiter };
         var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Headers */]();
         headers.append('Content-Type', 'application/json');
         var url = __WEBPACK_IMPORTED_MODULE_2__assets_apiconfig__["a" /* APIURL */].URL1;
         var path = url.concat("/api/employee");
-        console.log(path);
-        console.log(postParams);
         this.http.post(path, JSON.stringify(postParams), { headers: headers })
             .subscribe(function (res) {
-            console.log(res);
             var data = res.json();
             var alert = _this.alertCtrl.create({
                 title: 'Employee Details',
@@ -303,7 +397,7 @@ var WaiterPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 110:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -412,94 +506,6 @@ var RegisterPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=register.js.map
-
-/***/ }),
-
-/***/ 111:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageOrderPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__ = __webpack_require__(23);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the ManageOrderPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ManageOrderPage = /** @class */ (function () {
-    function ManageOrderPage(storage, loadingCtrl, navCtrl, http) {
-        this.storage = storage;
-        this.loadingCtrl = loadingCtrl;
-        this.navCtrl = navCtrl;
-        this.http = http;
-    }
-    ManageOrderPage.prototype.ionViewCanEnter = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        this.storage.get('r_name').then(function (val) {
-            var postParams = { hotel_name: val };
-            var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
-            headers.append('Content-Type', 'application/json');
-            var url = __WEBPACK_IMPORTED_MODULE_4__assets_apiconfig__["a" /* APIURL */].URL1;
-            var path = url.concat("/api/vieworder");
-            _this.http.post(path, JSON.stringify(postParams), { headers: headers })
-                .subscribe(function (res) {
-                var data = res.json();
-                _this.dish = [];
-                _this.quant = [];
-                _this.table_no = [];
-                for (var i in data) {
-                    if (data[i].delivered == 'no') {
-                        _this.table_no.push(data[i].table_number);
-                        _this.dish.push(data[i].dish);
-                        _this.quant.push(data[i].quantity);
-                    }
-                }
-                loading.dismiss();
-            }, function (err) {
-                console.log(err);
-            });
-        });
-    };
-    ManageOrderPage.prototype.get_details = function ($event, t) {
-        console.log(this.table_no);
-        console.log(this.dish);
-        console.log(this.quant);
-    };
-    ManageOrderPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-manage-order',template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/'<!--\n  Generated template for the ManageOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>GrubHaven</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding="true">\n  <ion-card *ngFor="let t of table_no" (click)="get_details($event,t)">\n\n    <ion-card-header>\n      Table# - {{ t }}\n    </ion-card-header>\n</ion-card>\n    <ion-card-content>\n      <!-- add data! -->\n    </ion-card-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\pages\manage-order\manage-order.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _d || Object])
-    ], ManageOrderPage);
-    return ManageOrderPage;
-    var _a, _b, _c, _d;
-}());
-
-//# sourceMappingURL=manage-order.js.map
 
 /***/ }),
 
@@ -789,31 +795,31 @@ var map = {
 		8
 	],
 	"../pages/employee/waiter/waiter.module": [
-		293,
+		294,
 		7
 	],
 	"../pages/login/login.module": [
-		294,
+		295,
 		6
 	],
 	"../pages/make-reservations/make-reservations.module": [
-		297,
+		296,
 		5
 	],
 	"../pages/manage-order/manage-order.module": [
-		295,
+		293,
 		4
 	],
 	"../pages/manager-home/manager-home.module": [
-		296,
+		299,
 		3
 	],
 	"../pages/register/register.module": [
-		298,
+		297,
 		2
 	],
 	"../pages/review/review.module": [
-		299,
+		298,
 		1
 	],
 	"../pages/search/search.module": [
@@ -843,7 +849,7 @@ module.exports = webpackAsyncContext;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmployeePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__waiter_waiter__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__waiter_waiter__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chef_chef__ = __webpack_require__(108);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -921,14 +927,14 @@ var APIURL;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_auth__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_employee_employee__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_register_register__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_register_register__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_search_search__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_employee_chef_chef__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_employee_waiter_waiter__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_employee_waiter_waiter__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_customer_home_customer_home__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_review_review__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_make_reservations_make_reservations__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_manage_order_manage_order__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -984,13 +990,13 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/customer-home/customer-home.module#CustomerHomePageModule', name: 'CustomerHomePage', segment: 'customer-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/employee/chef/chef.module#ChefPageModule', name: 'ChefPage', segment: 'chef', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/manage-order/manage-order.module#ManageOrderPageModule', name: 'ManageOrderPage', segment: 'manage-order', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/employee/waiter/waiter.module#WaiterPageModule', name: 'WaiterPage', segment: 'waiter', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/manage-order/manage-order.module#ManageOrderPageModule', name: 'ManageOrderPage', segment: 'manage-order', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/manager-home/manager-home.module#ManagerHomePageModule', name: 'ManagerHomePage', segment: 'manager-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/make-reservations/make-reservations.module#MakeReservationsPageModule', name: 'MakeReservationsPage', segment: 'make-reservations', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/review/review.module#ReviewPageModule', name: 'ReviewPage', segment: 'review', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/manager-home/manager-home.module#ManagerHomePageModule', name: 'ManagerHomePage', segment: 'manager-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -1039,7 +1045,7 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_employee_employee__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_search_search__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_review_review__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_manage_order_manage_order__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_manage_order_manage_order__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1099,14 +1105,15 @@ var MyApp = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\app\app.html"*/'<ion-menu [content]="content" id="menurest">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list inset>\n\n      <button ion-item menuClose   (click)="goToEmployees()">\n\n        Manage Employees\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToInventory()">\n\n        Inventory\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToOrders()">\n\n        View Orders\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToTables()">\n\n        Manage Tables\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToReservations()">\n\n      Reservations\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToAnalytics()">\n\n      View Analytics\n\n      </button>\n\n      \n\n      <!-- *ngFor="let p of pages" (click)="openPage(p)"> -->\n\n\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<ion-menu [content]="content" id="menucust">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list inset>\n\n      <button ion-item menuClose   (click)="goToSearch()">\n\n        Search for Restaurant\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToOrder()">\n\n        Place order\n\n      </button>\n\n      <button ion-item menuClose   (click)="goToBill()">\n\n        View Bills\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToRecommend()">\n\n        My Recommender\n\n      </button>\n\n      <button ion-item  menuClose    (click)="goToReview()">\n\n        Write a review\n\n      </button>\n\n\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\Users\ShikharGupta\Desktop\GrubHaven\Frontend\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -1254,7 +1261,7 @@ var ManagerHomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__manager_home_manager_home__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__register_register__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__register_register__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__customer_home_customer_home__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1392,7 +1399,6 @@ var AuthProvider = /** @class */ (function () {
     AuthProvider.prototype.login = function (credentials) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            console.log(credentials);
             var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
             headers.append('Content-Type', 'application/json');
             var url = __WEBPACK_IMPORTED_MODULE_3__assets_apiconfig__["a" /* APIURL */].URL1;
@@ -1416,9 +1422,10 @@ var AuthProvider = /** @class */ (function () {
     };
     AuthProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object])
     ], AuthProvider);
     return AuthProvider;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=auth.js.map

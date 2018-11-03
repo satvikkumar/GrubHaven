@@ -1,26 +1,24 @@
 var mongoose = require('mongoose');
 
 var OrdersSchema = new mongoose.Schema({
- 
+
     hotel_name: {
         type: String
     },
-    
+
     table_number: {
-	type: String,
-	required: true
-    },
-    dish: {
         type: String,
         required: true
     },
-    quantity: {
-        type: Number,
+    dish: {
+        type: Array,
+        default: [],
         required: true
     },
-    delivered: {
-	type: String,
-	enum: ['yes', 'no']
+    quantity: {
+        type: Array,
+        default: [],
+        required: true
     }
 }, {
     timestamps: true

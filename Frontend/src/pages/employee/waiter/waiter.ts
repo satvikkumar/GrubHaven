@@ -64,7 +64,6 @@ export class WaiterPage {
     
   public get_details($event,waiter)
   {
-    console.log(waiter);
     let postParams = {employee_name: waiter};
   
     let headers = new Headers();
@@ -72,14 +71,11 @@ export class WaiterPage {
 
         let url = Enums.APIURL.URL1;
         let path = url.concat( "/api/employee");
-        console.log(path);
-        console.log(postParams);
-
+    
 
         this.http.post(path, JSON.stringify(postParams), {headers: headers})
           .subscribe(res => {
  
-            console.log(res);
             let data = res.json();
             let alert = this.alertCtrl.create({
               title: 'Employee Details',
