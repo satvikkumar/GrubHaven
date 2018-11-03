@@ -1,7 +1,7 @@
 var Order = require('../models/order');
 
 
-exports.list = function(req, res) {
+exports.view = function(req, res) {
 
     var name = req.body.hotel_name;
     //console.log(req.body)

@@ -11,6 +11,7 @@ var viewReviewByRestaurant = require('./controllers/viewReviewByRestaurant');
 var verify = require('./controllers/verify')
 var checkTables = require('./controllers/viewTables')
 var makeReservation = require('./controllers/makeReservation')
+var viewOrder = require('./controllers/vieworder')
 
 var requireAuth = passport.authenticate('jwt', {
     session: false
