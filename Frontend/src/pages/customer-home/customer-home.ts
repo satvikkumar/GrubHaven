@@ -5,6 +5,8 @@ import { Headers } from '@angular/http';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { MenuController } from 'ionic-angular';
+import { ActionSheetController } from 'ionic-angular';
+
 
 import * as Enums from '../../assets/apiconfig';
 
@@ -27,9 +29,13 @@ export class CustomerHomePage {
   city: string;
   custname: any;
   activeMenu: string = 'none';
+  locations = ["Bangalore", "Bombay", "Delhi"];
+  currLocation = "Bangalore";
+  isLocationSet = false;
+  reviewData:any;
 
 
-  constructor(public menu: MenuController, private storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http) {
+  constructor(public menu: MenuController, private storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http, public actionSheetCtrl: ActionSheetController) {
 
   }
 
@@ -39,9 +45,29 @@ export class CustomerHomePage {
     this.menu.enable(false, 'menurest');
   }
 
+  presentActionSheet() {
+    let genButtons = []
+    this.locations.forEach(element => {
+      genButtons.push({
+        text:element,
+        handler: () => {
+          this.isLocationSet = true
+          this.currLocation = element
+          console.log(this.currLocation)
+          this.search()
+        },
+      })
+    });
+    const actionSheet = this.actionSheetCtrl.create({
+      title: 'Set Your Location', 
+      buttons: genButtons
+    });
+    actionSheet.present();
+  }
+
   public search() {
 
-    let postParams = { city: this.city };
+    let postParams = { city: this.currLocation };
     console.log(postParams);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -55,14 +81,15 @@ export class CustomerHomePage {
       .subscribe(res => {
 
         var data = res.json();
-        this.reviews = [];
-        this.restaurant = [];
-        this.custname = [];
-        for (let i in data) {
-          this.reviews.push(data[i].review);
-          this.restaurant.push(data[i].hotel_name);
-          this.custname.push(data[i].customer_name);
-        }
+        this.reviewData = data;
+        // this.reviews = [];
+        // this.restaurant = [];
+        // this.custname = [];
+        // for (let i in data) {
+        //   this.reviews.push(data[i].review);
+        //   this.restaurant.push(data[i].hotel_name);
+        //   this.custname.push(data[i].customer_name);
+        // }
       }, (err) => {
         console.log(err);
       });
