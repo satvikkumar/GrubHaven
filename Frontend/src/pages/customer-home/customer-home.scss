@@ -11,4 +11,43 @@ page-customer-home {
     font-size : 10px;
     color: grey;
 }
+.card-background-page {
+
+    ion-card {
+        height: 15%;
+      position: relative;
+      text-align: center;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 15%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 45%;
+      width: 100%;
+      color: #fff;
+    }
+    .cardfooter {
+        padding-right: 10px;
+        text-align: right;
+        font-size: 1.0em;
+        position: absolute;
+        bottom: 5%;
+        width: 100%;
+        color: #fff;
+      }
 }
+.scroll-content {
+    padding: 0!important;
+}
+}
+
+
