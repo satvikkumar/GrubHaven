@@ -22,6 +22,7 @@ var MenuSchema = new mongoose.Schema({
     },
     cost: {
 	type: Number
+    }
 }, {
     timestamps: true
 });

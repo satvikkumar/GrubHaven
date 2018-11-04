@@ -24,6 +24,7 @@ import { CustomerHomePage } from '../pages/customer-home/customer-home';
 import { ReviewPage } from '../pages/review/review';
 import { MakeReservationsPage } from '../pages/make-reservations/make-reservations';
 import { ManageOrderPage } from '../pages/manage-order/manage-order';
+import { ViewReservationsPage } from '../pages/view-reservations/view-reservations';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ManageOrderPage } from '../pages/manage-order/manage-order';
     CustomerHomePage,
     ReviewPage,
     MakeReservationsPage,
-    ManageOrderPage
+    ManageOrderPage,
+    ViewReservationsPage
   ],
   imports: [
     BrowserModule,
@@ -61,8 +63,8 @@ import { ManageOrderPage } from '../pages/manage-order/manage-order';
     CustomerHomePage,
     ReviewPage,
     MakeReservationsPage,
-    ManageOrderPage
-
+    ManageOrderPage,
+    ViewReservationsPage
   ],
   providers: [
     StatusBar,

@@ -9,6 +9,7 @@ import { EmployeePage } from '../pages/employee/employee';
 import { SearchPage } from '../pages/search/search';
 import { ReviewPage } from '../pages/review/review';
 import { ManageOrderPage } from '../pages/manage-order/manage-order';
+import { ViewReservationsPage } from '../pages/view-reservations/view-reservations';
 
 
 @Component({
@@ -44,6 +45,10 @@ export class MyApp {
   public goToOrders()
   {
     this.nav.push(ManageOrderPage)
+  }
+
+  public goToReservations(){
+    this.nav.push(ViewReservationsPage)
   }
 
 

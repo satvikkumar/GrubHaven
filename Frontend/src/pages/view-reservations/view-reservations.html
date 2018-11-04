@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ViewReservationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+  Generated template for the ManageOrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button left menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>GrubHaven</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="true">
+
+  <ion-card *ngFor="let name of customer_name ;  let i = index">
+
+    <ion-card-header>
+      {{ name }}
+    </ion-card-header>
+    <ion-card-header>
+      {{ r_date[i] }}
+    </ion-card-header>
+    <ion-card-header>
+      {{ r_time[i] }}
+     </ion-card-header>
+    <ion-card-header>
+      {{ phone[i] }}
+    </ion-card-header>
+
+  <ion-card-content>
+      <button  color="primary" ion-button (click)="arrived(  name , r_date[i] , r_time[i] )">Arrived</button>
+      <button  color="primary" ion-button (click)="cancel(name , r_date[i], r_time[i] )">Cancel</button>
+    <!-- add data! -->
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
