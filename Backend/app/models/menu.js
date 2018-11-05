@@ -6,25 +6,29 @@ var MenuSchema = new mongoose.Schema({
         type: String
     },
     
+    dishes : [Dishes]
+});
+
+var Dishes = new mongoose.Schema({
+    
     dish_name: {
-	type: String,
-	required: true
+	    type: String,
+	    required: true
     },
     ingr_1: {
         type: String,
         required: true
     },
     ingr_2: {
-        type: Number
+        type: String
     },
     ingr_3: {
-	type: String
+	    type: String
     },
     cost: {
-	type: Number
+	    type: Number
     }
-}, {
-    timestamps: true
 });
 
 module.exports = mongoose.model('Menu', MenuSchema);
+

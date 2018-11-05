@@ -18,16 +18,10 @@
 <ion-content padding="true">
     <ion-card *ngFor="let chef of chefs" (click)="get_details($event,chef)">
 
-        <ion-card-header>
+        <ion-card-header class="card-content">
             {{ chef }}
         </ion-card-header>
-      
-        <ion-card-content>
-            
-          <!-- Add card content here! -->
-        </ion-card-content>
-
-        
+       
       
       </ion-card>
   </ion-content>

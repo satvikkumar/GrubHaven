@@ -24,6 +24,9 @@ var ReservationSchema = new mongoose.Schema({
     contact: {
         type: String,
         required: true
+    },
+    OTP: {
+        type: Number
     }
  
 }, {

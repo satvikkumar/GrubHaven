@@ -13,6 +13,7 @@ page-search {
           .r_name, .r_address, .r_city, .r_contact, .r_cuisine{
             padding: 20px 20px 0px 20px;
             margin-top: -1%;
+            color : #000000
           }
           .r_name{
             font-weight: bold;
@@ -21,7 +22,7 @@ page-search {
           }
 
           #content {
-            background: #f8f8f8;
+            background: grey;
             display: none;
             text-align : center;
           }

@@ -99,7 +99,32 @@ export class ViewReservationsPage {
 
   public arrived(name , r_date , r_time){
     console.log("Hello")
+    this.storage.get('r_name').then((val) => {
 
 
+      let postParams = { hotel_name: val, customer_name : name, time: r_time , date: r_date  };
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      let url = Enums.APIURL.URL1;
+      let path = url.concat("/api/arrivedReservation");
+
+
+      this.http.post(path, JSON.stringify(postParams), { headers: headers })
+        .subscribe(res => {
+          let data = res.json();
+              let alert = this.alertCtrl.create({
+              title: 'This is the OTP: ',
+              subTitle: data.OTP,
+              buttons: ['Dismiss']
+            });
+            alert.present();
+
+        }, (err) => {
+          console.log(err);
+        });
+
+        this.ionViewCanEnter()
+    });
   }
 }
