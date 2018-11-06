@@ -13,6 +13,8 @@ var checkTables = require('./controllers/viewTables')
 var makeReservation = require('./controllers/makeReservation')
 var viewOrder = require('./controllers/vieworder')
 var viewReservations = require('./controllers/viewReservations')
+var viewMenu = require('./controllers/viewMenu')
+var checkOTP = require('./controllers/checkOTP')
 
 
 var requireAuth = passport.authenticate('jwt', {
@@ -44,6 +46,8 @@ module.exports = function (app) {
     authRoutes.post('/viewReservations', viewReservations.returnAll);
     authRoutes.post('/removeReservation', viewReservations.deleteOne);
     authRoutes.post('/arrivedReservation', viewReservations.viewOne);
+    authRoutes.post('/viewMenu', viewMenu.show);
+    authRoutes.post('/checkOTP', checkOTP.check);
 
 
 

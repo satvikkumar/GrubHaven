@@ -1,15 +1,9 @@
 var mongoose = require('mongoose');
 
-var MenuSchema = new mongoose.Schema({
- 
-    hotel_name: {
-        type: String
-    },
-    
-    dishes : [Dishes]
-});
 
-var Dishes = new mongoose.Schema({
+var Dishes = new mongoose.Schema();
+
+Dishes.add({
     
     dish_name: {
 	    type: String,
@@ -28,6 +22,15 @@ var Dishes = new mongoose.Schema({
     cost: {
 	    type: Number
     }
+});
+
+var MenuSchema = new mongoose.Schema({
+ 
+    hotel_name: {
+        type: String
+    },
+    
+    dishes : [Dishes]
 });
 
 module.exports = mongoose.model('Menu', MenuSchema);

@@ -1,0 +1,93 @@
+<!--
+  Generated template for the PlaceOrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons left>
+        <button ion-button left menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Place Order</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <button ion-button full text-uppercase (click)= "orderByDishName()"> Order By Dish Name </button>
+  <button ion-button full text-uppercase (click)= "orderByIngredient()" > Order By Ingredient </button>
+
+  <div>
+    <ion-grid>
+      <ion-row text-center>
+        <ion-col col-8 > 
+
+          <div class = "dishname" id = "dishname">
+    
+
+              <ion-list  *ngFor="let f_item of list;">
+
+                  <ion-item>
+                    <ion-label (click)='addItem(f_item)' >{{ f_item }}</ion-label>
+    
+                  </ion-item>
+                
+                </ion-list>
+
+        </div>
+
+          <div class = "ingredient" id = "ingredient">
+
+           <form>
+            <ion-searchbar name = "i_name" placeholder = "Type ingredient name" [(ngModel)]= "i_name"></ion-searchbar>
+            <button  ion-button (click) = "search()" > SEARCH </button>
+          </form>
+
+                      <ion-list  *ngFor="let f_item of list2;">
+    
+                      <ion-item>
+                          <ion-label (click)='addItem(f_item)' >{{ f_item }}</ion-label>
+                      </ion-item>
+                    
+                    </ion-list>
+
+          </div>
+          
+        
+        </ion-col>
+        <ion-col col-4 > 
+          <h1> YOUR CART </h1>
+
+            <ion-card *ngFor="let item of orderedItems;  let i = index">
+
+                <ion-card-header>
+                </ion-card-header>
+              
+                <ion-card-content>
+                  {{ item }}
+                </ion-card-content>
+            
+                <ion-card-content>
+                  Quantity: {{ q[i] }}
+                
+                </ion-card-content>
+
+                <ion-card-content>
+                <button  ion-button (click) = "modify(item)" > CHANGE QUANTITY </button>
+                <button  ion-button (click) = "remove(item)" > REMOVE </button>
+              </ion-card-content>
+                
+              
+              </ion-card>
+
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

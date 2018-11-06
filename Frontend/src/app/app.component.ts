@@ -11,6 +11,7 @@ import { SearchPage } from '../pages/search/search';
 import { ReviewPage } from '../pages/review/review';
 import { ManageOrderPage } from '../pages/manage-order/manage-order';
 import { ViewReservationsPage } from '../pages/view-reservations/view-reservations';
+import { PlaceOrderPage } from '../pages/place-order/place-order';
 
 
 @Component({
@@ -35,17 +36,18 @@ export class MyApp {
   public goToEmployees(){
     this.nav.push(EmployeePage);
   }
-  public goToSearch()
-  {
+  public goToSearch(){
     this.nav.push(SearchPage);
   }
-  public goToReview()
-  {
+  public goToReview(){
     this.nav.push(ReviewPage);
   }
-  public goToOrders()
-  {
+  public goToOrders(){
     this.nav.push(ManageOrderPage)
+  }
+
+  public goToPlaceOrder(){
+    this.nav.push(PlaceOrderPage)
   }
 
   public goToReservations(){
