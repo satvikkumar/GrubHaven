@@ -60,6 +60,7 @@
         </ion-col>
         <ion-col col-4 > 
           <h1> YOUR CART </h1>
+          <button ion-button (click) = "placeOrder()" > ORDER </button>
 
             <ion-card *ngFor="let item of orderedItems;  let i = index">
 
@@ -82,6 +83,8 @@
                 
               
               </ion-card>
+
+
 
 
 

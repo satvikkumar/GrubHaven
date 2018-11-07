@@ -3,6 +3,7 @@ import { Http, Headers } from '@angular/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import * as Enums from '../../assets/apiconfig';
+import { CustomerHomePage } from '../customer-home/customer-home';
 
 /**
  * Generated class for the PlaceOrderPage page.
@@ -25,6 +26,7 @@ export class PlaceOrderPage {
   q : any;
   r_name : any;
   i_name: any;
+  table_number : any;
 
   constructor( public http: Http, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -64,9 +66,31 @@ export class PlaceOrderPage {
 
         this.http.post(path, JSON.stringify(postParams), {headers: headers})
           .subscribe(res => {
+
+            if (JSON.stringify(res).length < 150)
+            {
+            let alert = this.alertCtrl.create({
+              title: 'Wrong OTP',
+              subTitle: 'Try again',
+              buttons: [
+                {
+                text: 'Cancel',
+                handler: data => {
+                    this.ionViewDidLoad()
+                  }
+                }
+              ]
+            });
+            alert.present();
+          }
+
+          else
+          {
             data = res.json();
             console.log(data)
             this.r_name = data.hotel_name;
+            this.table_number = data.table_number;
+          }
 
           })
           }
@@ -230,6 +254,53 @@ public remove(name){
     }
 
 
+}
+
+public placeOrder(){
+  if (this.orderedItems.length == 0)
+  {
+    let alert = this.alertCtrl.create({
+      title: 'Sorry :(',
+      subTitle: 'Please populate your cart',
+      buttons: ['Dismiss']
+    });
+    alert.present();
+  }
+  else{
+
+
+    let postParams = {hotel_name: this.r_name, table_number : this.table_number, dish: this.orderedItems , quantity: this.q};
+    console.log(postParams);
+  
+    let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        let url = Enums.APIURL.URL1;
+        let path = url.concat( "/api/addOrder");
+        console.log(path);
+        console.log(postParams);
+
+        this.http.post(path, JSON.stringify(postParams), {headers: headers})
+        .subscribe(res => {
+
+          let alert = this.alertCtrl.create({
+            title: 'Order Placed :)',
+            subTitle: 'Enjoy your food',
+            buttons: [
+              {
+              text: 'Continue',
+              handler: data => {
+                  this.navCtrl.push(CustomerHomePage)
+                }
+              }
+            ]
+          });
+          alert.present();
+
+
+        });
+
+  }
 }
 
 }
