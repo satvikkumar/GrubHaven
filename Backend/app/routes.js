@@ -16,6 +16,7 @@ var viewReservations = require('./controllers/viewReservations')
 var viewMenu = require('./controllers/viewMenu')
 var checkOTP = require('./controllers/checkOTP')
 var addOrder = require('./controllers/addOrder')
+var genChecksum = require('./controllers/genChecksum')
 
 
 var requireAuth = passport.authenticate('jwt', {
@@ -51,6 +52,7 @@ module.exports = function (app) {
     authRoutes.post('/checkOTP', checkOTP.check);
     authRoutes.post('/addOrder', addOrder.add);
     authRoutes.post('/showBill', viewOrder.billing)
+    authRoutes.post('/paytm/checksum', genChecksum.generateChecksum)
 
 
 

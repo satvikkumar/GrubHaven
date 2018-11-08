@@ -1,13 +1,11 @@
 var mongoose = require('mongoose');
 
 var OrdersSchema = new mongoose.Schema({
-
     hotel_name: {
         type: String
     },
-
     table_number: {
-        type: String,
+        type: String, 
         required: true
     },
     dish: {
