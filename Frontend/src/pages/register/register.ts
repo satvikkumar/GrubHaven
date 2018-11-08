@@ -16,7 +16,7 @@ import { Storage } from '@ionic/storage';
 })
 export class RegisterPage {
   registerCredentials = {  unique_id : '', email: '', password: '', role: '', restaurant_name : '' };
-  flag = 1;
+  flag : boolean;
   manager: boolean = true;
         radio_select(value) {
         if (value == 'manager') {
@@ -41,6 +41,8 @@ export class RegisterPage {
     var header = { "headers": {"Content-Type": "application/json"} };
     console.log(details);
 
+    this.flag = true;
+
     if ((this.registerCredentials.role) == 'manager'){
       let postParams = {uniqueId: this.registerCredentials.unique_id, name : this.registerCredentials.restaurant_name};
   
@@ -61,34 +63,43 @@ export class RegisterPage {
             console.log(JSON.stringify(res).length)
             if (JSON.stringify(res).length < 150)
             {
-              this.flag = 0;
+              this.flag = false;
               let alert = this.alertCtrl.create({
                 title: 'WARNING',
                 subTitle: 'You are not authorized to do this',
                 buttons: ['Dismiss']
               });
               alert.present();
+              this.navCtrl.push(LoginPage);
+
+            }
+
+            else{
+
+              this.authService.createAccount(details).then((result) => {
+                let data = JSON.parse(JSON.stringify(result["user"]));
+                console.log(result);
+              this.storage.set('r_name', data.restaurant_name);
+                this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
+                console.log(data.role);
+             
+        
+              });
+
             }
     });
   }
+    
+  if ((this.registerCredentials.role) == 'user'){
+    this.authService.createAccount(details).then((result) => {
+    let data = JSON.parse(JSON.stringify(result["user"]));
+    this.navCtrl.push(CustomerHomePage);
+                console.log(data.role);
+    });
+  }
+  
 
-    if (this.flag == 1)
-    {
-      this.authService.createAccount(details).then((result) => {
-        let data = JSON.parse(JSON.stringify(result["user"]));
-        console.log(result);
-      if ((this.registerCredentials.role) == 'manager'){
-        this.storage.set('r_name', data.restaurant_name);
-        this.navCtrl.push(ManagerHomePage, { username: this.registerCredentials.email });
-      }
-      else
-      {
-        this.navCtrl.push(CustomerHomePage);
-        console.log(data.role);
-      }
-
-      });
-   }
+    
   }
 
 }
