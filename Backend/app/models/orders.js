@@ -19,6 +19,14 @@ var OrdersSchema = new mongoose.Schema({
         type: Array,
         default: [],
         required: true
+    },
+    delivered: {
+        type : Boolean,
+        default: false
+    },
+    paid: {
+        type : Boolean,
+        default: false
     }
 }, {
     timestamps: true

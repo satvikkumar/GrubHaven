@@ -27,6 +27,8 @@ export class PlaceOrderPage {
   r_name : any;
   i_name: any;
   table_number : any;
+  cost : any;
+  cost2: any;
 
   constructor( public http: Http, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -138,9 +140,11 @@ export class PlaceOrderPage {
           var data = res.json();
           this.list2 = [];
           this.list=[];
+          this.cost = [];
             for (let i in data.dishes)
             {
                 this.list.push(data.dishes[i].dish_name);
+                this.cost.push(data.dishes[i].cost);
               }
             
           }, (err) => {
@@ -174,12 +178,14 @@ export class PlaceOrderPage {
           var data = res.json();
           this.list2=[];
           this.list=[];
+          this.cost2 = [];
           this.searchValue = this.i_name;
             for (let i in data.dishes)
             {
               if(data.dishes[i].ingr_1 == this.searchValue || data.dishes[i].ingr_2 == this.searchValue || data.dishes[i].ingr_3 == this.searchValue  )
               {
                 this.list2.push(data.dishes[i].dish_name);
+                this.cost2.push(data.dishes[i].cost);
               }
             }
             

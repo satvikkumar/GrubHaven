@@ -5,7 +5,8 @@ exports.view = function(req, res) {
     var name = req.body.hotel_name;
 
     Order.find({
-        hotel_name : name
+        hotel_name : name,
+        delivered: !true
     }, function (err, orders) {
 
         if (err) {
@@ -28,22 +29,23 @@ exports.removeOne=function(req, res) {
     var table_number = req.body.table_number;
     console.log(req.body)
     // use mongoose to get all employees
-    Order.remove({
+    Order.findOneAndUpdate({
         hotel_name: hotel_name,
         dish: dish,
         quantity: quantity,
         table_number : table_number
-    }, function (err, tables) {
+    },
+    { $set: { "delivered": "true"} }
+    , function (err, tables) {
+
 
         if (err) {
+            console.log(err);
             return next(err);
         }
-
+    
         else {
-            console.log("DONE");
+            res.send(tables);
         };
-
-
-        //res.send(rest); // return all reviews in JSON format
     });
 }
