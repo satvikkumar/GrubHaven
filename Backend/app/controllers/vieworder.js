@@ -49,3 +49,29 @@ exports.removeOne=function(req, res) {
         };
     });
 }
+
+exports.billing = function(req,res){
+
+    var name = req.body.hotel_name;
+    var table_number = req.body.table_number;
+
+    Order.find({
+        hotel_name : name,
+        table_number: table_number,
+        delivered: true,
+        paid: false
+    }, function (err, orders) {
+
+        if (err) {
+            return next(err);
+        }
+
+        else {
+            console.log(orders);
+            res.send(orders);
+        };
+
+
+    });
+
+}

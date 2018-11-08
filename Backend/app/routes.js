@@ -50,6 +50,7 @@ module.exports = function (app) {
     authRoutes.post('/viewMenu', viewMenu.show);
     authRoutes.post('/checkOTP', checkOTP.check);
     authRoutes.post('/addOrder', addOrder.add);
+    authRoutes.post('/showBill', viewOrder.billing)
 
 
 
