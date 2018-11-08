@@ -43,7 +43,7 @@ module.exports = function (app) {
     authRoutes.post('/tables', checkTables.search);
     authRoutes.post('/makeReservation', makeReservation.add);
     authRoutes.post('/vieworder', viewOrder.view);
-    authRoutes.post('/orderdetails', viewOrder.orderdetail);
+    authRoutes.post('/removeOrder', viewOrder.removeOne);
     authRoutes.post('/viewReservations', viewReservations.returnAll);
     authRoutes.post('/removeReservation', viewReservations.deleteOne);
     authRoutes.post('/arrivedReservation', viewReservations.viewOne);
