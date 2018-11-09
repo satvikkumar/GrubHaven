@@ -1,14 +1,37 @@
 import requests
-from bs4 import BeautifulSoup
-import re
-#import urllib.request
+from pprint import pprint
+import sys
+import json
+import pymongo
 
-#Used headers/agent as the request timed out and asking for agent. Using following code you can fake the agent.
-headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
-restaurants ={}
-r_list=["xpress-chai-btm"]
-for r in r_list :
- response = requests.get("https://www.zomato.com/bangalore/",headers=headers)
- content = response.content
- #print(content)
- soup = BeautifulSoup(content,"html.parser")
+non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
+restaurantIDMap = {"TheBlackPerl":"18387426","Truffles":"51040"}
+'''
+reveiwFromRestID = "https://api.zomato.com/v1/reviews.json/18387426/user?count=50&apikey=61694d8a5fe01a6695eb0ef7f8957e27"
+header = {"User-agent": "curl/7.43.0", "Accept": "application/json"}
+response = requests.get(reveiwFromRestID, headers=header).json()
+with open('data.json', 'a') as outfile:
+    json.dump(response, outfile)
+'''
+myclient = pymongo.MongoClient("mongodb://18.136.208.244:27017/")
+mydb = myclient["drms"]
+mycol = mydb["reviews"]
+
+for rname,rid in restaurantIDMap.items(): 
+    reveiwFromRestID = "https://api.zomato.com/v1/reviews.json/"+rid+"/user?count=50&apikey=61694d8a5fe01a6695eb0ef7f8957e27"
+    header = {"User-agent": "curl/7.43.0", "Accept": "application/json"}
+
+    response = requests.get(reveiwFromRestID, headers=header).json()
+    with open('data.json', 'a') as outfile:
+        json.dump(response, outfile)
+    #dictdump = json.loads(response)
+    userRevDict = response["userReviews"]
+    for reviews in userRevDict:
+        innerReview=reviews["review"]
+        userRating=innerReview["rating"]
+        userReview=innerReview["reviewText"]
+        userName=innerReview["userName"]
+        reviewDict={"hotel_name":rname ,"customer_name":userName,"review":userReview.translate(non_bmp_map),"rating":userRating}
+        x = mycol.insert_one(reviewDict)
+        print(reviewDict)
+    
