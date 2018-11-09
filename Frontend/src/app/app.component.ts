@@ -12,6 +12,7 @@ import { ReviewPage } from '../pages/review/review';
 import { ManageOrderPage } from '../pages/manage-order/manage-order';
 import { ViewReservationsPage } from '../pages/view-reservations/view-reservations';
 import { PlaceOrderPage } from '../pages/place-order/place-order';
+import { ViewBillPage } from '../pages/view-bill/view-bill';
 
 
 @Component({
@@ -52,6 +53,10 @@ export class MyApp {
 
   public goToReservations(){
     this.nav.push(ViewReservationsPage)
+  }
+
+  public goToBill(){
+    this.nav.push(ViewBillPage)
   }
 
 

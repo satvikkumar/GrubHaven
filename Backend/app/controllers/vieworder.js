@@ -5,7 +5,8 @@ exports.view = function(req, res) {
     var name = req.body.hotel_name;
 
     Order.find({
-        hotel_name : name
+        hotel_name : name,
+        delivered: !true
     }, function (err, orders) {
 
         if (err) {
@@ -20,14 +21,45 @@ exports.view = function(req, res) {
 
     });
 }
-exports.orderdetail=function(req, res) {
+exports.removeOne=function(req, res) {
+
+    var hotel_name = req.body.hotel_name;
+    var dish = req.body.dish;
+    var quantity = req.body.quantity;
+    var table_number = req.body.table_number;
+    console.log(req.body)
+    // use mongoose to get all employees
+    Order.findOneAndUpdate({
+        hotel_name: hotel_name,
+        dish: dish,
+        quantity: quantity,
+        table_number : table_number
+    },
+    { $set: { "delivered": "true"} }
+    , function (err, tables) {
+
+
+        if (err) {
+            console.log(err);
+            return next(err);
+        }
+    
+        else {
+            res.send(tables);
+        };
+    });
+}
+
+exports.billing = function(req,res){
 
     var name = req.body.hotel_name;
-    var table = req.body.table_no;
+    var table_number = req.body.table_number;
 
     Order.find({
         hotel_name : name,
-        table_number : table
+        table_number: table_number,
+        delivered: true,
+        paid: false
     }, function (err, orders) {
 
         if (err) {
@@ -41,4 +73,5 @@ exports.orderdetail=function(req, res) {
 
 
     });
+
 }

@@ -85,4 +85,9 @@
     <plugin name="cordova-plugin-datepicker" spec="0.9.3" />
     <engine name="android" spec="7.1.1" />
     <engine name="browser" spec="5.0.4" />
+    <plugin name="cordova-plugin-paytm" spec="0.0.4">
+        <variable name="MERCHANT_ID" value="iAqnCr74514021156008" />
+        <variable name="INDUSTRY_TYPE_ID" value="Retail" />
+        <variable name="WEBSITE" value="DEFAULT" />
+    </plugin>
 </widget>

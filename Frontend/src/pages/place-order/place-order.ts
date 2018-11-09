@@ -27,15 +27,19 @@ export class PlaceOrderPage {
   r_name : any;
   i_name: any;
   table_number : any;
+  cost : any;
+  cost2: any;
 
   constructor( public http: Http, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PlaceOrderPage');
+  ionViewCanEnter() {
     this.q = [];
+    //document.getElementById('ingredient').style.display = 'none';
+    //document.getElementById('dishes').style.display = 'none';
     this.orderedItems = [];
     this.list2=[];
+    this.list = [];
 
     let alert = this.alertCtrl.create({
       title: 'Enter Reservation OTP',
@@ -43,11 +47,8 @@ export class PlaceOrderPage {
               name: 'otp',
               placeholder : 'OTP'
       }],
+      enableBackdropDismiss: false,
       buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel'
-        },
         {
           text: 'Continue',
           handler: data => {
@@ -63,6 +64,23 @@ export class PlaceOrderPage {
         console.log(path);
         console.log(postParams);
 
+        if (data.otp = ''){
+          let alert = this.alertCtrl.create({
+            title: 'Wrong OTP',
+            subTitle: 'Try again',
+            buttons: [
+              {
+              text: 'Cancel',
+              handler: data => {
+                this.navCtrl.push(CustomerHomePage)
+                }
+              }
+            ]
+          });
+          alert.present();
+
+        }
+
 
         this.http.post(path, JSON.stringify(postParams), {headers: headers})
           .subscribe(res => {
@@ -76,7 +94,7 @@ export class PlaceOrderPage {
                 {
                 text: 'Cancel',
                 handler: data => {
-                    this.ionViewDidLoad()
+                  this.navCtrl.push(CustomerHomePage)
                   }
                 }
               ]
@@ -102,8 +120,9 @@ export class PlaceOrderPage {
   }
 
   public orderByDishName(){
-    document.getElementById('dishname').style.display = 'block';
+
     document.getElementById('ingredient').style.display = 'none';
+    document.getElementById('dishname').style.display = 'block';
     let postParams = {hotel_name: this.r_name};
     console.log(postParams);
   
@@ -119,10 +138,13 @@ export class PlaceOrderPage {
         .subscribe(res => {
           
           var data = res.json();
+          this.list2 = [];
           this.list=[];
+          this.cost = [];
             for (let i in data.dishes)
             {
                 this.list.push(data.dishes[i].dish_name);
+                this.cost.push(data.dishes[i].cost);
               }
             
           }, (err) => {
@@ -156,12 +178,14 @@ export class PlaceOrderPage {
           var data = res.json();
           this.list2=[];
           this.list=[];
+          this.cost2 = [];
           this.searchValue = this.i_name;
             for (let i in data.dishes)
             {
               if(data.dishes[i].ingr_1 == this.searchValue || data.dishes[i].ingr_2 == this.searchValue || data.dishes[i].ingr_3 == this.searchValue  )
               {
                 this.list2.push(data.dishes[i].dish_name);
+                this.cost2.push(data.dishes[i].cost);
               }
             }
             
@@ -183,7 +207,7 @@ export class PlaceOrderPage {
       buttons: [
         {
           text: 'Cancel',
-          role: 'cancel'
+          role: 'cancel',
         },
         {
           text: 'Continue',

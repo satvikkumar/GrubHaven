@@ -1,13 +1,11 @@
 var mongoose = require('mongoose');
 
 var OrdersSchema = new mongoose.Schema({
-
     hotel_name: {
         type: String
     },
-
     table_number: {
-        type: String,
+        type: String, 
         required: true
     },
     dish: {
@@ -19,6 +17,14 @@ var OrdersSchema = new mongoose.Schema({
         type: Array,
         default: [],
         required: true
+    },
+    delivered: {
+        type : Boolean,
+        default: false
+    },
+    paid: {
+        type : Boolean,
+        default: false
     }
 }, {
     timestamps: true

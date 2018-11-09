@@ -16,11 +16,14 @@
 </ion-header>
 
 <ion-content padding="true">
-  <ion-card *ngFor="let t of table_no" (click)="get_details($event,t)">
+  <ion-card *ngFor="let t of table_no; let i = index" (click)="get_details($event,i)">
 
     <ion-card-header class="card-content">
       Table# - {{ t }}
     </ion-card-header>
+
+      <button  color="primary" ion-button (click)="$event.stopPropagation();remove(i)">Completed</button>
+
   </ion-card>
 
 </ion-content>

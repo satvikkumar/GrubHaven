@@ -28,10 +28,10 @@
           <div class = "dishname" id = "dishname">
     
 
-              <ion-list  *ngFor="let f_item of list;">
+              <ion-list  *ngFor="let f_item of list; let i = index">
 
                   <ion-item>
-                    <ion-label (click)='addItem(f_item)' >{{ f_item }}</ion-label>
+                    <ion-label (click)='addItem(f_item)' >{{ f_item }} <span float-right> Rs {{ cost[i] }} </span></ion-label>
     
                   </ion-item>
                 
@@ -39,17 +39,17 @@
 
         </div>
 
-          <div class = "ingredient" id = "ingredient">
+          <div class = "ingredient"id = "ingredient">
 
            <form>
-            <ion-searchbar name = "i_name" placeholder = "Type ingredient name" [(ngModel)]= "i_name"></ion-searchbar>
+            <ion-searchbar  name = "i_name" placeholder = "Type ingredient name" [(ngModel)]= "i_name"></ion-searchbar>
             <button  ion-button (click) = "search()" > SEARCH </button>
           </form>
 
-                      <ion-list  *ngFor="let f_item of list2;">
+                      <ion-list  *ngFor="let f_item of list2; let i = index">
     
                       <ion-item>
-                          <ion-label (click)='addItem(f_item)' >{{ f_item }}</ion-label>
+                          <ion-label (click)='addItem(f_item)' >{{ f_item }} <span float-right> Rs {{ cost2[i] }} </span>  </ion-label>
                       </ion-item>
                     
                     </ion-list>
