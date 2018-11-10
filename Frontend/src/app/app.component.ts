@@ -22,7 +22,7 @@ import { ViewBillPage } from '../pages/view-bill/view-bill';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MakePaytmPaymentPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 

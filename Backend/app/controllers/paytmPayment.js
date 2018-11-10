@@ -14,6 +14,7 @@ exports.initiatePayment = function (req, res){
 	params['ORDER_ID']			= 'ORDER_'  + new Date().getTime();
 	params['CUST_ID'] 			= 'USER_'  + new Date().getTime();
     params['TXN_AMOUNT']			= req.query.amount;
+    // params.CALLBACK_URL = "https://rohin.serveo.net/api/paytm/transactionComplete";
     params.CALLBACK_URL = url.concat("/api/paytm/transactionComplete");
 
 	checksum_lib.genchecksum(params, "_2NOnBMEh!ktAueq", function (err, checksum) {
@@ -37,14 +38,16 @@ exports.initiatePayment = function (req, res){
 }
 
 exports.transactionComplete = function(req, res) {
-    // if (req.body.STATUS == "TXN_SUCCESS") {
-        // var txn_id = req.body.TXNID;
-        // var paymentmode = req.body.PAYMENTMODE;
+    if (req.body.STATUS == "TXN_SUCCESS") {
+        var txn_id = req.body.TXNID;
+        var paymentmode = req.body.PAYMENTMODE;
         res.sendFile('index.html', { root: path.join(__dirname, '../../assets') });
         // other details and function after payment transaction
-    // } else {
+    } else {
         // error code will be available in RESPCODE
         // error list page https://docs.google.com/spreadsheets/d/1h63fSrAmEml3CYV-vBdHNErxjJjg8-YBSpNyZby6kkQ/edit#gid=2058248999
-        // res.send("Transaction Failed for reason " + req.body.RESPMSG);
-    // }       
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write('<html><head><title>Merchant Checkout Page</title></head><body><script type="text/javascript"> window.location.href = "http://google.com?q=fail"; </script></body></html>');
+        res.end();
+    }       
 }   
