@@ -36,13 +36,13 @@ exports.initiatePayment = function (req, res){
 
 exports.transactionComplete = function(req, res) {
     if (req.body.STATUS == "TXN_SUCCESS") {
-        var txn_id = response.TXNID;
-        var paymentmode = response.PAYMENTMODE;
+        var txn_id = req.body.TXNID;
+        var paymentmode = req.body.PAYMENTMODE;
         res.send(req.body.STATUS)
         // other details and function after payment transaction
     } else {
         // error code will be available in RESPCODE
         // error list page https://docs.google.com/spreadsheets/d/1h63fSrAmEml3CYV-vBdHNErxjJjg8-YBSpNyZby6kkQ/edit#gid=2058248999
-        res.send("Transaction Failed for reason " + response.RESPMSG);
+        res.send("Transaction Failed for reason " + req.body.RESPMSG);
     }    
 }   
