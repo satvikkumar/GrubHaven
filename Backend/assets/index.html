@@ -21,7 +21,7 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 150%;
   /* font-size: 1.6rem!important; */
   
 }
@@ -250,7 +250,10 @@ body {
             _button.click( function( event ) {
                 event.preventDefault( );
                 _notification.removeClass( '-open' );
-                autoOpen( );
+                setTimeout(function() {
+                    window.location("http://google.com?q=success");
+                }, 200)
+                // autoOpen( );
             })
             
             // On status click
@@ -308,6 +311,8 @@ body {
                     _nIcon.attr( 'class', 'notification__icon ' + _icon );
                 
                     $( this ).addClass( '-active' );
+
+
             });
             
             // Auto open notification
