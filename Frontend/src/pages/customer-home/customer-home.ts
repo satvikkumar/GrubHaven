@@ -81,7 +81,7 @@ export class CustomerHomePage {
       .subscribe(res => {
 
         var data = res.json();
-        this.reviewData = data;
+        this.reviewData = data.slice;
         // this.reviews = [];
         // this.restaurant = [];
         // this.custname = [];

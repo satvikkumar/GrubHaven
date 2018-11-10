@@ -24,21 +24,21 @@ exports.view=function(req, res) {
 
             console.log(arr);
 
-                Review.find({
-                   hotel_name: arr
-                }, function (err2, review)  {
+			Review.find({
+			   hotel_name: arr
+			}, function (err2, review)  {
 
-                    if (err2) {
-                        console.log(err2);
-                        return next(err2);
-                    }
-            
-                    else {
-                        res.send(review);
-                    }
-                }
-                
-                ) 
+				if (err2) {
+					console.log(err2);
+					return next(err2);
+				}
+		
+				else {
+					res.send(review);
+				}
+			}
+			
+			) 
         };
     });
 }
