@@ -27,6 +27,8 @@ import { ManageOrderPage } from '../pages/manage-order/manage-order';
 import { ViewReservationsPage } from '../pages/view-reservations/view-reservations';
 import { PlaceOrderPage } from '../pages/place-order/place-order';
 import { ViewBillPage } from '../pages/view-bill/view-bill';
+import { MakePaytmPaymentPage } from './../pages/make-paytm-payment/make-paytm-payment';
+
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { ViewBillPage } from '../pages/view-bill/view-bill';
     ManageOrderPage,
     ViewReservationsPage,
     PlaceOrderPage,
-    ViewBillPage
+    ViewBillPage, 
+    MakePaytmPaymentPage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { ViewBillPage } from '../pages/view-bill/view-bill';
     ManageOrderPage,
     ViewReservationsPage,
     PlaceOrderPage,
-    ViewBillPage
+    ViewBillPage,
+    MakePaytmPaymentPage
   ],
   providers: [
     StatusBar,

@@ -16,7 +16,7 @@ var viewReservations = require('./controllers/viewReservations')
 var viewMenu = require('./controllers/viewMenu')
 var checkOTP = require('./controllers/checkOTP')
 var addOrder = require('./controllers/addOrder')
-var genChecksum = require('./controllers/genChecksum')
+var paytmPayment = require('./controllers/paytmPayment')
 
 
 var requireAuth = passport.authenticate('jwt', {
@@ -52,12 +52,10 @@ module.exports = function (app) {
     authRoutes.post('/checkOTP', checkOTP.check);
     authRoutes.post('/addOrder', addOrder.add);
     authRoutes.post('/showBill', viewOrder.billing)
-    authRoutes.post('/paytm/checksum', genChecksum.generateChecksum)
+    authRoutes.get('/paytm/initiatePayment/:TXN_AMOUNT', paytmPayment.initiatePayment)
+    authRoutes.post('/paytm/transactionComplete', paytmPayment.transactionComplete)
     authRoutes.post('/addEmployee', employeeEdit.add)
     authRoutes.post('/removeEmp', employeeEdit.deleteOne)
-
-
-
 
     // Set up routes
     app.use('/api', authRoutes);

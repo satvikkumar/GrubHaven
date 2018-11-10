@@ -1,3 +1,4 @@
+import { MakePaytmPaymentPage } from './../pages/make-paytm-payment/make-paytm-payment';
 import { CustomerHomePage } from './../pages/customer-home/customer-home';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -21,7 +22,7 @@ import { ViewBillPage } from '../pages/view-bill/view-bill';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = MakePaytmPaymentPage;
 
   pages: Array<{title: string, component: any}>;
 
