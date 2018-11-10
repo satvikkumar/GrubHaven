@@ -33,6 +33,7 @@ export class CustomerHomePage {
   currLocation = "Bangalore";
   isLocationSet = false;
   reviewData:any;
+  rating: any;
 
 
   constructor(public menu: MenuController, private storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http, public actionSheetCtrl: ActionSheetController) {
@@ -81,7 +82,24 @@ export class CustomerHomePage {
       .subscribe(res => {
 
         var data = res.json();
+<<<<<<< HEAD
         this.reviewData = data.slice;
+=======
+        this.reviewData = data;
+        this.rating = []
+        for (let i in data){
+          let rate = [];
+          for (let j = 0; j< parseInt(data[i].rating); j++ )
+          {
+            rate.push("1");
+          }
+          this.rating.push(rate)
+
+          
+
+        }
+        console.log(this.rating[0])
+>>>>>>> c4f8271fe5569032a0df9b18357ee9ae163df1d9
         // this.reviews = [];
         // this.restaurant = [];
         // this.custname = [];
