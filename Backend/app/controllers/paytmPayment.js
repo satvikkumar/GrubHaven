@@ -3,7 +3,7 @@ let url = "http://18.136.208.244:8080";
 
 
 exports.initiatePayment = function (req, res){
-    // var params 					= {};
+    var params 					= {};
     // params = req.body
 	params['MID'] 				= 'iAqnCr74514021156008';
 	params['WEBSITE']			= 'DEFAULT';
