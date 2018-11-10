@@ -24,20 +24,12 @@ def getSentiment(review):
 		neut=0
 		pos += score['pos']
 		neg += score['neg']
-		neut += score['neu']
 	length = len(sentences)
 	pos = 10*pos/length
 	neg = 10*neg/length
-	neut = 10*neut/length
 
-	if pos > neg and pos > neut:
-		sentiment = "positive"	
-	elif neg > pos and neg > neut:
-		sentiment = "negative"
-	else:
-		sentiment = "neutral"
-	
-	return sentiment
+
+	return "positive" if pos > neg else "negative"
 
 res = requests.post(url = URL ,data = {"city":"Bangalore"})
 
