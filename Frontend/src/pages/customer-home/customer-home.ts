@@ -93,9 +93,7 @@ export class CustomerHomePage {
       .subscribe(res => {
 
         var data = res.json();
-<<<<<<< HEAD
-        this.reviewData = data.slice;
-=======
+
         this.reviewData = data;
         this.rating = []
         for (let i in data){
@@ -114,7 +112,7 @@ export class CustomerHomePage {
 
         }
         console.log(this.rating[0])
->>>>>>> c4f8271fe5569032a0df9b18357ee9ae163df1d9
+
         // this.reviews = [];
         // this.restaurant = [];
         // this.custname = [];
