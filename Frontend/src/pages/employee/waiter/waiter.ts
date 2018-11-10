@@ -25,7 +25,7 @@ export class WaiterPage {
   constructor( private storage: Storage,  public alertCtrl: AlertController, public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams,public http: Http) {
   }
 
-  ionViewCanEnter()
+  ionViewDidLoad()
   {
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
@@ -136,4 +136,110 @@ export class WaiterPage {
             alert.present();
           });
     }
+
+
+    public addWaiter(){
+
+  var r_name = ''
+  this.storage.get('r_name').then((val) => {
+    console.log(val);
+    r_name = val 
+    let alert = this.alertCtrl.create({
+    title: 'Employee Details',
+    message: "Enter New Employee Details",
+    inputs: [
+      {
+        name : 'employee_name', placeholder: "NAME"
+      },
+      {
+        name: 'employee_address', placeholder: "ADDRESS"
+      },
+      {
+        name: 'contact', placeholder: "CONTACT"
+      },
+      {
+        name: 'shift_time', placeholder: "SHIFT TIME"
+      }
+    ],
+    
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: result => {
+          console.log('Cancel clicked');
+        }
+      },
+      {
+        text: 'Add',
+        handler: result => {
+          let postParams = {
+            hotel_name: r_name,
+            employee_name: result.employee_name,
+            employee_type: "waiter", 
+            address: result.employee_address, 
+            contact : result.contact , 
+            shift_time : result.shift_time 
+          };
+
+          let headers = new Headers();
+          headers.append('Content-Type', 'application/json');
+
+          let url = Enums.APIURL.URL1;
+          let path = url.concat( "/api/addEmployee");
+
+          this.http.post(path, JSON.stringify(postParams), {headers: headers})
+          .subscribe(res =>{
+            this.ionViewDidLoad()
+              let alert2 = this.alertCtrl.create({
+                title: "Successful",
+                subTitle: "Employee Added",
+                buttons: ['Dismiss']
+              });
+              
+              alert2.present();
+            }, (err) => {
+              console.log(err);
+            });
+        }
+      }] //End of buttons list
+    });
+    alert.present();
+  }); //End of Storage
+
+  
+  }//End of add function
+
+
+  public remove(waiter){
+
+    var r_name = '';
+    this.storage.get('r_name').then((val) => {
+      r_name = val
+
+
+      let postParams = {
+        hotel_name: r_name,
+        employee_name: waiter,
+        employee_type: "waiter", 
+      };
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      let url = Enums.APIURL.URL1;
+      let path = url.concat("/api/removeEmp");
+
+
+      this.http.post(path, JSON.stringify(postParams), { headers: headers })
+        .subscribe(res => {
+
+        }, (err) => {
+          console.log(err);
+        });
+
+        this.ionViewDidLoad()
+    });
+
+  }
 }
+

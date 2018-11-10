@@ -53,6 +53,8 @@ module.exports = function (app) {
     authRoutes.post('/addOrder', addOrder.add);
     authRoutes.post('/showBill', viewOrder.billing)
     authRoutes.post('/paytm/checksum', genChecksum.generateChecksum)
+    authRoutes.post('/addEmployee', employeeEdit.add)
+    authRoutes.post('/removeEmp', employeeEdit.deleteOne)
 
 
 

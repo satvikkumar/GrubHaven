@@ -21,7 +21,15 @@
         <ion-card-header class="card-content">
             {{ chef }}
         </ion-card-header>
+
+        <ion-card-header float-right>
+          <button ion-button (click) = "$event.stopPropagation();remove(chef)" > REMOVE </button>
+        </ion-card-header>
        
       
       </ion-card>
+
+      <ion-fab  bottom right>
+          <button ion-fab (click)= addChef()>+</button>
+        </ion-fab>
   </ion-content>
