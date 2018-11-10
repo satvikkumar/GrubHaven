@@ -14,7 +14,7 @@
     "target": "es5"
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts", "../Backend/app/controllers/paytmPayment.js"
   ],
   "exclude": [
     "node_modules",

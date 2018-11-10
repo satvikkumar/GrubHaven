@@ -83,11 +83,7 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-datepicker" spec="0.9.3" />
-    <engine name="android" spec="7.1.1" />
+    <plugin name="cordova-plugin-inappbrowser" spec="3.0.0" />
     <engine name="browser" spec="5.0.4" />
-    <plugin name="cordova-plugin-paytm" spec="0.0.4">
-        <variable name="MERCHANT_ID" value="iAqnCr74514021156008" />
-        <variable name="INDUSTRY_TYPE_ID" value="Retail" />
-        <variable name="WEBSITE" value="DEFAULT" />
-    </plugin>
+    <engine name="android" spec="7.1.2" />
 </widget>

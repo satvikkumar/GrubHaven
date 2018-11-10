@@ -23,6 +23,16 @@
             {{ waiter }}
         </ion-card-header>
 
+
+        <ion-card-header float-right>
+            <button ion-button (click) = "$event.stopPropagation();remove(waiter)" > REMOVE </button>
+          </ion-card-header>
+
       
       </ion-card>
+
+
+      <ion-fab  bottom right>
+          <button ion-fab (click)= addWaiter()>+</button>
+        </ion-fab>
   </ion-content>

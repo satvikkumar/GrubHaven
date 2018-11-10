@@ -1,9 +1,11 @@
+import { MakePaytmPaymentPage } from './../make-paytm-payment/make-paytm-payment';
 import { Component } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import * as Enums from '../../assets/apiconfig';
 import { CustomerHomePage } from '../customer-home/customer-home';
+
 /**
  * Generated class for the ViewBillPage page.
  *
@@ -193,6 +195,6 @@ export class ViewBillPage {
   }
 
   public payment(){
-
+    this.navCtrl.push(MakePaytmPaymentPage)
   }
 }

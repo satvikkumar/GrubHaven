@@ -1,3 +1,4 @@
+import { MakePaytmPaymentPage } from './../pages/make-paytm-payment/make-paytm-payment';
 import { CustomerHomePage } from './../pages/customer-home/customer-home';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
