@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>100 Days CSS #2</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
+
+   <style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,300);
+:root {
+  --color-info: #34b5f0;
+  --color-success: #31e284;
+  --color-warning: #f0a834;
+  --color-danger: #ff3f3f;
+  --color-notification: white;
+  --color-dark: #131821;
+}
+
+html {
+  font-size: 100%;
+  /* font-size: 1.6rem!important; */
+  
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.frame {
+  position: absolute;
+  /* top: 50%; */
+  /* left: 50%; */
+  width: 100%;
+  height: 100%;
+  /* margin-top: -200px;/ */
+  /* margin-left: -200px; */
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: var(--color-dark);
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notification {
+  --padding: 3rem 4rem 1rem 4rem;
+  --color: var( --color-info );
+  --bezier: cubic-bezier( .75,.21,.25,.78 );
+  position: relative;
+  text-align: center;
+  height: 40%;
+  width: 80%;
+  background-color: var(--color-notification);
+  box-shadow: 0px 10px 10px black;
+  border-radius: 5px;
+  transition: -webkit-transform .5s ease .4s;
+  transition: transform .5s ease .4s;
+  transition: transform .5s ease .4s, -webkit-transform .5s ease .4s;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+.notification.-danger {
+  --color: var( --color-danger );
+}
+.notification.-info {
+  --color: var( --color-info );
+}
+.notification.-success {
+  --color: var( --color-success );
+}
+.notification.-warning {
+  --color: var( --color-warning );
+}
+.notification.-open {
+  transition: all .5s ease;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.notification.-open::before {
+  transition: all 0.4s var(--bezier) 0.4s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+.notification.-open .notification__button {
+  color: #fff;
+  transition: color .3s ease .8s, background-color .3s ease;
+}
+.notification::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  transition: all 0.5s var(--bezier);
+  background: var(--color);
+  border-radius: 5px;
+}
+.notification__content {
+  box-sizing: border-box;
+  padding: var(--padding);
+  width: 100%;
+  margin: 0 auto;
+}
+.notification__icon {
+  font-size: 5.2rem;
+  color: var(--color);
+  margin-bottom: 2rem;
+  transition: color .3s ease;
+}
+.notification__title, .notification__text, .notification__icon {
+  margin-top: 0;
+}
+.notification__title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.notification__text {
+  color: var(--color-dark);
+  font-size: 1.4rem;
+}
+.notification__button {
+  background: var(--color);
+  color: var(--color);
+  width: 100%;
+  border: none;
+  padding: 1.4rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: color .3s ease, background-color .3s ease;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  top: 1px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.colors {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+.colors a {
+  --color: var( --color-danger );
+  width: 1.6rem;
+  height: 1.6rem;
+  display: block;
+  margin: .5rem;
+  background: var(--color);
+  border-radius: 50%;
+  transition: box-shadow .3s ease;
+}
+.colors a[data-status="-warning"] {
+  --color: var( --color-warning );
+}
+.colors a[data-status="-success"] {
+  --color: var( --color-success );
+}
+.colors a[data-status="-info"] {
+  --color: var( --color-info );
+}
+.colors a.-active {
+  box-shadow: 0 0 4px 2px var(--color);
+}
+
+       </style>
+
+
+  
+</head>
+
+<body>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<div class="frame">
+  <div class="center">
+		<div class="notification -success">
+			<div class="notification__content">
+				<i class="notification__icon far fa-check-circle"></i>
+				<h3 class="notification__title">Success!</h3>
+				<p class="notification__text">
+					You have succesfully made the payment. Hope to see you again soon!
+				</p>
+			</div>
+			<button class="notification__button">
+				Dismiss
+			</button>
+		</div>
+  </div>
+	<!-- <div class="colors">
+		<a href="#" data-status="-danger" class="-active"></a>
+		<a href="#" data-status="-warning"></a>
+		<a href="#" data-status="-success"></a>
+		<a href="#" data-status="-info"></a>
+	</div> -->
+ </div>
+  <script src='https://100dayscss.com/codepen/js/jquery.min.js'></script>
+
+  
+  <script>
+        // jQuery v3.3.1 is supported
+        jQuery( function( $ ) {
+            // Notification element
+            var _notification = $( '.notification' );
+            
+            // Notification icon
+            var _nIcon = $( '.notification__icon' );
+            
+            // Notification title
+            var _nTitle = $( '.notification__title' );
+            
+            // Notification text
+            var _nText = $( '.notification__text' );
+            
+            // Notification button
+            var _button = $( '.notification__button' );
+            
+            // Statuses
+            var _statuses = $( '.colors a' );
+            
+            // Notification button click
+            _button.click( function( event ) {
+                event.preventDefault( );
+                _notification.removeClass( '-open' );
+                autoOpen( );
+            })
+            
+            // On status click
+            _statuses.click( function( event ) {
+                    event.preventDefault( );
+                    // Get the color
+                    var _status = $( this ).data( 'status' );
+                
+                    // Check if status found
+                    if( !_status.length )
+                            return;
+                
+                    _statuses.removeClass( '-active' );
+                
+                    // Check if open
+                    var _open = _notification.hasClass( '-open' );
+                
+                    // Remove all classes besides the notification class
+                  _notification.attr( 'class', 'notification' + ( _open ? ' -open' : '' ) );
+                
+                    // Add the status
+                    _notification.addClass( _status );
+                
+                    // Change text
+                    var _title      = 'Oh snap!';
+                    var _text       = 'An error has occured while creating an error report.';
+                    var _buttonText = 'Dismiss';
+                    var _icon       = 'fas fa-exclamation-circle';
+                
+                    switch( _status ) {
+                        case '-warning' :
+                            _title = 'Invalid data provided';
+                            _text  = 'You have provided invalid data when submitting a form';
+                            _buttonText = 'Let\'s fix it';
+                            _icon = 'fas fa-exclamation-triangle';
+                        break;
+                        case '-info' :
+                            _title = 'Hey there!';
+                            _text  = 'When accessing the hidden data you should enable some options';
+                            _buttonText = 'Got it!';
+                            _icon = 'fas fa-info-circle';
+                        break;
+                        case '-success' :
+                            _title = 'Success!';
+                            _text  = 'Your profile was succesfully updated and new data will appear on your timeline.';
+                            _buttonText = 'Thank you!';
+                            _icon = 'far fa-check-circle';
+                        break;
+                    }
+                
+                    _nTitle.text( _title );
+                    _nText.text( _text );
+                    _button.text( _buttonText );
+                
+                    _nIcon.attr( 'class', 'notification__icon ' + _icon );
+                
+                    $( this ).addClass( '-active' );
+            });
+            
+            // Auto open notification
+            function autoOpen( $ms = 2000 ) {
+                setTimeout( function( ) {
+                    _notification.addClass( '-open' );
+                }, $ms );
+            }
+            
+            autoOpen( 300 );
+        });
+        
+        
+        </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 checksum_lib = require("../../utils/checksum.js")
 let url = "http://18.136.208.244:8080";
+var path = require('path');
+
 
 
 exports.initiatePayment = function (req, res){
@@ -35,14 +37,14 @@ exports.initiatePayment = function (req, res){
 }
 
 exports.transactionComplete = function(req, res) {
-    if (req.body.STATUS == "TXN_SUCCESS") {
-        var txn_id = req.body.TXNID;
-        var paymentmode = req.body.PAYMENTMODE;
-        res.send(req.body.STATUS)
+    // if (req.body.STATUS == "TXN_SUCCESS") {
+        // var txn_id = req.body.TXNID;
+        // var paymentmode = req.body.PAYMENTMODE;
+        res.sendFile('index.html', { root: path.join(__dirname, '../../assets') });
         // other details and function after payment transaction
-    } else {
+    // } else {
         // error code will be available in RESPCODE
         // error list page https://docs.google.com/spreadsheets/d/1h63fSrAmEml3CYV-vBdHNErxjJjg8-YBSpNyZby6kkQ/edit#gid=2058248999
-        res.send("Transaction Failed for reason " + req.body.RESPMSG);
-    }    
+        // res.send("Transaction Failed for reason " + req.body.RESPMSG);
+    // }       
 }   
