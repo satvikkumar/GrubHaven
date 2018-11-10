@@ -52,7 +52,7 @@ module.exports = function (app) {
     authRoutes.post('/checkOTP', checkOTP.check);
     authRoutes.post('/addOrder', addOrder.add);
     authRoutes.post('/showBill', viewOrder.billing)
-    authRoutes.get('/paytm/initiatePayment/:TXN_AMOUNT', paytmPayment.initiatePayment)
+    authRoutes.get('/paytm/initiatePayment', paytmPayment.initiatePayment)
     authRoutes.post('/paytm/transactionComplete', paytmPayment.transactionComplete)
     authRoutes.post('/addEmployee', employeeEdit.add)
     authRoutes.post('/removeEmp', employeeEdit.deleteOne)
