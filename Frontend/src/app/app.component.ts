@@ -59,6 +59,15 @@ export class MyApp {
     this.nav.push(ViewBillPage)
   }
 
+  public logout(){
+    this.nav.push(LoginPage)
+  }
+
+  public goToCustomerHome(){
+    this.nav.push(CustomerHomePage)
+
+  }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
