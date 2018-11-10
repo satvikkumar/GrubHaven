@@ -12,7 +12,7 @@ exports.initiatePayment = function (req, res){
 	params['ORDER_ID']			= 'ORDER_'  + new Date().getTime();
 	params['CUST_ID'] 			= 'USER_'  + new Date().getTime();
     params['TXN_AMOUNT']			= req.query.amount;
-    params.CALLBACK_URL = url.concat("/paytm/transactionComplete");
+    params.CALLBACK_URL = url.concat("/api/paytm/transactionComplete");
 
 	checksum_lib.genchecksum(params, "_2NOnBMEh!ktAueq", function (err, checksum) {
         // res.json(params)
