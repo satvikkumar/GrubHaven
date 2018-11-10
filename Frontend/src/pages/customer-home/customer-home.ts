@@ -66,6 +66,17 @@ export class CustomerHomePage {
     actionSheet.present();
   }
 
+  showReviewAlert(item) {
+    let alert2 = this.alertCtrl.create({
+      title: item.hotel_name,
+      cssClass: "custom-alert",
+      subTitle: item.rating + "/5 review by " + item.customer_name,
+      message: item.review,
+      buttons: ['Dismiss']
+    });
+    alert2.present();
+  }
+
   public search() {
 
     let postParams = { city: this.currLocation };
@@ -91,7 +102,11 @@ export class CustomerHomePage {
           let rate = [];
           for (let j = 0; j< parseInt(data[i].rating); j++ )
           {
-            rate.push("1");
+            rate.push("star");
+          }
+          for (let j = parseInt(data[i].rating); j<5; j++ )
+          {
+            rate.push("star-outline");
           }
           this.rating.push(rate)
 

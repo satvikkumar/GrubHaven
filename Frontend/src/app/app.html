@@ -10,22 +10,22 @@
 
   <ion-content>
     <ion-list inset>
-      <button ion-item menuClose   (click)="goToEmployees()">
+      <button ion-item menuClose  style="background-color: #191919;" (click)="goToEmployees()">
         Manage Employees
       </button>
-      <button ion-item menuClose   (click)="goToInventory()">
+      <button ion-item menuClose  style="background-color: #191919;" (click)="goToInventory()">
         Inventory
       </button>
-      <button ion-item menuClose   (click)="goToOrders()">
+      <button ion-item menuClose  style="background-color: #191919;" (click)="goToOrders()">
         View Orders
       </button>
-      <button ion-item  menuClose    (click)="goToTables()">
+      <button ion-item  menuClose   style="background-color: #191919;" (click)="goToTables()">
         Manage Tables
       </button>
-      <button ion-item  menuClose    (click)="goToReservations()">
+      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToReservations()">
       Reservations
       </button>
-      <button ion-item  menuClose    (click)="goToAnalytics()">
+      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToAnalytics()">
       View Analytics
       </button>
       
@@ -36,33 +36,31 @@
 
 </ion-menu>
 
-<ion-menu [content]="content" id="menucust">
+<ion-menu type="push" [content]="content" id="menucust">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu 
-       <span float-right ><button ion-button menuClose    (click)="logout()">Logout</button></span>
-      </ion-title>
+    <ion-toolbar color="primary">
+      <ion-title><span float-left style="margin: 10px 10px 0 0!important;">Menu</span><span float-right ><button ion-button menuClose color="light"  round outline   (click)="logout()">Logout</button></span></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
-    <ion-list inset>
-      <button ion-item menuClose   (click)="goToCustomerHome()">
+    <ion-list no-lines >
+      <button ion-item menuClose  style="background-color: #191919;" (click)="goToCustomerHome()">
         Home Page
       </button>
-      <button ion-item menuClose   (click)="goToSearch()">
+      <button ion-item menuClose  style="background-color: #191919;" (click)="goToSearch()">
         Search for Restaurant
       </button>
-      <button ion-item menuClose   (click)="goToPlaceOrder()">
+      <button ion-item menuClose  style="background-color: #191919;" (click)="goToPlaceOrder()">
         Place order
       </button>
-      <button ion-item menuClose   (click)="goToBill()">
+      <button ion-item menuClose  style="background-color: #191919;" (click)="goToBill()">
         View Bills
       </button>
-      <button ion-item  menuClose    (click)="goToRecommend()">
-        My Recommender
+      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToRecommend()">
+        My Recommendations
       </button>
-      <button ion-item  menuClose    (click)="goToReview()">
+      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToReview()">
         Write a review
       </button>
 

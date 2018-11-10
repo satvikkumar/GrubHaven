@@ -21,21 +21,17 @@
 
   <ion-content class="card-background-page">
 
-    <ion-card *ngFor="let item of reviewData; let i = index">
+    <ion-card *ngFor="let item of reviewData; let i = index" (click)="showReviewAlert(item)">
       <img style="filter: opacity(0.5);" src="assets/imgs/restaurant-back.png" />
-      <div class = "card-title">
-      <span float-right>
-          <ion-row>
-            
-          <ion-col *ngFor = "let star of rating[i]">
-            <ion-thumbnail item-right><img width = 20 height = 20 src="assets/imgs/star.png"/> </ion-thumbnail>
-          </ion-col>
-      
-        </ion-row>
-      </span>
-      </div>
+
       <div class="card-title"> <span> {{item.hotel_name}} </span></div>
-      <div class="card-subtitle">"{{item.review}}"</div>
+      <div class = "card-star">
+          <ion-col *ngFor = "let starType of rating[i]">
+              <ion-icon small [name]="starType "></ion-icon>
+          </ion-col>
+      </div>
+      
+      <div class="card-subtitle">"{{ item.review | slice:0:120 }}{{item.review.length > 125 ? ' ...' : ''}}"</div>
       <div class="cardfooter">Review by {{item.customer_name}}</div>
     </ion-card>
   </ion-content>

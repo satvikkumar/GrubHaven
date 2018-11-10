@@ -11,6 +11,14 @@ page-customer-home {
     font-size : 10px;
     color: grey;
 }
+.custom-alert {
+    > div {
+      background: black; // if you don't use .md, .ios, .mp initially, you'd have to use !important here.
+      color: #fff;
+      margin-bottom: 10px;
+    }
+}
+
 .card-background-page {
 
     ion-card {
@@ -20,20 +28,42 @@ page-customer-home {
     }
   
     .card-title {
+        padding-left:15px;  
+        text-align: left;
       position: absolute;
-      top: 15%;
-      font-size: 2.0em;
+      top: 4%;
+      font-size: 1.7em;
       width: 100%;
       font-weight: bold;
       color: #fff;
     }
+
+    .card-star {
+        text-align: right;
+        padding-right: 15px;
+        position: absolute;
+        top: 4%;
+        font-size: 1.7em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        .col {
+            padding: 0;
+        }
+  
+      }
   
     .card-subtitle {
       font-size: 1.0em;
       position: absolute;
-      top: 45%;
-      width: 100%;
+      top: 32%;
+      width: 80%;
       color: #fff;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+
+   
     }
     .cardfooter {
         padding-right: 10px;
