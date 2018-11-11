@@ -5,7 +5,7 @@ exports.view=function(req, res) {
     var rname = req.body.name;
     
     Review.find({
-        hotel_name: rname
+        hotel_name: new RegExp(rname, 'i')
      }, function (err2, review)  {
 
          if (err2) {
