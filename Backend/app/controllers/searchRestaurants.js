@@ -10,7 +10,7 @@ exports.search=function(req, res) {
     var cuisine = String;
     // use mongoose to get all employees
     Rest.findOne({
-        name: '/'+name+'/i'
+        name: { $regex: /name/, $options: 'i' }
     }, function (err, restaurant) {
 
         if (err) {
