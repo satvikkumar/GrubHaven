@@ -17,7 +17,7 @@ with open('data.json', 'a') as outfile:
 myclient = pymongo.MongoClient("mongodb://18.136.208.244:27017/")
 mydb = myclient["drms"]
 mydbreview = mydb["reviews"]
-mydbrest = mydb["restaurant"]
+mydbrest = mydb["restaurants"]
 
 #Review Update
 for rname,rid in restaurantIDMap.items(): 
