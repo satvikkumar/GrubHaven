@@ -1,10 +1,7 @@
-<ion-menu [content]="content" id="menurest">
+<ion-menu type="push" [content]="content" id="menurest">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu 
-        <span float-right ><button ion-button menuClose    (click)="logout()">Logout</button></span>
-      </ion-title>
-      
+    <ion-toolbar color="primary">
+      <ion-title><span float-left style="margin: 10px 10px 0 0!important;">Menu</span><span float-right ><button ion-button menuClose color="light"  round outline   (click)="logout()">Logout</button></span></ion-title>
     </ion-toolbar>
   </ion-header>
 
