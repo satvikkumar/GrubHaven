@@ -61,6 +61,7 @@ module.exports = function (app) {
     authRoutes.post('/addItem', manageInventory.add);
     authRoutes.post('/removeItem', manageInventory.remove);
     authRoutes.post('/iEdit', manageInventory.edit);
+    authRoutes.post('/showTableOrders', viewOrder.tableOrders);
 
     // Set up routes
     app.use('/api', authRoutes);

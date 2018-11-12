@@ -195,6 +195,6 @@ export class ViewBillPage {
   }
 
   public payment(){
-    this.navCtrl.push(MakePaytmPaymentPage)
+    this.navCtrl.push(MakePaytmPaymentPage, { amount: this.total })
   }
 }
