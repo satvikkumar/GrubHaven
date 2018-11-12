@@ -3,11 +3,9 @@ import requests
 import nltk 
 import os
 from itertools import groupby
-from collections import defaultdict
-
-
-
+from collections import defaultdict,Counter
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
 
 # api-endpoint 
 URL = "http://18.136.208.244:8080/api/viewReview"
@@ -28,24 +26,41 @@ def getSentiment(review):
 		neut=0
 		pos += score['pos']
 		neg += score['neg']
+		neut += score['neu']
 	length = len(sentences)
 	pos = 10*pos/length
-	neg = - 10*neg/length
+	neg = 10*neg/length
+	neut = 10*neut/length
 
-	return pos if pos > neg else neg
+	if pos > neg and pos > neut:
+		sentiment = "positive"
+	elif neg > pos and neg > neut:
+		sentiment = "negative"
+	else:
+		sentiment = "neutral"
+	
+	return sentiment	
+
 
 res = requests.post(url = URL ,data = {"city":"Bangalore"})
 #print(res)
 review_data  = res.json()
 
-
-hotel_sentscore = defaultdict(list)
+hotel_sentlist = defaultdict(list)
+hotel_sentcount = defaultdict(dict)
 
 
 #Getting the sentiment for each review 
 for item in review_data:
 	score = getSentiment(item['review'])
-	hotel_sentscore[item['hotel_name']].append(score)
+	hotel_sentlist[item['hotel_name']].append(score)
+
+for hotel in hotel_sentlist.keys():
+
+	hotel_sentcount[hotel] = Counter(hotel_sentlist[hotel])
+
+print(hotel_sentcount)
+
 
 
 cur_dir = os.path.dirname(os.path.realpath('sentanalysis_client.py'))
@@ -55,11 +70,17 @@ target_dir = os.path.join(cur_dir, '../assets/')
 target_dir = os.path.abspath(os.path.realpath(target_dir))
 os.chdir(target_dir)
 
+
 #Aggregating sentiment score for a hotel and creating a file for each hotel with respective score
-for hotel in hotel_sentscore.keys():
-	avg_score = sum(hotel_sentscore[hotel])/(len(hotel_sentscore[hotel]))
-	
+for hotel in hotel_sentcount.keys():
+
 	fname = str(hotel) + "_sentiment.txt"
 	file  = open(fname,'a')
-	file.write(str(avg_score))
+	
+	for sent in hotel_sentcount[hotel]:
+		s = str(sent) + " " + str(hotel_sentcount[hotel][sent])
+		file.write(s)
+		file.write('\n')
+
+	
 	
