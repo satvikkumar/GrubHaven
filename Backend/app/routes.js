@@ -17,6 +17,7 @@ var viewMenu = require('./controllers/viewMenu')
 var checkOTP = require('./controllers/checkOTP')
 var addOrder = require('./controllers/addOrder')
 var paytmPayment = require('./controllers/paytmPayment')
+var manageInventory = require('./controllers/inventory')
 
 
 var requireAuth = passport.authenticate('jwt', {
@@ -51,11 +52,15 @@ module.exports = function (app) {
     authRoutes.post('/viewMenu', viewMenu.show);
     authRoutes.post('/checkOTP', checkOTP.check);
     authRoutes.post('/addOrder', addOrder.add);
-    authRoutes.post('/showBill', viewOrder.billing)
-    authRoutes.get('/paytm/initiatePayment', paytmPayment.initiatePayment)
-    authRoutes.post('/paytm/transactionComplete', paytmPayment.transactionComplete)
-    authRoutes.post('/addEmployee', employeeEdit.add)
-    authRoutes.post('/removeEmp', employeeEdit.deleteOne)
+    authRoutes.post('/showBill', viewOrder.billing);
+    authRoutes.get('/paytm/initiatePayment', paytmPayment.initiatePayment);
+    authRoutes.post('/paytm/transactionComplete', paytmPayment.transactionComplete);
+    authRoutes.post('/addEmployee', employeeEdit.add);
+    authRoutes.post('/removeEmp', employeeEdit.deleteOne);
+    authRoutes.post('/listItems',manageInventory.list);
+    authRoutes.post('/addItem', manageInventory.add);
+    authRoutes.post('/removeItem', manageInventory.remove);
+    authRoutes.post('/iEdit', manageInventory.edit);
 
     // Set up routes
     app.use('/api', authRoutes);

@@ -1,24 +1,30 @@
 var mongoose = require('mongoose');
 
-var InventorySchema = new mongoose.Schema({
- 
+var Inventory = new mongoose.Schema();
+
+
+Inventory.add({
+    
+    ing_name: {
+	    type: String,
+	    required: true
+    },
+    ing_quant: {
+        type: String,
+        required: true
+    },
+    ing_supplier: {
+        type: String
+    }
+});
+
+var InventorySchema = new mongoose.Schema({ 
     hotel_name: {
         type: String
     },
     
-    ingredient: {
-	type: String,
-	required: true
-    },
-    quantity: {
-        type: Number,
-        required: true
-    },
-    supplier: {
-	type: String
-    }
-}, {
-    timestamps: true
+    inventory : [Inventory]
 });
 
 module.exports = mongoose.model('Inventory', InventorySchema);
+
