@@ -63,7 +63,7 @@ export class MyApp {
   }
 
   public logout(){
-    this.nav.push(LoginPage)
+    this.nav.setRoot(LoginPage)
   }
 
   public goToCustomerHome(){
