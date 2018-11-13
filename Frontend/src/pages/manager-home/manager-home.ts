@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MenuController } from 'ionic-angular';
 
 
 /**
@@ -17,13 +18,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ManagerHomePage {
 
   user: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  activeMenu: string = 'none';
+  constructor(public menu: MenuController, public navCtrl: NavController, public navParams: NavParams) {
     this.user = navParams.get('username');
   }
 
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad ManagerHomePage');
+    this.activeMenu = 'menurest';
+    this.menu.enable(true, 'menurest');
+    this.menu.enable(false, 'menucust');
   }
 
 }

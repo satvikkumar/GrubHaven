@@ -14,6 +14,8 @@ import { ManageOrderPage } from '../pages/manage-order/manage-order';
 import { ViewReservationsPage } from '../pages/view-reservations/view-reservations';
 import { PlaceOrderPage } from '../pages/place-order/place-order';
 import { ViewBillPage } from '../pages/view-bill/view-bill';
+import { InventoryPage } from '../pages/inventory/inventory';
+import { TablesPage } from '../pages/tables/tables';
 
 
 @Component({
@@ -61,12 +63,19 @@ export class MyApp {
   }
 
   public logout(){
-    this.nav.push(LoginPage)
+    this.nav.setRoot(LoginPage)
   }
 
   public goToCustomerHome(){
     this.nav.push(CustomerHomePage)
 
+  }
+  public goToInventory(){
+    this.nav.push(InventoryPage)
+  }
+
+  public goToTables(){
+    this.nav.push(TablesPage);
   }
 
 

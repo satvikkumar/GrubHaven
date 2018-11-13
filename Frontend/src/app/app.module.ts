@@ -29,6 +29,9 @@ import { PlaceOrderPage } from '../pages/place-order/place-order';
 import { ViewBillPage } from '../pages/view-bill/view-bill';
 import { MakePaytmPaymentPage } from './../pages/make-paytm-payment/make-paytm-payment';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { InventoryPage } from '../pages/inventory/inventory';
+import { TablesPage } from '../pages/tables/tables';
+
 
 
 
@@ -50,7 +53,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     ViewReservationsPage,
     PlaceOrderPage,
     ViewBillPage, 
-    MakePaytmPaymentPage
+    MakePaytmPaymentPage,
+    InventoryPage,
+    TablesPage
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     ViewReservationsPage,
     PlaceOrderPage,
     ViewBillPage,
-    MakePaytmPaymentPage
+    MakePaytmPaymentPage,
+    InventoryPage,
+    TablesPage
   ],
   providers: [
     InAppBrowser,
