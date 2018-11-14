@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, Loading, IonicPage } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
 
@@ -19,7 +19,7 @@ export class LoginPage {
   email: string;
   password: string;
 
-  constructor(private storage: Storage, private nav: NavController, public authService: AuthProvider, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public http: HttpClient) { }
+  constructor(private storage: Storage, private nav: NavController, public authService: AuthProvider, private alertCtrl: AlertController, public http: HttpClient) { }
 
   public createAccount() {
 
@@ -30,9 +30,6 @@ export class LoginPage {
   public login() {
 
     let postParams = { email: this.email, password: this.password };
-    var header = { "headers": { "Content-Type": "application/json" } };
-
-    console.log(postParams);
     this.authService.login(postParams).then((result) => {
 
       let data = JSON.parse(JSON.stringify(result["user"]));
@@ -57,7 +54,6 @@ export class LoginPage {
 
 
 
-      //this.nav.push(ManagerHomePage, { username: this.email });
     });
 
   }

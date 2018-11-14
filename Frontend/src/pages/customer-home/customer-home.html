@@ -1,11 +1,11 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-      <ion-title>GrubHaven</ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home Feed</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 
 
@@ -36,23 +36,5 @@
       <div class="cardfooter">Review by {{item.customer_name}}</div>
     </ion-card>
   </ion-content>
-
-  <!-- <ion-card *ngFor="let review of reviews;  let i = index" style="margin-top:0.5em">
-
-              <ion-card-header class = "rname">
-               {{ restaurant[i] }}  
-              </ion-card-header>
-            
-              <ion-card-content>
-                {{ review }}
-              </ion-card-content>
-        
-              <ion-card-content class = "by">
-                Review By: {{ custname[i] }}
-              </ion-card-content>
-        
-              
-            
-            </ion-card>  -->
 </ion-content>
 

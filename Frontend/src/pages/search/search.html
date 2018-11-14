@@ -1,68 +1,49 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-      <ion-title>GrubHaven</ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>GrubHaven</ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content class="login-content" padding>
-    <form  #registerForm="ngForm">
-      <ion-row>
-        <ion-col>
-          <ion-list inset>
 
-            <ion-item>
-              <ion-input class = "search" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>
-            </ion-item>
+  <ion-grid>
+    <ion-row text-center>
+      <ion-col>
+        <div>
+          <form #registerForm="ngForm">
+            <ion-searchbar placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name"
+              required></ion-searchbar>
+            <button ion-button (click)="search()"> SEARCH </button>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-          </ion-list>
-        </ion-col>
-      </ion-row>
+  <div id="content">
+    <ion-label class='r_name'></ion-label>
+    <ion-label class='r_address'></ion-label>
+    <ion-label class='r_city'></ion-label>
+    <ion-label class='r_contact'></ion-label>
+    <ion-label class='r_cuisine'></ion-label>
+    <button ion-button class="submit-btn" full type="submit" block (click)="book()">Book</button>
 
-      <ion-row>
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" block clear (click)="search()">Search</button>
-        </ion-col>
-      </ion-row>
-  </form>
 
-<div id = "content">
-    <ion-label class = 'r_name'></ion-label>
-    <ion-label class = 'r_address'></ion-label>
-    <ion-label class = 'r_city'></ion-label>
-    <ion-label class = 'r_contact'></ion-label>
-    <ion-label class = 'r_cuisine'></ion-label>
-
-    <button ion-button class="submit-btn" full type="submit" block clear (click)="book()">Book</button>
-
-    
   </div>
-
-  
-
-
-
-
   <ion-card *ngFor="let review of reviews;  let i = index">
 
     <ion-card-header>
     </ion-card-header>
-  
+
     <ion-card-content>
       {{ review }}
     </ion-card-content>
 
-    <ion-card-content class = "by">
+    <ion-card-content class="by">
       Review By: {{ custname[i] }}
     </ion-card-content>
-
-    
-  
   </ion-card>
-
-
-
-
 </ion-content>
