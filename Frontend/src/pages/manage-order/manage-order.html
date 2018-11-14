@@ -5,14 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons left>
-      <button ion-button left menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>GrubHaven</ion-title>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding="true">
@@ -22,7 +20,7 @@
       Table# - {{ t }}
     </ion-card-header>
 
-      <button  color="primary" ion-button (click)="$event.stopPropagation();remove(i)">Completed</button>
+    <button color="primary" ion-button (click)="$event.stopPropagation();remove(i)">Completed</button>
 
   </ion-card>
 
