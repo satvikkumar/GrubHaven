@@ -2,7 +2,7 @@ var AuthenticationController = require('./controllers/authentication');
 var express = require('express');
 var passportService = require('../config/passport');
 var passport = require('passport');
-var listing = require('./controllers/Listing');
+var listing = require('./controllers/listing');
 var searchRestaurants = require('./controllers/searchRestaurants'); 
 var employeeEdit = require('./controllers/employeeEdit'); 
 var viewReviews = require('./controllers/viewReviews'); 
@@ -62,6 +62,7 @@ module.exports = function (app) {
     authRoutes.post('/removeItem', manageInventory.remove);
     authRoutes.post('/iEdit', manageInventory.edit);
     authRoutes.post('/showTableOrders', viewOrder.tableOrders);
+    authRoutes.post('/paidTable',checkTables.paid)
 
     // Set up routes
     app.use('/api', authRoutes);
