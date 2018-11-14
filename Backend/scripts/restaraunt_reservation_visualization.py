@@ -25,17 +25,23 @@ URL = "http://18.136.208.244:8080/api/viewReservations"
 
 hotel_time_dict = defaultdict(int)
 
-cur_dir = os.path.dirname(os.path.realpath('sentanalysis_client.py'))
+cur_dir = os.path.dirname(os.path.realpath('restaraunt_reservation_visualization.py'))
 print(cur_dir)
 
-target_dir = os.path.join(cur_dir, '../assets/')
-target_dir = os.path.abspath(os.path.realpath(target_dir))
-os.chdir(target_dir)
 
 for hotel in hotels_list:
+	
+	#Changing the current working directory to respective hotel folder in assets
+	target_dir = os.path.join(cur_dir, '../assets/'+str(hotel)+'/')
+	target_dir = os.path.abspath(os.path.realpath(target_dir))
+	os.chdir(target_dir)
+
+
 	res = requests.post(url = URL ,data = {"hotel_name":hotel})
 	view_tables_data  = res.json()
 	
+	
+
 	for item in view_tables_data:
 		hotel_time_dict[int(item['time'])] += 1
 

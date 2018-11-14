@@ -63,12 +63,12 @@ for hotel in hotel_sentlist.keys():
 
 	hotel_sentcount[hotel] = Counter(hotel_sentlist[hotel])
 
-print(hotel_sentcount)
+#print(hotel_sentcount)
 
 
 
 cur_dir = os.path.dirname(os.path.realpath('sentanalysis_client.py'))
-print(cur_dir)
+#print(cur_dir)
 
 target_dir = os.path.join(cur_dir, '../assets/')
 target_dir = os.path.abspath(os.path.realpath(target_dir))
@@ -77,6 +77,12 @@ os.chdir(target_dir)
 
 #Aggregating sentiment score for a hotel and creating a file for each hotel with respective score
 for hotel in hotel_sentcount.keys():
+
+	
+	#Changing the current working directory to respective hotel folder in assets
+	target_dir = os.path.join(cur_dir, '../assets/'+str(hotel)+'/')
+	target_dir = os.path.abspath(os.path.realpath(target_dir))
+	os.chdir(target_dir)
 
 	fname = str(hotel) + "_sentiment.txt"
 	file  = open(fname,'a')
