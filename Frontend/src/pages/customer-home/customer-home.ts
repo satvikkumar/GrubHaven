@@ -93,6 +93,7 @@ export class CustomerHomePage {
       .subscribe(res => {
 
         var data = res.json();
+
         this.reviewData = data;
         this.rating = []
         for (let i in data){

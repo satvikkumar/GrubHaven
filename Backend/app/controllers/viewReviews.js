@@ -49,9 +49,8 @@ exports.view=function(req, res) {
 					}
 				}
 				)
-			}
-			console.log("YO MAM IAM HERE")
-			
+			}	
         };
     });
 }
+

@@ -19,16 +19,19 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
     "method-override": "^3.0.0",
-    "mongoose": "^5.3.2",
+    "mongoose": "^5.3.11",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.4",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
-    "shelljs": "^0.8.2"
+    "path": "^0.12.7",
+    "shelljs": "^0.8.2",
+    "util": "^0.11.1"
   }
 }

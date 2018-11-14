@@ -54,7 +54,10 @@ export class MakeReservationsPage {
     let url = Enums.APIURL.URL1;
     let rname = "/" + this.restaurant_name;
     let image_name = rname.concat(".jpg");
-    this.path = url.concat(image_name);
+    let folder_path = rname.concat(image_name);
+
+    this.path = url.concat(folder_path);
+    console.log(this.path)
     console.log(this.numTables);
     this.getTableAvailability();
   }
