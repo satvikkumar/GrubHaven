@@ -61,7 +61,7 @@ for hotel in hotels_list:
 		
 		plt.bar(y_pos, freq,width = 0.8,align='center', alpha=0.5)
 		plt.xticks(y_pos, time_slot)
-		plt.ylabel('Busyness of Time slot')
+		plt.ylabel('Frequency of reservations')
 		plt.title('Time slot')
 		fname = str(hotel) + "_PeakHours.png"
 
