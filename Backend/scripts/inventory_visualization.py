@@ -68,8 +68,9 @@ y_pos = np.arange(len(ing_name_list))
 
 plt.barh(y_pos, numeric_ing_quantity,align='center', alpha=0.5)
 plt.yticks(y_pos, ing_name_list)
-plt.xlabel('Ingredients')
 plt.title('Quantity in kg')
 #fname = str(hotel) + "_inventory.png"
 fname = "AKF" + "_inventory.png"
-plt.savefig(fname, bbox_inches='tight')
+plt.savefig(fname)
+
+# bbox_inches='tight'
