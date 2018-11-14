@@ -6,7 +6,6 @@ from itertools import groupby
 from collections import defaultdict
 
 
-
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # api-endpoint 
