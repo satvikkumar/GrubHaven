@@ -92,5 +92,3 @@ for hotel in hotel_sentcount.keys():
 		file.write(s)
 		file.write('\n')
 
-	
-	

@@ -132,4 +132,52 @@ export class TablesPage {
       });
     });
   }
+
+  public paid(table_number){
+
+    this.storage.get('r_name').then((val) => {
+      let postParams = { hotel_name: val, table_number : table_number };
+      console.log(postParams)
+      let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+  
+        let url = Enums.APIURL.URL1;
+        let path = url.concat("/api/paidTable");
+  
+  
+        this.http.post(path, JSON.stringify(postParams), { headers: headers })
+          .subscribe(res => {
+
+            var data= res.json();
+            console.log(data);
+            if (data.n == 1 || data.n == 0){
+
+              let alert = this.alertCtrl.create({
+                title: 'Table Not Occupied',
+                message: 'This table is not currently busy.',
+                buttons: ['Ok']
+                });
+    
+                alert.present();
+
+
+            }
+            else{
+
+              let alert = this.alertCtrl.create({
+                title: 'Done',
+                message: 'Marked as paid',
+                buttons: ['Ok']
+                });
+    
+                alert.present();
+
+            }
+  
+          }, (err) => {
+            console.log(err);
+          });
+        });
+
+  }
 }

@@ -21,6 +21,9 @@
     <ion-card-header class="card-content">
       Table# - {{ t }}
     </ion-card-header>
+
+    <button  float-right color="primary" ion-button (click)="$event.stopPropagation();paid(i+1)">Paid</button>
+
   </ion-card>
 
 </ion-content>
