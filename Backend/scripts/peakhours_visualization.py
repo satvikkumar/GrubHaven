@@ -25,7 +25,7 @@ URL = "http://18.136.208.244:8080/api/viewReservations"
 
 hotel_time_dict = defaultdict(int)
 
-cur_dir = os.path.dirname(os.path.realpath('restaraunt_reservation_visualization.py'))
+cur_dir = os.path.dirname(os.path.realpath('peakhours_visualization.py'))
 print(cur_dir)
 
 
