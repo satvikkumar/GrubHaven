@@ -1,2 +1,2 @@
-neutral 38
 positive 12
+neutral 38

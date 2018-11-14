@@ -29,8 +29,7 @@ page-register {
   $settings-text-input-placeholder: #CCCCCC;
   $settings-text-color-description: #CCCCCC;
   $settings-text-color-description-links: #687DFC;
-  $settings-text-label-color: #FF0000;
-
+  
   /* Content
   ===============================*/
   ion-content {
@@ -101,7 +100,6 @@ page-register {
           position: absolute;
           right: 0;
           bottom: 0;
-          color: $settings-text-label-color !important;
           font-size: $settings-font-size-label;
           font-weight: $settings-font-weight-label;
           line-height: 17px;
