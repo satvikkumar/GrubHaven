@@ -40,27 +40,32 @@ for hotel in hotels_list:
 	res = requests.post(url = URL ,data = {"hotel_name":hotel})
 	view_tables_data  = res.json()
 	
+	if view_tables_data == []:
+		continue
 	
+	else:
+		print(view_tables_data)
 
-	for item in view_tables_data:
-		hotel_time_dict[int(item['time'])] += 1
+		for item in view_tables_data:
+			hotel_time_dict[int(item['time'])] += 1
 
-	freq = []
-	for key in hotel_time_dict.keys():
-		freq.append(hotel_time_dict[key])
-	print(freq)	 
+		freq = []
+		for key in hotel_time_dict.keys():
+			freq.append(hotel_time_dict[key])
+		print(freq)	 
 
 
-	#Creating plot
-	time_slot = [1,2,3,4,5,6]
-	y_pos = np.arange(len(time_slot))
-	
-	plt.bar(y_pos, freq,width = 0.8,align='center', alpha=0.5)
-	plt.xticks(y_pos, freq)
-	plt.ylabel('Busyness of Time slot')
-	plt.title('Time slot')
-	fname = str(hotel) + "_PeakHours.png"
-	plt.savefig(fname, bbox_inches='tight')
+		#Creating plot
+		time_slot = [1,2,3,4,5,6]
+		y_pos = np.arange(len(time_slot))
+		
+		plt.bar(y_pos, freq,width = 0.8,align='center', alpha=0.5)
+		plt.xticks(y_pos, time_slot)
+		plt.ylabel('Busyness of Time slot')
+		plt.title('Time slot')
+		fname = str(hotel) + "_PeakHours.png"
+
+		plt.savefig(fname, bbox_inches='tight')
 
 
 
