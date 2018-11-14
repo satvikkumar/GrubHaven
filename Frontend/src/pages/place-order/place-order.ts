@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import * as Enums from '../../assets/apiconfig';
 import { CustomerHomePage } from '../customer-home/customer-home';
@@ -30,17 +30,14 @@ export class PlaceOrderPage {
   cost : any;
   cost2: any;
 
-  constructor( public http: Http, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public actionSheetCtrl: ActionSheetController, public http: Http, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewCanEnter() {
     this.q = [];
-    //document.getElementById('ingredient').style.display = 'none';
-    //document.getElementById('dishes').style.display = 'none';
     this.orderedItems = [];
     this.list2=[];
     this.list = [];
-
     let alert = this.alertCtrl.create({
       title: 'Enter Reservation OTP',
       inputs: [{
@@ -160,10 +157,8 @@ export class PlaceOrderPage {
 
 
   public search(){
-    console.log(this.i_name)
-   let postParams = {hotel_name: this.r_name};
-    console.log(postParams);
-  
+       let postParams = {hotel_name: this.r_name};
+    
     let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
@@ -195,6 +190,7 @@ export class PlaceOrderPage {
   }
 
   public addItem(name){
+    document.getElementById('cart').style.display = 'block';
     console.log(name)
     if (!this.orderedItems.includes(name))
     {
@@ -326,5 +322,4 @@ public placeOrder(){
 
   }
 }
-
 }

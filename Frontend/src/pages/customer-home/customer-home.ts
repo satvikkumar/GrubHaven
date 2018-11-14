@@ -36,7 +36,8 @@ export class CustomerHomePage {
   rating: any;
 
 
-  constructor(public menu: MenuController, private storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http, public actionSheetCtrl: ActionSheetController) {
+  constructor(public menu: MenuController, private storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http,
+     public actionSheetCtrl: ActionSheetController) {
 
   }
 
