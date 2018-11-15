@@ -1,2 +1,0 @@
-positive 5
-neutral 45

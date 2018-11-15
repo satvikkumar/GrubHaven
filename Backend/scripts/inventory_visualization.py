@@ -34,33 +34,24 @@ for hotel in hotels_list:
 	
 
 	res = requests.post(url = URL ,data = {"hotel_name":hotel})
-
 	inventory_data  = res.json()
-
-	if inventory_data == [] :
-		continue
-	else:
-		inventory = inventory_data['inventory']
+	
+	for inventory in inventory_data:
 		
 		ing_name_list = []
 		ing_quantity_list = []
 			
-		for item in inventory:
+		for item in inventory['inventory']:
 			ing_name_list.append(item['ing_name'])
 			ing_quantity_list.append(item['ing_quant'])
 
-		print(hotel)
-		print(ing_name_list)
-		print(ing_quantity_list)
-
+		
 		numeric_ing_quantity = []
 
 		for ing_quantity in ing_quantity_list:
 			quantity = ing_quantity.split()
 			quantity = int(quantity[0])
 			numeric_ing_quantity.append(quantity)
-
-		print(numeric_ing_quantity)
 
 	#Creating plot
 		y_pos = np.arange(len(ing_name_list))
@@ -69,3 +60,7 @@ for hotel in hotels_list:
 		plt.title('Quantity in kg')
 		fname = str(hotel) + "_inventory.png"
 		plt.savefig(fname)
+
+		y_pos = None
+
+
