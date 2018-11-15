@@ -21,11 +21,10 @@ exports.view=function(req, res) {
             {
                 arr[i]=restaurant[i].name;
             }
-			var i =0;
             console.log(arr);
 			var finalReview = []
 			var counter=0;
-			for (i = 0; i<arr.length ; i++)
+			for (var i = 0; i<arr.length ; i++)
 			{
 				Review.find({
 				   hotel_name: arr[i]
