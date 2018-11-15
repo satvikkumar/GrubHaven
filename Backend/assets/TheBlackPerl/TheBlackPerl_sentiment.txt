@@ -1,2 +1,0 @@
-positive 9
-neutral 41

@@ -1,3 +1,0 @@
-neutral 34
-negative 1
-positive 1
