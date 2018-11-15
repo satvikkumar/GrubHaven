@@ -37,7 +37,6 @@ export class RecommendationsPage {
 		.subscribe(res => {
 		
           var data = res.json();
-		  console.log("HEEE");
           console.log(data.length);
           this.hotel_rating = [];
           for (let i in data) {

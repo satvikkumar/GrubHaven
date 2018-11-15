@@ -7,8 +7,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class = "basic">
-
-      <h1> Hello {{user}} </h1>
-   
+<ion-content padding class="buttons-components-page">
+	<div text-center><h2>Hi {{user}}</h2></div>
+	<ion-card *ngFor="let path of paths;">
+      <ion-card-content>
+        <img src="{{path}}" />
+      </ion-card-content>
+    </ion-card>
+	<div text-center><button ion-button color="secondary" (click)="genAnalytics()" round>Generate Analytics</button></div>
 </ion-content>
