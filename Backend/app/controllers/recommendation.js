@@ -14,7 +14,8 @@ function calculateAverage(request){
 }
 
 function sortHotels(request){
-	
+	var reqLength = Object.keys(request).length;
+	console.log(reqLength);
 	var items = Object.keys(request).map(function(key) {
 					return [key, request[key]];
 				});
@@ -22,13 +23,12 @@ function sortHotels(request){
 	items.sort(function(first, second) {
 				return second[1] - first[1];
 			});
-	console.log("FIII");
 	console.log(items);
 	return items.slice(0,5);
 }
 
 exports.recommend = function(req,res){
-	var recommend=[]
+	var recommend={};
 	Rest.find({
         city: 'Bangalore'
     },function (err, restaurant) {
@@ -57,13 +57,13 @@ exports.recommend = function(req,res){
 						}
 					else {
 						//console.log(review);
-						calculateAverage(review)
-						recommend.push(calculateAverage(review));
-						console.log(recommend)
+						recommend = Object.assign({},recommend,calculateAverage(review));
+						//recommend.push(calculateAverage(review));
+						//console.log(recommend)
 						counter++;
-						if(counter==arr.length-1){
-								var sortedRecommend = sortHotels(recommend);
-								res.send(sortedRecommend);
+						if(counter==arr.length){
+								res.send(sortHotels(recommend));
+								//res.send('Hi');
 							}
 						}
 					}

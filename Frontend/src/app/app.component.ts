@@ -15,7 +15,7 @@ import { PlaceOrderPage } from '../pages/place-order/place-order';
 import { ViewBillPage } from '../pages/view-bill/view-bill';
 import { InventoryPage } from '../pages/inventory/inventory';
 import { TablesPage } from '../pages/tables/tables';
-
+import { RecommendationsPage } from '../pages/recommendations/recommendations';
 
 @Component({
   templateUrl: 'app.html'
@@ -80,7 +80,13 @@ export class MyApp {
     this.nav.setRoot(LoginPage)
   }
 
+  public goToRecommend() {
+	this.nav.push(RecommendationsPage)
+  }
 
+  public goToAnalytics(){
+	  this.nav.setRoot(ManagerHomePage)
+  }
 
 
   initializeApp() {

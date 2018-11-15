@@ -31,6 +31,7 @@ import { MakePaytmPaymentPage } from './../pages/make-paytm-payment/make-paytm-p
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { InventoryPage } from '../pages/inventory/inventory';
 import { TablesPage } from '../pages/tables/tables';
+import { RecommendationsPage } from '../pages/recommendations/recommendations';
 
 
 
@@ -55,7 +56,8 @@ import { TablesPage } from '../pages/tables/tables';
     ViewBillPage, 
     MakePaytmPaymentPage,
     InventoryPage,
-    TablesPage
+    TablesPage,
+	RecommendationsPage
   ],
   imports: [
     BrowserModule,
@@ -83,7 +85,8 @@ import { TablesPage } from '../pages/tables/tables';
     ViewBillPage,
     MakePaytmPaymentPage,
     InventoryPage,
-    TablesPage
+    TablesPage,
+	RecommendationsPage
   ],
   providers: [
     InAppBrowser,

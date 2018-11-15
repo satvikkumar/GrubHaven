@@ -1,0 +1,70 @@
+page-recommendations {
+.card-background-page {
+
+    ion-card {
+      height: 25%;
+      position: relative;
+      text-align: center;
+    }
+	ion-card
+	img	{
+		display:block;
+		width:100%;
+		height:125%;
+	}
+  
+    .card-title {
+      padding-left:25px;  
+      text-align: left;
+      position: absolute;
+      top: 4%;
+      font-size: 1.7em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-star {
+        text-align: right;
+        padding-right: 15px;
+        position: absolute;
+        top: 10%;
+        font-size: 1.7em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        .col {
+            padding: 0;
+        }
+  
+      }
+  
+    .card-subtitle {
+	  text-align: left;
+      font-size: 1.3em;
+	  font-weight: bold;
+      position: absolute;
+      top: 52%;
+	  padding-left:30px;
+      width: 100%;
+      color: #ff8a26;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+
+   
+    }
+    .cardfooter {
+        padding-right: 10px;
+        text-align: right;
+        font-size: 1.0em;
+        position: absolute;
+        bottom: 5%;
+        width: 100%;
+        color: #fff;
+      }
+}
+.scroll-content {
+    padding: 0!important;
+}
+}
