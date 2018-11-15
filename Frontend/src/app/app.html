@@ -1,32 +1,83 @@
 <ion-menu type="push" [content]="content" id="menurest">
   <ion-header>
     <ion-toolbar color="primary">
-      <ion-title><span float-left style="margin: 10px 10px 0 0!important;">Menu</span><span float-right ><button ion-button menuClose color="light"  round outline   (click)="logout()">Logout</button></span></ion-title>
+      <ion-title><span float-left style="margin: 10px 10px 0 0!important;">Menu</span><span float-right><button
+            ion-button menuClose color="light" round outline (click)="logout()">Logout</button></span></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
-    <ion-list no-lines >
-      <button ion-item menuClose  style="background-color: #191919;" (click)="goToEmployees()">
-        Manage Employees
-      </button>
-      <button ion-item menuClose  style="background-color: #191919;" (click)="goToInventory()">
-        Inventory
-      </button>
-      <button ion-item menuClose  style="background-color: #191919;" (click)="goToOrders()">
-        View Orders
-      </button>
-      <button ion-item  menuClose   style="background-color: #191919;" (click)="goToTables()">
-        Manage Tables
-      </button>
-      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToReservations()">
-      Reservations
-      </button>
-      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToAnalytics()">
-      View Analytics
-      </button>
-      
-     
+    <ion-list no-lines>
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToEmployees()">
+            Manage Employees
+          </button>
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon class="custom-icon" name="contact"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToInventory()">
+            Inventory
+          </button>
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon class="custom-icon" name="pizza"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToOrders()">
+            View Orders
+          </button>
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon name="book" class="custom-icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToTables()">
+            Manage Tables
+          </button>
+
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon name="cafe" class="custom-icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToReservations()">
+            Reservations
+          </button>
+        </ion-col>
+
+        <ion-col col-2 padding>
+          <ion-icon name="calendar" class="custom-icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToAnalytics()">
+            View Analytics
+          </button>
+
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon class="custom-icon" name="analytics"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+
     </ion-list>
   </ion-content>
 
@@ -35,31 +86,83 @@
 <ion-menu type="push" [content]="content" id="menucust">
   <ion-header>
     <ion-toolbar color="primary">
-      <ion-title><span float-left style="margin: 10px 10px 0 0!important;">Menu</span><span float-right ><button ion-button menuClose color="light"  round outline   (click)="logout()">Logout</button></span></ion-title>
+      <ion-title><span float-left style="margin: 10px 10px 0 0!important;">Menu</span><span float-right><button
+            ion-button menuClose color="light" round outline (click)="logout()">Logout</button></span></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
-    <ion-list no-lines >
-      <button ion-item menuClose  style="background-color: #191919;" (click)="goToCustomerHome()">
-        Home Page
-      </button>
-      <button ion-item menuClose  style="background-color: #191919;" (click)="goToSearch()">
-        Search for Restaurant
-      </button>
-      <button ion-item menuClose  style="background-color: #191919;" (click)="goToPlaceOrder()">
-        Place order
-      </button>
-      <button ion-item menuClose  style="background-color: #191919;" (click)="goToBill()">
-        View Bills
-      </button>
-      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToRecommend()">
-        My Recommendations
-      </button>
-      <button ion-item  menuClose  style="background-color: #191919;"  (click)="goToReview()">
-        Write a review
-      </button>
+    <ion-list no-lines>
 
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToCustomerHome()">
+            Home Page
+          </button>
+
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon name="home" class="custom-icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToSearch()">
+            Search for Restaurant
+          </button>
+
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon name="restaurant" class="custom-icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToPlaceOrder()">
+            Place order
+          </button>
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon name="cafe" class="custom-icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToBill()">
+            View Bills
+          </button>
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon name="calculator"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToRecommend()">
+            Recommendations
+          </button>
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon class="custom-icon" name="analytics"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <button ion-item menuClose style="background-color: #191919;" (click)="goToReview()">
+            Write a review
+          </button>
+
+        </ion-col>
+        <ion-col col-2 padding>
+          <ion-icon name="clipboard"></ion-icon>
+        </ion-col>
+      </ion-row>
     </ion-list>
   </ion-content>
 
