@@ -60,5 +60,7 @@ for hotel in hotels_list:
 
 		plt.savefig(fname, bbox_inches='tight')
 
+		plt.clf()
+
 
 

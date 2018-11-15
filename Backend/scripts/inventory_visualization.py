@@ -60,7 +60,7 @@ for hotel in hotels_list:
 		plt.title('Quantity in kg')
 		fname = str(hotel) + "_inventory.png"
 		plt.savefig(fname)
-
+		plt.clf()
 		y_pos = None
 
 

@@ -73,3 +73,4 @@ for hotel in hotels_list:
 		fname = str(hotel) + "_populardishes.png"
 
 		plt.savefig(fname)
+		plt.clf()
