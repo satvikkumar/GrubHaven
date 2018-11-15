@@ -21,6 +21,29 @@ exports.view = function(req, res) {
 
     });
 }
+exports.pullOrder = function(req, res) {
+
+    var name = req.body.hotel_name;
+
+    Order.find({
+        hotel_name : name,
+        delivered: true,
+		paid: true
+    }, function (err, orders) {
+
+        if (err) {
+            return next(err);
+        }
+
+        else {
+            console.log(orders);
+            res.send(orders);
+        };
+
+
+    });
+}
+
 exports.removeOne=function(req, res) {
 
     var hotel_name = req.body.hotel_name;
