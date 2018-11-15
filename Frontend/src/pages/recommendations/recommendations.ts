@@ -18,7 +18,9 @@ import * as Enums from '../../assets/apiconfig';
   templateUrl: 'recommendations.html',
 })
 export class RecommendationsPage {
-
+   
+  hotel_rating : any;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams , public http: Http) {
   }
 
