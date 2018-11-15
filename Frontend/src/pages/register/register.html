@@ -1,76 +1,75 @@
 <ion-content class="login-content" padding>
 
-  
-    <ion-grid no-padding>
-      <!-- logo -->
-      <ion-row header align-items-start align-items-stretch>
-          <!-- <ion-col width-67> -->
-              <!-- <img src="../../assets/imgs/grubhaven.png"/> -->
-          <!-- </ion-col> -->
-  
-      <!-- Section form>-->
-    <ion-col col-10 offset-1 col-md-6 offset-md-3>
-      <form padding  #registerForm="ngForm">
-        <ion-row align-items-start>
-          <ion-col col-12>
-            <h1><strong>Welcome!</strong>Register a new account!</h1>
-          </ion-col>
-        </ion-row>
-        <!-- Input-field -->
-        <ion-row>
-          <ion-col col-12>
-            <div input-field>
-              <!-- Input-field-text -->
-              <ion-item no-padding>
-                <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="registerCredentials.email"  [ngModelOptions]="{standalone: true}" required></ion-input>
-  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->
-           </ion-item>
-              <!-- Input-field-password -->
-              <ion-item no-padding>
-                <ion-input  type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" [ngModelOptions]="{standalone: true}" required></ion-input>
-                <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->
-              </ion-item>
-                <ion-list radio-group [(ngModel)]="registerCredentials.role" name = "role" class = "field">
 
-                  <ion-list-header>
-                    Who are you?
-                  </ion-list-header>
-                
-                  <ion-item>
-                    <ion-label>Manager</ion-label>
-                    <ion-radio value="manager" (ionSelect)="radio_select('manager')"></ion-radio>
-                  </ion-item>
-                
-                  <ion-item>
-                    <ion-label>User</ion-label>
-                    <ion-radio value="user" (ionSelect)="radio_select('user')"></ion-radio>
-                  </ion-item>
-                  </ion-list>
-                <ion-item>
-                  <ion-input type="text" [disabled] = "manager" placeholder="Restaurant Name" name="restaurant_name" [(ngModel)]="registerCredentials.restaurant_name" required></ion-input>
-                </ion-item>
-                <ion-item>
-                  <ion-input type="password" [disabled] = "manager" placeholder="Unique Key" name="unique_id" [(ngModel)]="registerCredentials.unique_id" required></ion-input>
-                </ion-item>
-              
-            </div>
-            <!-- Login button -->
-            <ion-col col-12 no-padding>
-              <button no-margin ion-button full text-uppercase (click)='register()'>Register</button>
+  <ion-grid no-padding>
+    <!-- logo -->
+    <ion-row header align-items-start align-items-stretch>
+      <!-- <ion-col width-67> -->
+      <!-- <img src="../../assets/imgs/grubhaven.png"/> -->
+      <!-- </ion-col> -->
+
+      <!-- Section form>-->
+      <ion-col col-10 offset-1 col-md-6 offset-md-3>
+        <form padding #registerForm="ngForm">
+          <ion-row align-items-start>
+            <ion-col col-12>
+              <h1><strong>Welcome!</strong>Register a new account!</h1>
             </ion-col>
-            <!-- Description -->
-            <div description text-center>
-              <ion-row>
-                <!-- Signup now button -->
-                <ion-col col-12 no-padding>
-                  <p no-margin no-padding>Already a member!<a (click)="GoToLogin()">Login</a> </p>
-                </ion-col>
-              </ion-row>
-            </div>
-          </ion-col>
-        </ion-row>
-      </form>
+          </ion-row>
+          <!-- Input-field -->
+          <ion-row>
+            <ion-col col-12>
+              <div input-field>
+                <!-- Input-field-text -->
+                <ion-item no-padding>
+                  <ion-input type="text" placeholder="Email" name="userName" [(ngModel)]="registerCredentials.email"
+                    [ngModelOptions]="{standalone: true}" required></ion-input>
+                  <!--               <ion-label no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>-->
+                </ion-item>
+                <!-- Input-field-password -->
+                <ion-item no-padding>
+                  <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password"
+                    [ngModelOptions]="{standalone: true}" required></ion-input>
+                  <!-- <ion-label no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label> -->
+                </ion-item>
+                <ion-list radio-group [(ngModel)]="registerCredentials.role" name="role" class="field">
+                    <ion-item no-padding >
+                      <ion-label>Manager</ion-label>
+                      <ion-radio value="manager" (ionSelect)="radio_select('manager')"></ion-radio>
+                    </ion-item>
+                    <ion-item no-padding >
+                      <ion-label>User</ion-label>
+                      <ion-radio value="user" (ionSelect)="radio_select('user')"></ion-radio>
+                    </ion-item>
+                  </ion-list>
+                <ion-item no-padding>
+                  <ion-input type="text" [disabled]="manager" placeholder="Restaurant Name" name="restaurant_name"
+                    [(ngModel)]="registerCredentials.restaurant_name" required></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                  <ion-input type="password" [disabled]="manager" placeholder="Unique Key" name="unique_id" [(ngModel)]="registerCredentials.unique_id"
+                    required></ion-input>
+                </ion-item>
+
+              </div>
+              <!-- Login button -->
+              <ion-col col-12 no-padding>
+                <button no-margin ion-button full text-uppercase (click)='register()'>Register</button>
+              </ion-col>
+              <!-- Description -->
+              <div description text-center>
+                <ion-row>
+                  <!-- Signup now button -->
+                  <ion-col col-12 no-padding>
+                    <p no-margin no-padding>Already a member!<a (click)="GoToLogin()">Login</a> </p>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </ion-col>
+          </ion-row>
+        </form>
       </ion-col>
     </ion-row>
-    </ion-grid>
-  </ion-content>
+  </ion-grid>
+</ion-content>

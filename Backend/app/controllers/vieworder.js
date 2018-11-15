@@ -21,6 +21,7 @@ exports.view = function(req, res) {
 
     });
 }
+
 exports.removeOne=function(req, res) {
 
     var id = req.body._id;

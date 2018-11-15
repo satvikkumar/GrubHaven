@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Headers } from '@angular/http';
 import { AlertController } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 import { MenuController } from 'ionic-angular';
 
 import * as Enums from '../../assets/apiconfig';
@@ -22,7 +21,7 @@ export class ReviewPage {
   customer_name = '';
   review = '';
   
-  constructor( public menu : MenuController,private storage: Storage,  public alertCtrl: AlertController, public navCtrl: NavController,public http: Http ) {
+  constructor( public menu : MenuController,  public alertCtrl: AlertController, public navCtrl: NavController,public http: Http ) {
 
   }
 
@@ -59,7 +58,7 @@ export class ReviewPage {
             });
             alert2.present();
 
-            this.navCtrl.push(CustomerHomePage);
+            this.navCtrl.pop();
           },
           (err) => {
             console.log(err);

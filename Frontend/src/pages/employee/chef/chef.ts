@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Headers } from '@angular/http';
 import { AlertController } from 'ionic-angular';
@@ -21,16 +21,15 @@ import * as Enums from '../../../assets/apiconfig';
 })
 export class ChefPage {
 
- 
+
   chefs: any;
   rname: any;
 
-  constructor( private storage: Storage,  public alertCtrl: AlertController, public loadingCtrl: LoadingController,public navCtrl: NavController,public http: Http ) {
+  constructor(private storage: Storage, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http) {
 
   }
 
-  ionViewDidLoad()
-  {
+  ionViewDidLoad() {
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
@@ -38,178 +37,178 @@ export class ChefPage {
     loading.present();
     this.storage.get('r_name').then((val) => {
       console.log(val);
-        r_name = val 
-    
-    let postParams = {employee_type:"chef", hotel_name: r_name};
+      r_name = val
+
+      let postParams = { employee_type: "chef", hotel_name: r_name };
+      let headers = new Headers();
+
+      headers.append('Content-Type', 'application/json');
+
+      let url = Enums.APIURL.URL1;
+      let path = url.concat("/api/list");
+
+      this.http.post(path, JSON.stringify(postParams), { headers: headers })
+        .subscribe(res => {
+
+          var data = res.json();
+          this.chefs = [];
+          for (let i in data) {
+            this.chefs.push(data[i].employee_name);
+
+          }
+          loading.dismiss();
+        }, (err) => {
+          console.log(err);
+        });
+    });
+  }
+  public get_details($event, chef) {
+    let postParams = { employee_name: chef };
+
     let headers = new Headers();
-    
     headers.append('Content-Type', 'application/json');
 
-        let url = Enums.APIURL.URL1;
-        let path = url.concat( "/api/list");
+    let url = Enums.APIURL.URL1;
+    let path = url.concat("/api/employee");
 
-        this.http.post(path, JSON.stringify(postParams), {headers: headers})
-          .subscribe(res => {
- 
-            var data = res.json();
-            this.chefs=[];
-            for (let i in data)
+
+    this.http.post(path, JSON.stringify(postParams), { headers: headers })
+      .subscribe(res => {
+
+        let data = res.json();
+        let alert = this.alertCtrl.create({
+          title: 'Employee Details',
+          message: "Name: " + data.employee_name,
+          inputs: [
             {
-              this.chefs.push(data[i].employee_name);
-            
+              name: 'employee_address', placeholder: data.address, value : data.address
+            },
+            {
+              name: 'contact', placeholder: data.contact, value : data.contact
+            },
+            {
+              name: 'shift_time', placeholder: data.shift_time, value : data.shift_time
             }
-           loading.dismiss();
-          }, (err) => {
-            console.log(err);
-          });
-        });
-  }
-  public get_details($event,chef)
-  {
-    let postParams = {employee_name: chef};
-  
-    let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-
-        let url = Enums.APIURL.URL1;
-        let path = url.concat( "/api/employee");
-    
-
-        this.http.post(path, JSON.stringify(postParams), {headers: headers})
-          .subscribe(res => {
- 
-            let data = res.json();
-            let alert = this.alertCtrl.create({
-              title: 'Employee Details',
-              message: "Name: " + data.employee_name,
-              inputs: [
-                {
-                  name: 'employee_address', placeholder: data.address
-                },
-                {
-                  name: 'contact', placeholder: data.contact
-                },
-                {
-                  name: 'shift_time', placeholder: data.shift_time
-                }
-              ],
-              buttons: [
-                {
-                  text: 'Cancel',
-                  role: 'cancel',
-                  handler: result => {
-                    console.log('Cancel clicked');
-                  }
-                },
-                {
-                  text: 'Change',
-                  handler: result => {
-                    let postParams = {employee_name: data.employee_name, 
-                      address: result.employee_address, 
-                      contact : result.contact , 
-                      shift_time : result.shift_time };
-
-                    let headers = new Headers();
-                    headers.append('Content-Type', 'application/json');
-
-                    let url = Enums.APIURL.URL1;
-                    let path = url.concat( "/api/eedit");
-
- 
-                    this.http.post(path, JSON.stringify(postParams), {headers: headers})
-                    .subscribe(res =>{
- 
-                        let alert2 = this.alertCtrl.create({
-                        title: "Successful",
-                        subTitle: "Details Changed",
-                        buttons: ['Dismiss']
-            });
-            alert2.present();
-                    }, (err) => {
-                      console.log(err);
-                    });
-                }
+          ],
+          buttons: [
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              handler: result => {
+                console.log('Cancel clicked');
               }
-              ]
-            });
-            alert.present();
-          });
-        }
+            },
+            {
+              text: 'Change',
+              handler: result => {
+                let postParams = {
+                  employee_name: data.employee_name,
+                  address: result.employee_address,
+                  contact: result.contact,
+                  shift_time: result.shift_time
+                };
 
-public addChef(){
+                let headers = new Headers();
+                headers.append('Content-Type', 'application/json');
 
-  var r_name = ''
-  this.storage.get('r_name').then((val) => {
-    console.log(val);
-    r_name = val 
-    let alert = this.alertCtrl.create({
-    title: 'Employee Details',
-    message: "Enter New Employee Details",
-    inputs: [
-      {
-        name : 'employee_name', placeholder: "NAME"
-      },
-      {
-        name: 'employee_address', placeholder: "ADDRESS"
-      },
-      {
-        name: 'contact', placeholder: "CONTACT"
-      },
-      {
-        name: 'shift_time', placeholder: "SHIFT TIME"
-      }
-    ],
-    
-    buttons: [
-      {
-        text: 'Cancel',
-        role: 'cancel',
-        handler: result => {
-          console.log('Cancel clicked');
-        }
-      },
-      {
-        text: 'Add',
-        handler: result => {
-          let postParams = {
-            hotel_name: r_name,
-            employee_name: result.employee_name,
-            employee_type: "chef", 
-            address: result.employee_address, 
-            contact : result.contact , 
-            shift_time : result.shift_time 
-          };
+                let url = Enums.APIURL.URL1;
+                let path = url.concat("/api/eedit");
 
-          let headers = new Headers();
-          headers.append('Content-Type', 'application/json');
 
-          let url = Enums.APIURL.URL1;
-          let path = url.concat( "/api/addEmployee");
+                this.http.post(path, JSON.stringify(postParams), { headers: headers })
+                  .subscribe(res => {
 
-          this.http.post(path, JSON.stringify(postParams), {headers: headers})
-          .subscribe(res =>{
-            this.ionViewDidLoad()
-              let alert2 = this.alertCtrl.create({
-                title: "Successful",
-                subTitle: "Employee Added",
-                buttons: ['Dismiss']
-              });
-              
-              alert2.present();
-            }, (err) => {
-              console.log(err);
-            });
-        }
-      }] //End of buttons list
-    });
-    alert.present();
-  }); //End of Storage
+                    let alert2 = this.alertCtrl.create({
+                      title: "Successful",
+                      subTitle: "Details Changed",
+                      buttons: ['Dismiss']
+                    });
+                    alert2.present();
+                  }, (err) => {
+                    console.log(err);
+                  });
+              }
+            }
+          ]
+        });
+        alert.present();
+      });
+  }
+
+  public addChef() {
+
+    var r_name = ''
+    this.storage.get('r_name').then((val) => {
+      console.log(val);
+      r_name = val
+      let alert = this.alertCtrl.create({
+        title: 'Employee Details',
+        message: "Enter New Employee Details",
+        inputs: [
+          {
+            name: 'employee_name', placeholder: "NAME"
+          },
+          {
+            name: 'employee_address', placeholder: "ADDRESS"
+          },
+          {
+            name: 'contact', placeholder: "CONTACT"
+          },
+          {
+            name: 'shift_time', placeholder: "SHIFT TIME"
+          }
+        ],
+
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            handler: result => {
+              console.log('Cancel clicked');
+            }
+          },
+          {
+            text: 'Add',
+            handler: result => {
+              let postParams = {
+                hotel_name: r_name,
+                employee_name: result.employee_name,
+                employee_type: "chef",
+                address: result.employee_address,
+                contact: result.contact,
+                shift_time: result.shift_time
+              };
+
+              let headers = new Headers();
+              headers.append('Content-Type', 'application/json');
+
+              let url = Enums.APIURL.URL1;
+              let path = url.concat("/api/addEmployee");
+
+              this.http.post(path, JSON.stringify(postParams), { headers: headers })
+                .subscribe(res => {
+                  this.ionViewDidLoad()
+                  let alert2 = this.alertCtrl.create({
+                    title: "Successful",
+                    subTitle: "Employee Added",
+                    buttons: ['Dismiss']
+                  });
+
+                  alert2.present();
+                }, (err) => {
+                  console.log(err);
+                });
+            }
+          }] //End of buttons list
+      });
+      alert.present();
+    }); //End of Storage
 
 
   }//End of add function
 
 
-  public remove(chef){
+  public remove(chef) {
 
     var r_name = '';
     this.storage.get('r_name').then((val) => {
@@ -219,7 +218,7 @@ public addChef(){
       let postParams = {
         hotel_name: r_name,
         employee_name: chef,
-        employee_type: "chef", 
+        employee_type: "chef",
       };
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
@@ -235,7 +234,7 @@ public addChef(){
           console.log(err);
         });
 
-        this.ionViewDidLoad()
+      this.ionViewDidLoad()
     });
 
   }

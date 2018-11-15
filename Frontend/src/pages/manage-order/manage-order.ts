@@ -7,7 +7,6 @@ import { Storage } from '@ionic/storage';
 
 
 import * as Enums from '../../assets/apiconfig';
-import { ThrowStmt } from '@angular/compiler';
 
 /**
  * Generated class for the ManageOrderPage page.
@@ -28,7 +27,7 @@ export class ManageOrderPage {
   _id: any;
   quant: any;
   dishes: any;
-  quantity : any;
+  quantity: any;
   table_no: any;
   r_name: any;
   list: any;
@@ -82,27 +81,27 @@ export class ManageOrderPage {
 
     //console.log(this.dishes[i].length)
 
-      this.list = "<table style='width:100%;'> <tr> <th>Dish</th> <th>Quantity</th> </tr>"
-      let index = 0;
-      for (index = 0; index < this.dishes[i].length; index++ ) {
-        var element = "<tr> <td>" + this.dishes[i][index] + "</td><td align:'right'>    " + this.quantity[i][index] + "</td></tr>"
-        this.list += element
-      }
-            
-      this.list += "</table>"
-      let alert = this.alertCtrl.create({
+    this.list = "<table style='width:100%;'> <tr> <th>Dish</th> <th>Quantity</th> </tr>"
+    let index = 0;
+    for (index = 0; index < this.dishes[i].length; index++) {
+      var element = "<tr> <td>" + this.dishes[i][index] + "</td><td align:'right'>    " + this.quantity[i][index] + "</td></tr>"
+      this.list += element
+    }
+
+    this.list += "</table>"
+    let alert = this.alertCtrl.create({
       title: 'Pending Order',
       message: this.list,
       buttons: ['Ok']
-      });
-      
-      alert.present()
-    }
+    });
+
+    alert.present()
+  }
 
 
-  public remove(index){
+  public remove(index) {
 
-   
+
 
     this.storage.get('r_name').then((val) => {
     let postParams = {_id : this._id[index]};
@@ -121,8 +120,8 @@ export class ManageOrderPage {
           console.log(err);
         });
 
-        this.ionViewCanEnter()
-      });
+      this.ionViewCanEnter()
+    });
 
 
   }
