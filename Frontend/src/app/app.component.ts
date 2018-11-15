@@ -1,4 +1,3 @@
-import { MakePaytmPaymentPage } from './../pages/make-paytm-payment/make-paytm-payment';
 import { CustomerHomePage } from './../pages/customer-home/customer-home';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -26,7 +25,7 @@ export class MyApp {
 
   rootPage: any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -37,46 +36,51 @@ export class MyApp {
     ];
 
   }
-  public goToEmployees(){
+  // Manager side options
+  public goToEmployees() {
     this.nav.push(EmployeePage);
   }
-  public goToSearch(){
-    this.nav.push(SearchPage);
+  public goToInventory() {
+    this.nav.push(InventoryPage)
   }
-  public goToReview(){
-    this.nav.push(ReviewPage);
-  }
-  public goToOrders(){
+  public goToOrders() {
     this.nav.push(ManageOrderPage)
   }
-
-  public goToPlaceOrder(){
-    this.nav.push(PlaceOrderPage)
+  public goToTables() {
+    this.nav.push(TablesPage);
   }
-
-  public goToReservations(){
+  public goToReservations() {
     this.nav.push(ViewReservationsPage)
   }
 
-  public goToBill(){
+  // User side options
+  public goToCustomerHome() {
+    this.nav.setRoot(CustomerHomePage)
+
+  }
+
+  public goToSearch() {
+    this.nav.push(SearchPage);
+  }
+
+  public goToPlaceOrder() {
+    this.nav.push(PlaceOrderPage)
+  }
+
+
+  public goToBill() {
     this.nav.push(ViewBillPage)
   }
 
-  public logout(){
+  public goToReview() {
+    this.nav.push(ReviewPage);
+  }
+
+  public logout() {
     this.nav.setRoot(LoginPage)
   }
 
-  public goToCustomerHome(){
-    this.nav.push(CustomerHomePage)
 
-  }
-  public goToInventory(){
-    this.nav.push(InventoryPage)
-  }
-
-  public goToTables(){
-    this.nav.push(TablesPage);
-  }
 
 
   initializeApp() {

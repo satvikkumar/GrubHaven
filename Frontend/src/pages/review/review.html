@@ -1,62 +1,63 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons left>
-      <button ion-button left menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>GrubHaven</ion-title>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <form  #registerForm="ngForm">
+  <form #registerForm="ngForm">
     <ion-row>
       <ion-col>
         <ion-list inset>
 
-          <ion-item class = "field">
-            <ion-input class = "restname" type="text" placeholder="Enter Restaurant Name" name="restaurant_name" [(ngModel)]="restaurant_name" required></ion-input>
+          <ion-item class="field">
+            <ion-input class="restname" type="text" placeholder="Enter Restaurant Name" name="restaurant_name"
+              [(ngModel)]="restaurant_name" required></ion-input>
           </ion-item>
-          <ion-item class = "field">
-            <ion-input class = "name" type="text" placeholder="Enter your name" name="customer_name" [(ngModel)]="customer_name" required></ion-input>
+          <ion-item class="field">
+            <ion-input class="name" type="text" placeholder="Enter your name" name="customer_name" [(ngModel)]="customer_name"
+              required></ion-input>
           </ion-item>
-          <ion-item class = "field">
-            <ion-textarea class = "review" type="text" placeholder="Enter your review" name="review" [(ngModel)]="review" required></ion-textarea>
+          <ion-item class="field">
+            <ion-textarea class="review" type="text" placeholder="Enter your review" name="review" [(ngModel)]="review"
+              required></ion-textarea>
           </ion-item>
-          <ion-list radio-group [(ngModel)]="rating" name = "rating" class = "field">
+          <ion-list radio-group [(ngModel)]="rating" name="rating" class="field">
 
             <ion-list-header>
               Rating
             </ion-list-header>
-          
+
             <ion-item>
               <ion-label>1 Star</ion-label>
               <ion-radio value="one"></ion-radio>
             </ion-item>
-          
+
             <ion-item>
               <ion-label>2 Star</ion-label>
               <ion-radio value="two"></ion-radio>
             </ion-item>
-          
+
             <ion-item>
               <ion-label>3 Star</ion-label>
               <ion-radio value="3"></ion-radio>
             </ion-item>
-          
+
             <ion-item>
               <ion-label>4 Star</ion-label>
               <ion-radio value="4"></ion-radio>
             </ion-item>
-          
+
             <ion-item>
               <ion-label>5 Star</ion-label>
               <ion-radio value="5"></ion-radio>
             </ion-item>
-          
+
           </ion-list>
-          
+
 
         </ion-list>
       </ion-col>
@@ -64,8 +65,8 @@
 
     <ion-row>
       <ion-col class="signup-col">
-        <button ion-button class="submit-btn" full type="submit" block clear (click)="submit()">Submit</button>
+        <button ion-button class="submit-btn" full type="submit" block (click)="submit()">Submit</button>
       </ion-col>
     </ion-row>
-</form>
+  </form>
 </ion-content>

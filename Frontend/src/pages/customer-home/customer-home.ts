@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Headers } from '@angular/http';
 import { AlertController } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 import { MenuController } from 'ionic-angular';
 import { ActionSheetController } from 'ionic-angular';
 
@@ -36,7 +35,8 @@ export class CustomerHomePage {
   rating: any;
 
 
-  constructor(public menu: MenuController, private storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http, public actionSheetCtrl: ActionSheetController) {
+  constructor(public menu: MenuController, public alertCtrl: AlertController, public navCtrl: NavController, public http: Http,
+     public actionSheetCtrl: ActionSheetController) {
 
   }
 

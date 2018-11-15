@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, IonicPage } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ManagerHomePage } from '../manager-home/manager-home';
 import { LoginPage } from '../login/login';
@@ -38,9 +38,6 @@ export class RegisterPage {
   public register() {
 
     let details = { email: this.registerCredentials.email, password: this.registerCredentials.password, role: this.registerCredentials.role, restaurant_name: this.registerCredentials.restaurant_name };
-    var header = { "headers": { "Content-Type": "application/json" } };
-    console.log(details);
-
     this.flag = true;
 
     if ((this.registerCredentials.role) == 'manager') {
@@ -91,7 +88,6 @@ export class RegisterPage {
 
     if ((this.registerCredentials.role) == 'user') {
       this.authService.createAccount(details).then((result) => {
-        let data = JSON.parse(JSON.stringify(result["user"]));
         this.navCtrl.setRoot(CustomerHomePage);
       });
     }
