@@ -310,7 +310,7 @@ public placeOrder(){
               {
               text: 'Continue',
               handler: data => {
-                  this.navCtrl.push(CustomerHomePage)
+                  this.navCtrl.setRoot(CustomerHomePage)
                 }
               }
             ]

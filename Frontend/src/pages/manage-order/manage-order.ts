@@ -24,6 +24,7 @@ export class ManageOrderPage {
 
   cust_name: any;
   dish: any;
+  _id: any;
   quant: any;
   dishes: any;
   quantity: any;
@@ -58,11 +59,13 @@ export class ManageOrderPage {
           this.table_no = [];
           this.quantity = [];
           this.dishes = [];
+          this._id = [];
           for (let i in data) {
 
             this.table_no.push(data[i].table_number);
             this.dishes.push(data[i].dish);
             this.quantity.push(data[i].quantity);
+            this._id.push(data[i]._id)
             console.log(data[i]);
 
 
@@ -101,9 +104,9 @@ export class ManageOrderPage {
 
 
     this.storage.get('r_name').then((val) => {
-      let postParams = { hotel_name: val, table_number: this.table_no[index], dish: this.dishes[index], quantity: this.quantity[index] };
-      console.log(postParams)
-      let headers = new Headers();
+    let postParams = {_id : this._id[index]};
+    console.log(postParams)
+    let headers = new Headers();
       headers.append('Content-Type', 'application/json');
 
       let url = Enums.APIURL.URL1;

@@ -26,7 +26,6 @@ URL = "http://18.136.208.244:8080/api/viewReservations"
 hotel_time_dict = defaultdict(int)
 
 cur_dir = os.path.dirname(os.path.realpath('peakhours_visualization.py'))
-print(cur_dir)
 
 
 for hotel in hotels_list:
@@ -44,16 +43,12 @@ for hotel in hotels_list:
 		continue
 	
 	else:
-		print(view_tables_data)
-
 		for item in view_tables_data:
 			hotel_time_dict[int(item['time'])] += 1
 
 		freq = []
 		for key in hotel_time_dict.keys():
 			freq.append(hotel_time_dict[key])
-		print(freq)	 
-
 
 		#Creating plot
 		time_slot = [1,2,3,4,5,6]

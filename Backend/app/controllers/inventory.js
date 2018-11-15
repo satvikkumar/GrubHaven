@@ -3,13 +3,11 @@ var Inventory = require('../models/inventory');
 
 exports.list = function(req, res) {
 
-    console.log("Listing users");
-
     // use mongoose to get all employees
     var hotel = req.body.hotel_name;
     //console.log(req.body)
 
-    Inventory.findOne({
+    Inventory.find({
         hotel_name : hotel
     }, function (err, list) {
 

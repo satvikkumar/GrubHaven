@@ -33,6 +33,9 @@ export class SearchPage {
 
     //TODO 
     //Read json of restaurants and populate below array
+
+    if (this.restaurant_name=="undefined")
+    {
     let postParams = { name: this.restaurant_name };
     console.log(postParams);
 
@@ -109,6 +112,17 @@ export class SearchPage {
       }, (err) => {
         console.log(err);
       });
+    }
+
+    else{
+      let alert = this.alertCtrl.create({
+        title: 'Enter a name',
+        subTitle: 'Please Enter a name',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+
+    }
 
   }
 

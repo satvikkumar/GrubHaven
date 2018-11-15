@@ -81,13 +81,13 @@ export class ChefPage {
           message: "Name: " + data.employee_name,
           inputs: [
             {
-              name: 'employee_address', placeholder: data.address
+              name: 'employee_address', placeholder: data.address, value : data.address
             },
             {
-              name: 'contact', placeholder: data.contact
+              name: 'contact', placeholder: data.contact, value : data.contact
             },
             {
-              name: 'shift_time', placeholder: data.shift_time
+              name: 'shift_time', placeholder: data.shift_time, value : data.shift_time
             }
           ],
           buttons: [

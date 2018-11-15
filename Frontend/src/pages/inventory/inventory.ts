@@ -53,7 +53,7 @@ export class InventoryPage {
         .subscribe(res => {
 
           var data = res.json();
-          //console.log(data);
+          console.log(data);
           this.items = [];
           this.quantity = [];
           this.supplier = [];
@@ -85,10 +85,10 @@ export class InventoryPage {
             message: "Name: " + this.items[i],
             inputs: [
               {
-                name: 'new_quantity', placeholder: this.quantity[i]
+                name: 'new_quantity', placeholder: this.quantity[i], value : this.quantity[i]
               },
               {
-                name: 'new_supplier', placeholder: this.supplier[i]
+                name: 'new_supplier', placeholder: this.supplier[i], value : this.supplier[i]
               }
             ],
             buttons: [
