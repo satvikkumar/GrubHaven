@@ -63,7 +63,7 @@ module.exports = function (app) {
     authRoutes.post('/iEdit', manageInventory.edit);
     authRoutes.post('/showTableOrders', viewOrder.tableOrders);
 	authRoutes.post('/recommendation', hotelRecommendation.recommend);
-	auth.Routes.post('/pullOrderHistory',viewOrder.pullOrder);
+	authRoutes.post('/pullOrderHistory',viewOrder.pullOrder);
     authRoutes.post('/paidTable',checkTables.paid)
 	
     // Set up routes
