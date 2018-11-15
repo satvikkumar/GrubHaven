@@ -23,6 +23,7 @@ export class SearchPage {
   contact: any;
   cuisine: any;
   city: any;
+  r_name : any;
 
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 
@@ -33,6 +34,11 @@ export class SearchPage {
 
     //TODO 
     //Read json of restaurants and populate below array
+
+
+
+    if (this.restaurant_name !== undefined && this.restaurant_name !== "" )
+    {
     let postParams = { name: this.restaurant_name };
     console.log(postParams);
 
@@ -43,7 +49,7 @@ export class SearchPage {
     let path = url.concat("/api/search");
     console.log(path);
     console.log(postParams);
-
+    console.log(this.restaurant_name.length);
 
     this.http.post(path, JSON.stringify(postParams), { headers: headers })
       .subscribe(res => {
@@ -63,6 +69,7 @@ export class SearchPage {
           var cont = document.getElementsByClassName('r_name')[0];
           let lbl1 = "RESTAURANT NAME: "
           cont.innerHTML = lbl1.concat(data.name);
+          this.r_name = data.name;
           console.log(cont.innerHTML)
 
           cont = document.getElementsByClassName('r_address')[0];
@@ -109,11 +116,22 @@ export class SearchPage {
       }, (err) => {
         console.log(err);
       });
+    }
+
+    else{
+      let alert = this.alertCtrl.create({
+        title: 'Enter a name',
+        subTitle: 'Please Enter a name',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+
+    }
 
   }
 
   public book() {
-    this.navCtrl.push(MakeReservationsPage, { restaurant_name: this.restaurant_name, numTables: this.numTables });
+    this.navCtrl.push(MakeReservationsPage, { restaurant_name: this.r_name, numTables: this.numTables });
     //Add the link to make reservations
   }
 

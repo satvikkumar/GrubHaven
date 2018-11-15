@@ -29,6 +29,8 @@ export class PlaceOrderPage {
   table_number : any;
   cost : any;
   cost2: any;
+  public show:boolean = false;
+  public buttonName:any = 'Show';
 
   constructor(public actionSheetCtrl: ActionSheetController, public http: Http, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -115,6 +117,17 @@ export class PlaceOrderPage {
     alert.present();
 
   }
+  toggle() {
+    console.log("clicked");
+    this.show = !this.show;
+
+    // CHANGE THE NAME OF THE BUTTON.
+    if(this.show)  
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Show";
+  }
+
 
   public orderByDishName(){
 
@@ -177,7 +190,7 @@ export class PlaceOrderPage {
           this.searchValue = this.i_name;
             for (let i in data.dishes)
             {
-              if(data.dishes[i].ingr_1 == this.searchValue || data.dishes[i].ingr_2 == this.searchValue || data.dishes[i].ingr_3 == this.searchValue  )
+              if(data.dishes[i].ingr_1.toLowerCase() == this.searchValue.toLowerCase() || ( data.dishes[i].ingr_2 !== undefined && data.dishes[i].ingr_2.toLowerCase() == this.searchValue.toLowerCase()) || ( data.dishes[i].ingr_3 !== undefined && data.dishes[i].ingr_3.toLowerCase() == this.searchValue.toLowerCase()))
               {
                 this.list2.push(data.dishes[i].dish_name);
                 this.cost2.push(data.dishes[i].cost);
@@ -190,8 +203,6 @@ export class PlaceOrderPage {
   }
 
   public addItem(name){
-    document.getElementById('cart').style.display = 'block';
-    console.log(name)
     if (!this.orderedItems.includes(name))
     {
     let alert = this.alertCtrl.create({
@@ -209,9 +220,21 @@ export class PlaceOrderPage {
           text: 'Continue',
           handler: data => {
               //console.log(data.quantity)
-              this.quantity = data.quantity;
-              this.orderedItems.push(name);
-              this.q.push(this.quantity);
+              if (parseInt(data.quantity) != data.quantity)
+              {
+                let alert = this.alertCtrl.create({
+                  title: 'Quantity Wrong',
+                  subTitle: 'The quantity you entered is not a number',
+                  buttons: ['Dismiss']
+                });
+                alert.present();
+              }
+              else
+              {
+                this.quantity = data.quantity;
+                this.orderedItems.push(name);
+                this.q.push(this.quantity);
+              }
           }
         }
       ]
@@ -246,6 +269,17 @@ public modify(name)
       {
         text: 'Continue',
         handler: data => {
+          if (parseInt(data.quantity) != data.quantity)
+          {
+            let alert = this.alertCtrl.create({
+              title: 'Quantity Wrong',
+              subTitle: 'The quantity you entered is not a number',
+              buttons: ['Dismiss']
+            });
+            alert.present();
+          }
+          else
+          {
             var i = 0;
             for (i = 0; i < this.orderedItems.length ; i++)
             {
@@ -254,6 +288,7 @@ public modify(name)
                  this.q[i] = data.quantity
               }
             }
+          }
         }
       }
     ]
@@ -310,7 +345,7 @@ public placeOrder(){
               {
               text: 'Continue',
               handler: data => {
-                  this.navCtrl.push(CustomerHomePage)
+                  this.navCtrl.setRoot(CustomerHomePage)
                 }
               }
             ]

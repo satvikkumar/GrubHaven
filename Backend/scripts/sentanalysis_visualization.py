@@ -1,8 +1,5 @@
-# importing the requests library 
-
-import sys
-sys.path.append('/usr/local/lib/python2.7/dist-packages')
-
+import numpy as np
+import matplotlib.pyplot as plt
 import requests
 import nltk 
 import os
@@ -51,44 +48,43 @@ res = requests.post(url = URL ,data = {"city":"Bangalore"})
 review_data  = res.json()
 
 hotel_sentlist = defaultdict(list)
-hotel_sentcount = defaultdict(dict)
-
+hotel_sentcount = defaultdict(list)
 
 #Getting the sentiment for each review 
 for item in review_data:
 	score = getSentiment(item['review'])
 	hotel_sentlist[item['hotel_name']].append(score)
 
-for hotel in hotel_sentlist.keys():
-
-	hotel_sentcount[hotel] = Counter(hotel_sentlist[hotel])
-
-#print(hotel_sentcount)
-
-
-
 cur_dir = os.path.dirname(os.path.realpath('sentanalysis_client.py'))
-#print(cur_dir)
-
-target_dir = os.path.join(cur_dir, '../assets/')
-target_dir = os.path.abspath(os.path.realpath(target_dir))
-os.chdir(target_dir)
-
 
 #Aggregating sentiment score for a hotel and creating a file for each hotel with respective score
-for hotel in hotel_sentcount.keys():
+for hotel in hotel_sentlist.keys():
 
 	
 	#Changing the current working directory to respective hotel folder in assets
 	target_dir = os.path.join(cur_dir, '../assets/'+str(hotel)+'/')
 	target_dir = os.path.abspath(os.path.realpath(target_dir))
 	os.chdir(target_dir)
-
-	fname = str(hotel) + "_sentiment.txt"
-	file  = open(fname,'a')
 	
-	for sent in hotel_sentcount[hotel]:
-		s = str(sent) + " " + str(hotel_sentcount[hotel][sent])
-		file.write(s)
-		file.write('\n')
+	
+	hotel_sentcount[hotel] = Counter(hotel_sentlist[hotel])
+	
+	sent_labels = []
+	sent_value = []
 
+	for sent in hotel_sentcount[hotel]:
+		sent_labels.append(sent)
+		sent_value.append(hotel_sentcount[hotel][sent])
+
+	#print(sent_labels)
+	#print(sent_value)
+
+	colors = ['green', 'grey', 'red']
+	patches, texts = plt.pie(sent_value, colors=colors, shadow=True, startangle=90)
+	plt.legend(patches, sent_labels, loc="best")
+	plt.axis('equal')
+	plt.tight_layout()
+	plt.title('Sentiment visualization')
+	fname = str(hotel) + "_sentimentvisualization.png"
+
+	plt.savefig(fname)

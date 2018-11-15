@@ -1,2 +1,0 @@
-positive 4
-neutral 16

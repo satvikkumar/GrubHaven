@@ -6,17 +6,28 @@
 -->
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>GrubHaven</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <button ion-button text-uppercase (click)="orderByDishName()"> Order By Dish Name </button>
-  <button ion-button text-uppercase (click)="orderByIngredient()"> Order By Ingredient </button>
+  <ion-col col-6>
+    <button ion-button text-uppercase (click)="orderByDishName()"> Order By Dish Name </button>
+
+  </ion-col>
+  <ion-col col-6>
+    <button ion-button text-uppercase (click)="orderByIngredient()"> Order By Ingredient </button>
+
+  </ion-col>
+  <ion-fab bottom right (click)="toggle()">
+    <button ion-fab>
+      <ion-icon class="custom-icon" name="cart"></ion-icon>
+    </button>
+  </ion-fab>
 
   <div>
     <ion-grid>
@@ -58,11 +69,14 @@
 
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col id="cart">
+      <ion-row *ngIf="show">
+        <ion-col col-6 padding>
           <h1>YOUR CART</h1>
-          <button ion-button (click)="placeOrder()"> ORDER </button>
-
+        </ion-col>
+        <ion-col col-6>
+          <button float-right ion-button (click)="placeOrder()"> ORDER </button>
+        </ion-col>
+        <ion-col>
           <ion-card *ngFor="let item of orderedItems;  let i = index">
 
             <ion-card-header>
@@ -85,6 +99,7 @@
           </ion-card>
         </ion-col>
       </ion-row>
+
     </ion-grid>
   </div>
 

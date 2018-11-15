@@ -58,7 +58,7 @@ export class ReviewPage {
             });
             alert2.present();
 
-            this.navCtrl.push(CustomerHomePage);
+            this.navCtrl.pop();
           },
           (err) => {
             console.log(err);
