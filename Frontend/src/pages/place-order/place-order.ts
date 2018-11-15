@@ -52,36 +52,36 @@ export class PlaceOrderPage {
           text: 'Continue',
           handler: data => {
               //console.log(data.quantity)
-              let postParams = {OTP: data.otp};
-    console.log(postParams);
-  
-    let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-
-        let url = Enums.APIURL.URL1;
-        let path = url.concat( "/api/checkOTP");
-        console.log(path);
-        console.log(postParams);
-
-        if (data.otp = ''){
-          let alert = this.alertCtrl.create({
-            title: 'Wrong OTP',
-            subTitle: 'Try again',
-            buttons: [
+              if (parseInt(data.otp) == data.otp)
               {
-              text: 'Cancel',
-              handler: data => {
-                this.navCtrl.push(CustomerHomePage)
-                }
+                        let postParams = {OTP: data.otp};
+              console.log(postParams);
+            
+              let headers = new Headers();
+                  headers.append('Content-Type', 'application/json');
+
+                  let url = Enums.APIURL.URL1;
+                  let path = url.concat( "/api/checkOTP");
+                  console.log(path);
+                  console.log(postParams);
+
+                  if (data.otp = ''){
+                    let alert = this.alertCtrl.create({
+                      title: 'Wrong OTP',
+                      subTitle: 'Try again',
+                      buttons: [
+                        {
+                        text: 'Cancel',
+                        handler: data => {
+                          this.navCtrl.pop()
+                          }
+                        }
+                      ]
+                    });
+                    alert.present();
               }
-            ]
-          });
-          alert.present();
-
-        }
-
-
-        this.http.post(path, JSON.stringify(postParams), {headers: headers})
+            
+           this.http.post(path, JSON.stringify(postParams), {headers: headers})
           .subscribe(res => {
 
             if (JSON.stringify(res).length < 150)
@@ -93,7 +93,7 @@ export class PlaceOrderPage {
                 {
                 text: 'Cancel',
                 handler: data => {
-                  this.navCtrl.push(CustomerHomePage)
+                  this.navCtrl.pop()
                   }
                 }
               ]
@@ -111,12 +111,30 @@ export class PlaceOrderPage {
 
           })
           }
-        }
+
+          
+          else{
+            let alert = this.alertCtrl.create({
+            title: 'Wrong OTP',
+            subTitle: 'Try again',
+            buttons: [
+              {
+              text: 'Cancel',
+              handler: data => {
+                this.navCtrl.pop()
+                }
+              }
+            ]
+          });
+          alert.present();
+          }
+
+        }}
       ]
     });
     alert.present();
 
-  }
+}
   toggle() {
     console.log("clicked");
     this.show = !this.show;
