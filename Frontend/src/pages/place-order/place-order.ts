@@ -29,6 +29,8 @@ export class PlaceOrderPage {
   table_number : any;
   cost : any;
   cost2: any;
+  public show:boolean = false;
+  public buttonName:any = 'Show';
 
   constructor(public actionSheetCtrl: ActionSheetController, public http: Http, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -115,6 +117,17 @@ export class PlaceOrderPage {
     alert.present();
 
   }
+  toggle() {
+    console.log("clicked");
+    this.show = !this.show;
+
+    // CHANGE THE NAME OF THE BUTTON.
+    if(this.show)  
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Show";
+  }
+
 
   public orderByDishName(){
 
@@ -190,8 +203,6 @@ export class PlaceOrderPage {
   }
 
   public addItem(name){
-    document.getElementById('cart').style.display = 'block';
-    console.log(name)
     if (!this.orderedItems.includes(name))
     {
     let alert = this.alertCtrl.create({
