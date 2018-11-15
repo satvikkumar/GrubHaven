@@ -190,7 +190,7 @@ export class PlaceOrderPage {
           this.searchValue = this.i_name;
             for (let i in data.dishes)
             {
-              if(data.dishes[i].ingr_1 == this.searchValue || data.dishes[i].ingr_2 == this.searchValue || data.dishes[i].ingr_3 == this.searchValue  )
+              if(data.dishes[i].ingr_1.toLowerCase() == this.searchValue.toLowerCase() || ( data.dishes[i].ingr_2 !== undefined && data.dishes[i].ingr_2.toLowerCase() == this.searchValue.toLowerCase()) || ( data.dishes[i].ingr_3 !== undefined && data.dishes[i].ingr_3.toLowerCase() == this.searchValue.toLowerCase()))
               {
                 this.list2.push(data.dishes[i].dish_name);
                 this.cost2.push(data.dishes[i].cost);
@@ -220,9 +220,21 @@ export class PlaceOrderPage {
           text: 'Continue',
           handler: data => {
               //console.log(data.quantity)
-              this.quantity = data.quantity;
-              this.orderedItems.push(name);
-              this.q.push(this.quantity);
+              if (parseInt(data.quantity) != data.quantity)
+              {
+                let alert = this.alertCtrl.create({
+                  title: 'Quantity Wrong',
+                  subTitle: 'The quantity you entered is not a number',
+                  buttons: ['Dismiss']
+                });
+                alert.present();
+              }
+              else
+              {
+                this.quantity = data.quantity;
+                this.orderedItems.push(name);
+                this.q.push(this.quantity);
+              }
           }
         }
       ]
@@ -257,6 +269,17 @@ public modify(name)
       {
         text: 'Continue',
         handler: data => {
+          if (parseInt(data.quantity) != data.quantity)
+          {
+            let alert = this.alertCtrl.create({
+              title: 'Quantity Wrong',
+              subTitle: 'The quantity you entered is not a number',
+              buttons: ['Dismiss']
+            });
+            alert.present();
+          }
+          else
+          {
             var i = 0;
             for (i = 0; i < this.orderedItems.length ; i++)
             {
@@ -265,6 +288,7 @@ public modify(name)
                  this.q[i] = data.quantity
               }
             }
+          }
         }
       }
     ]

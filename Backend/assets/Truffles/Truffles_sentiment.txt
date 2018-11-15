@@ -1,3 +1,0 @@
-positive 6
-negative 1
-neutral 43
