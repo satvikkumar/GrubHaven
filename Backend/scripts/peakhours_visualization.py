@@ -23,10 +23,7 @@ for item in review_data:
 
 URL = "http://18.136.208.244:8080/api/viewReservations"
 
-hotel_time_dict = defaultdict(int)
-
 cur_dir = os.path.dirname(os.path.realpath('peakhours_visualization.py'))
-
 
 for hotel in hotels_list:
 	
@@ -38,7 +35,8 @@ for hotel in hotels_list:
 
 	res = requests.post(url = URL ,data = {"hotel_name":hotel})
 	view_tables_data  = res.json()
-	
+	hotel_time_dict = defaultdict(int)
+		
 	if view_tables_data == []:
 		continue
 	
