@@ -16,6 +16,7 @@ import { ViewBillPage } from '../pages/view-bill/view-bill';
 import { InventoryPage } from '../pages/inventory/inventory';
 import { TablesPage } from '../pages/tables/tables';
 import { RecommendationsPage } from '../pages/recommendations/recommendations';
+import { ManageMenuPage } from '../pages/manage-menu/manage-menu';
 
 @Component({
   templateUrl: 'app.html'
@@ -86,6 +87,10 @@ export class MyApp {
 
   public goToAnalytics(){
 	  this.nav.setRoot(ManagerHomePage)
+  }
+
+  public goToMenu(){
+    this.nav.push(ManageMenuPage)
   }
 
 

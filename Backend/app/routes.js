@@ -19,6 +19,7 @@ var addOrder = require('./controllers/addOrder')
 var paytmPayment = require('./controllers/paytmPayment')
 var manageInventory = require('./controllers/inventory')
 var hotelRecommendation = require('./controllers/recommendation')
+var manageMenu = require('./controllers/menu')
 
 var requireAuth = passport.authenticate('jwt', {
     session: false
@@ -64,7 +65,11 @@ module.exports = function (app) {
     authRoutes.post('/showTableOrders', viewOrder.tableOrders);
 	authRoutes.post('/recommendation', hotelRecommendation.recommend);
 	authRoutes.post('/pullOrderHistory',viewOrder.pullOrder);
-    authRoutes.post('/paidTable',checkTables.paid)
+    authRoutes.post('/paidTable',checkTables.paid);
+    authRoutes.post('/listMenu',manageMenu.list);
+    authRoutes.post('/addMenuItem', manageMenu.add);
+    authRoutes.post('/removeMenuItem', manageMenu.remove);
+    authRoutes.post('/menuEdit', manageMenu.edit);
 	
     // Set up routes
     app.use('/api', authRoutes);
