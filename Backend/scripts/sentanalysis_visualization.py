@@ -27,19 +27,22 @@ def getSentiment(review):
 		neut=0
 		pos += score['pos']
 		neg += score['neg']
-		neut += score['neu']
+		#neut += score['neu']
 	length = len(sentences)
 	pos = 10*pos/length
 	neg = 10*neg/length
-	neut = 10*neut/length
+	#neut = 10*neut/length
 
+	'''
 	if pos > neg and pos > neut:
 		sentiment = "positive"
 	elif neg > pos and neg > neut:
 		sentiment = "negative"
 	else:
 		sentiment = "neutral"
-	
+	'''
+	sentiment = "positive" if pos > neg else "negative"
+
 	return sentiment	
 
 
@@ -66,7 +69,6 @@ for hotel in hotel_sentlist.keys():
 	target_dir = os.path.abspath(os.path.realpath(target_dir))
 	os.chdir(target_dir)
 	
-	
 	hotel_sentcount[hotel] = Counter(hotel_sentlist[hotel])
 	
 	sent_labels = []
@@ -76,10 +78,10 @@ for hotel in hotel_sentlist.keys():
 		sent_labels.append(sent)
 		sent_value.append(hotel_sentcount[hotel][sent])
 
-	#print(sent_labels)
-	#print(sent_value)
+	print(sent_labels)
+	print(sent_value)
 
-	colors = ['green', 'grey', 'red']
+	colors = ['green', 'red']
 	patches, texts = plt.pie(sent_value, colors=colors, shadow=True, startangle=90)
 	plt.legend(patches, sent_labels, loc="best")
 	plt.axis('equal')

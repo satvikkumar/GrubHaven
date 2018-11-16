@@ -7,7 +7,7 @@ exports.list = function(req, res) {
     var hotel = req.body.hotel_name;
     //console.log(req.body)
 
-    Inventory.find({
+    Inventory.findOne({
         hotel_name : hotel
     }, function (err, list) {
 
