@@ -40,6 +40,7 @@ export class MakeReservationsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private alertCtrl: AlertController) {
     this.restaurant_name = navParams.get('restaurant_name');
+	console.log(this.restaurant_name);
     this.numTables = navParams.get('numTables');
     var date = "2017-03-13";
     var time = "01:00";

@@ -92,7 +92,6 @@ exports.billing = function(req,res){
 
 }
 
-
 exports.tableOrders = function(req,res){
 
     var name = req.body.hotel_name;

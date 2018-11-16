@@ -46,6 +46,9 @@ export class ViewBillPage {
         {
           text: 'Continue',
           handler: data => {
+
+            if (parseInt(data.otp) == data.otp)
+            {
             let postParams = {OTP: data.otp};
             console.log(postParams);
   
@@ -65,7 +68,7 @@ export class ViewBillPage {
                   {
                   text: 'Cancel',
                   handler: data => {
-                    this.navCtrl.push(CustomerHomePage)
+                    this.navCtrl.pop()
                     }
                   }
                 ]
@@ -85,7 +88,7 @@ export class ViewBillPage {
                     {
                     text: 'Cancel',
                     handler: data => {
-                      this.navCtrl.push(CustomerHomePage)
+                      this.navCtrl.pop()
                       }
                     }
                   ]
@@ -186,7 +189,24 @@ export class ViewBillPage {
               });                 //End of post request for showBill
 
             }                     //End of else
-          })                      //End of post request for OTPVerification
+          })                       //End of post request for OTPVerification
+          }          
+          
+          else{
+            let alert = this.alertCtrl.create({
+            title: 'Wrong OTP',
+            subTitle: 'Try again',
+            buttons: [
+              {
+              text: 'Cancel',
+              handler: data => {
+                this.navCtrl.pop()
+                }
+              }
+            ]
+          });
+          alert.present();
+          }
          }                         //End of handler for OTP
         }                           //End of confirm buttons list for OTP alert
       ]                             //End of array of buttons for OTP
