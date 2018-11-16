@@ -54,7 +54,13 @@ export class ManageMenuPage {
       this.http.post(path, JSON.stringify(postParams), { headers: headers })
         .subscribe(res => {
 
-          var data = res.json();
+          
+		  var t_data = res.text();
+		  if(t_data.length)
+		  {
+			  var data=res.json();
+			  
+			  
           console.log(data);
           this.food = [];
           this.ingr_1 = [];
@@ -70,6 +76,7 @@ export class ManageMenuPage {
             this.cost.push(data.dishes[i].cost);
 
           }
+		  }
           loading.dismiss();
         }, (err) => {
           console.log(err);
