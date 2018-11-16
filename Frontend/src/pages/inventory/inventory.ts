@@ -51,10 +51,15 @@ export class InventoryPage {
 
       this.http.post(path, JSON.stringify(postParams), { headers: headers })
         .subscribe(res => {
-
-          var data = res.json();
-          //console.log(data);
+          
+          var t_data = res.text();
+          
+          if(t_data.length)
+          {
+            var data=res.json();
+            
           console.log(data.ing_name)
+         
           this.items = [];
           this.quantity = [];
           this.supplier = [];
@@ -64,7 +69,7 @@ export class InventoryPage {
             this.supplier.push(data.inventory[i].ing_supplier);
             //console.log(data.inventory[i].ing_name)
             console.log(this.items)
-
+          }
           }
           loading.dismiss();
         }, (err) => {

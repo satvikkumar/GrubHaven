@@ -16,7 +16,7 @@ import { CustomerHomePage } from '../customer-home/customer-home';
 export class ReviewPage {
 
   activeMenu: string = 'none';
-  rating = '';
+  rating : any;
   restaurant_name = '';
   customer_name = '';
   review = '';
@@ -35,6 +35,7 @@ export class ReviewPage {
 
   public submit()
   {
+	console.log("Rating : "+this.rating);
     var value = parseInt(this.rating);
     let postParams = {hotel_name : this.restaurant_name, customer_name: this.customer_name , review : this.review, rating: value};
     console.log(postParams);

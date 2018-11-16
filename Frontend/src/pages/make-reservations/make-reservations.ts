@@ -62,6 +62,10 @@ export class MakeReservationsPage {
     console.log(this.numTables);
     this.getTableAvailability();
   }
+  
+  info(){
+	  alert("Slot 1 : 08:00\nSlot 2 : 09:00\nSlot 3 : 12:30\nSlot 4 : 14:30\nSlot 5 : 19:00\nSlot 6 : 21:00");
+  }
 
   getTableAvailability() {
     this.isOneSelected = false;
