@@ -41,7 +41,7 @@ export class RegisterPage {
     this.flag = true;
 
     if ((this.registerCredentials.role) == 'manager') {
-      let postParams = { uniqueId: this.registerCredentials.unique_id, name: this.registerCredentials.restaurant_name };
+      let postParams = { uniqueId: this.registerCredentials.unique_id.toString(), name: this.registerCredentials.restaurant_name };
 
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');

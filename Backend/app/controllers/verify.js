@@ -8,11 +8,11 @@ exports.authorize=function(req, res) {
     // use mongoose to get all employees
     Rest.findOne({
         name: name,
-        uniqueId: uniqueId 
+        unique_id: uniqueId 
     }, function (err, restaurant) {
 
         if (err) {
-            res.send(err);
+            //res.send(err);
             return next(err);
         }
 

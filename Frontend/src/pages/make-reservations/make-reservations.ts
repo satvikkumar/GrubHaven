@@ -113,48 +113,64 @@ export class MakeReservationsPage {
   }
 
   makeReservation() {
-    let postParams = {
-      hotel_name: this.restaurant_name,
-      time: moment(this.time).hour(),
-      date: moment(this.today).format("DDMMYYYY"),
-      table_number: this.tableSelected,
-      customer_name: this.contact_name, 
-      contact: this.contact_number,
 
-      // date: "31102018",
-    };
 
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
+    if (Number.isInteger(parseInt(this.contact_number)) && this.contact_number.length == 10)
+    {
+        let postParams = {
+          hotel_name: this.restaurant_name,
+          time: moment(this.time).hour(),
+          date: moment(this.today).format("DDMMYYYY"),
+          table_number: this.tableSelected,
+          customer_name: this.contact_name, 
+          contact: this.contact_number,
 
-    let url = Enums.APIURL.URL1;
-    let path = url.concat("/api/makeReservation");
-    console.log(path);
-    console.log(postParams);
+          // date: "31102018",
+        };
 
-    this.http.post(path, JSON.stringify(postParams), {
-        headers: headers
-      })
-      .subscribe(res => {
-        console.log(res.json());
-        
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
 
-          console.log(this.tableInfo);
-                    
-          let alert2 = this.alertCtrl.create({
-            title: "Success!",
-            subTitle: "Your table has been reserved. Have a great meal. ",
-            buttons: ['Dismiss']
-          });
-          alert2.present();
+        let url = Enums.APIURL.URL1;
+        let path = url.concat("/api/makeReservation");
+        console.log(path);
+        console.log(postParams);
 
-          this.navCtrl.pop();
+        this.http.post(path, JSON.stringify(postParams), {
+            headers: headers
+          })
+          .subscribe(res => {
+            console.log(res.json());
+            
 
-          // this.navCtrl.push(CustomerHomePage);
-        },
-        (err) => {
-          console.log(err);
+              console.log(this.tableInfo);
+                        
+              let alert2 = this.alertCtrl.create({
+                title: "Success!",
+                subTitle: "Your table has been reserved. Have a great meal. ",
+                buttons: ['Dismiss']
+              });
+              alert2.present();
+
+              this.navCtrl.pop();
+
+              // this.navCtrl.push(CustomerHomePage);
+            },
+            (err) => {
+              console.log(err);
+            });
+      }
+
+      else{
+
+        let alert2 = this.alertCtrl.create({
+          title: "Wrong data entered",
+          subTitle: "Enter a 10 digit Number ",
+          buttons: ['Dismiss']
         });
+        alert2.present();
+
+      }
   }
 
 }
