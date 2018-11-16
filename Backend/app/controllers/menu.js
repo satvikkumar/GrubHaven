@@ -51,11 +51,11 @@ exports.add = function(req, res) {
 exports.remove = function(req, res) {
 
     var hotel = req.body.hotel_name;
-    var new_item = req.body.dish_nam;
+    var new_item = req.body.dish_name;
 
     Inventory.findOneAndUpdate(
         {hotel_name:hotel }, 
-        { $pull: { inventory:{ dish_name : new_item }}},
+        { $pull: { dishes:{ dish_name : new_item }}},
        function (error, success) {
              if (error) {
                  console.log(error);
