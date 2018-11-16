@@ -71,6 +71,8 @@ for hotel in hotel_sentlist.keys():
 	
 	hotel_sentcount[hotel] = Counter(hotel_sentlist[hotel])
 	
+	print()
+
 	sent_labels = []
 	sent_value = []
 
@@ -81,7 +83,7 @@ for hotel in hotel_sentlist.keys():
 	print(sent_labels)
 	print(sent_value)
 
-	colors = ['green', 'red']
+	colors = ['red', 'green']
 	patches, texts = plt.pie(sent_value, colors=colors, shadow=True, startangle=90)
 	plt.legend(patches, sent_labels, loc="best")
 	plt.axis('equal')
