@@ -22,10 +22,13 @@
           <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" [(ngModel)]="today" (ionChange)="getTableAvailability()"></ion-datetime>
         </ion-item>
         <ion-item>
-          <ion-label>TimeSlot</ion-label>
+          <ion-label>TimeSlot</ion-label><button ion-button color="primary" (click)="info()" outline round>Slot Info</button>
           <ion-datetime displayFormat="h" pickerFormat="h" hourValues="01,02,03,04,05,06" [(ngModel)]="time"
             (ionChange)="getTableAvailability()"></ion-datetime>
         </ion-item>
+		<ion-item>
+		   <div text-center><button ion-button color="primary" (click)="info()" outline round>Slot Info</button></div>
+		</ion-item>
       </ion-item-group>
     </ion-list>
 
