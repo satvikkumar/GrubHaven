@@ -53,7 +53,8 @@ export class InventoryPage {
         .subscribe(res => {
 
           var data = res.json();
-          console.log(data);
+          //console.log(data);
+          console.log(data.ing_name)
           this.items = [];
           this.quantity = [];
           this.supplier = [];
@@ -61,7 +62,8 @@ export class InventoryPage {
             this.items.push(data.inventory[i].ing_name);
             this.quantity.push(data.inventory[i].ing_quant);
             this.supplier.push(data.inventory[i].ing_supplier);
-            console.log(data.inventory[i].ing_name)
+            //console.log(data.inventory[i].ing_name)
+            console.log(this.items)
 
           }
           loading.dismiss();
