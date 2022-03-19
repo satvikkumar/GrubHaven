@@ -14,9 +14,9 @@ Back End (Controller): NodeJs, Python(Sentiment Analysis & Realtime Restaurant R
 Database (Model): MongoDB/Mongoose
 
 The entire tech stack was built using the Ionic framework mainly because:
-	-	Performance obsessed
-	-	Native focused
-	-	Utilizes AngularJS to build the frontend
+ - Performance obsessed
+ - Native focused
+ - Utilizes AngularJS to build the frontend
 
 Additionally, the User View needed to be via both an andriod/ios app & a Web App. Ionic with Cordova enables easier .apk * .ipa app builds.
 We used JWT(JSON Web Token) & a basic Authentitcation mechanism to login,store & transport user credentials securely.
